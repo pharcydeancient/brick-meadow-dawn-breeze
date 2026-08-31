@@ -11,9 +11,12 @@ export type Surface =
   | "history"
   | "themes"
   | "discover"
-  | "upgrade";
+  | "upgrade"
+  | "smart";
 
-export type SettingsTab = "account" | "models" | "prefs";
+export type Investigation = "off" | "web" | "research" | "deep";
+
+export type SettingsTab = "account" | "models" | "settings";
 
 export type MessageRole = "user" | "assistant";
 
@@ -63,6 +66,7 @@ export interface LiveTrack {
   title: string;
   artist: string;
   seconds: number;
+  src?: string;
 }
 
 export interface Wallpaper {
@@ -72,15 +76,39 @@ export interface Wallpaper {
   premium: boolean;
   purchased: boolean;
   src: string;
+  video?: string;
+  price?: string;
   motion: "still" | "drift" | "aurora" | "tide";
   tracks: LiveTrack[];
 }
 
+export type DiscoverFilter = "all" | "photo" | "motion" | "edit";
+
 export interface DiscoverItem {
   id: string;
   title: string;
-  category: "prompts" | "voices" | "packs" | "agents";
+  category: "photo" | "motion" | "edit";
   author: string;
-  blurb: string;
+  src: string;
+  video?: string;
   premium: boolean;
+  ratio?: string;
+}
+
+export type SmartPage = "cards" | "boards" | "canvas" | "genie";
+
+export type SmartKind = "memory" | "task" | "artifact" | "note";
+
+export type SmartLane = "inbox" | "play" | "ready" | "archive";
+
+export interface SmartCard {
+  id: string;
+  kind: SmartKind;
+  title: string;
+  body: string;
+  lane: SmartLane;
+  x: number;
+  y: number;
+  preview?: string;
+  createdAt: number;
 }

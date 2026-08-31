@@ -1,99 +1,89 @@
 /**
- * VISUAL GUIDE — source of truth.
+ * Composition map — source of truth.
  *
- * Every region of the app maps to a visionOS component.
- * Do not invent a second layout. If a control has no home here, it does not ship.
+ * Every live chrome choice maps to a named composition. Do not invent a
+ * second layout. If a control has no home here, it does not ship.
  *
- * Shared Space (full-bleed Environment — never chopped, never opaque-covered)
+ * Shared Space (full-bleed wallpaper — never chopped, never opaque-covered)
  * │
- * ├── MAIN WINDOW  (system glass, portrait, centered)
- * │     visionOS: Window + glass material + specular lip + drop shadow
- * │     Home:     up to 6 model cards (the canvas)
- * │     Card view: one model, chat — thicker glass (value-added work)
- * │     Working:  Files / History / Themes / Discover / Upgrade
- * │               (thicker glass, environment dims — they block the canvas)
+ * ├── CANVAS  (Kosmik tinted plate, portrait, centered)
+ * │     Home:     up to 6 model cards (Pinterest grid)
+ * │     Card view: one model, chat — plate untinted
+ * │     Working:  Files / Themes / Imagine / Smart / Upgrade (frosted plate)
  * │
- * ├── WINDOW BAR   (capsule under the window — move affordance)
- * ├── CLOSE        (top-left of window, outside the glass, hover → X)
+ * ├── CANVAS BAR   (kit capsule under the canvas)
+ * ├── CLOSE        (top-left of working / card view)
  * │
- * ├── LEADING ORNAMENT  (vertical tab bar, left of window)
- * │     visionOS TabView ornament. Symbols always; labels on gaze/hover.
- * │     Files · Themes · Discover · History
+ * ├── LEADING ORNAMENT  (kit TabView — Files · Themes · Imagine · Smart · History)
  * │
- * ├── BOTTOM ORNAMENT   (overlaps window bottom ~20px)
- * │     Hidden until summoned. Prompt bar lives here.
+ * ├── PROMPT CLUSTER    (A-composer.png — consensus card above prompt)
+ * │     Invisible until the 3D orb summons it. Relocatable. Returns on send / idle.
  * │
- * ├── SETTINGS ORB      (bottom-left of the scene — persistent, tiny)
- * │     Opens a SMALL glass pane (not a page). Tabs: Account · Models · Settings
- * │     Draggable. No environment dim. Translucent on purpose — logistics, not work.
+ * ├── SETTINGS ORB + ALERT  (Alert (1).png — Account / Models / Settings)
  * │
- * ├── PROMPT ORB        (bottom-center, 3D glass sphere)
- * │     Summons the prompt bar. Bar auto-hides on send and after 3s idle.
- * │
- * └── MUSIC WIDGET      (draggable glass, default lower-right)
- *       visionOS Music now-playing ornament. Stackable with the settings pane.
+ * └── MUSIC WIDGET      (visionOS now-playing, relocatable)
  */
 
 export const REGIONS = [
   {
     id: "environment",
-    label: "Environment",
-    mapsTo: "visionOS Environment / passthrough",
+    label: "Wallpaper",
+    mapsTo: "Kosmik continuous environment / passthrough",
     role: "The image is the product. UI never breaks its continuity.",
   },
   {
-    id: "window",
-    label: "Main window",
-    mapsTo: "visionOS Window + glass",
+    id: "canvas",
+    label: "Canvas",
+    mapsTo: "Kosmik tinted plate + Pinterest card grid",
     role: "Card canvas, card view, or a working surface.",
   },
   {
     id: "close",
     label: "Close",
-    mapsTo: "Window close affordance (top-left)",
+    mapsTo: "Kit window close (top-left)",
     role: "Dismisses card view / working surface back to home.",
   },
   {
-    id: "window-bar",
-    label: "Window bar",
-    mapsTo: "visionOS window bar",
-    role: "Move affordance. Anchors the window in space.",
+    id: "canvas-bar",
+    label: "Canvas bar",
+    mapsTo: "Kit window bar",
+    role: "Move affordance. Anchors the canvas in space.",
   },
   {
     id: "leading",
     label: "Leading ornament",
-    mapsTo: "visionOS vertical tab bar",
-    role: "Files, Themes, Discover, History. Logistics, not content.",
+    mapsTo: "Kit vertical tab bar",
+    role: "Files, Themes, Imagine, Smart, History. Relocatable.",
   },
   {
     id: "settings-orb",
     label: "Settings orb",
-    mapsTo: "Persistent ornament (bottom leading)",
-    role: "Opens Account / Models / Settings pane.",
+    mapsTo: "Persistent ornament (bottom trailing)",
+    role: "Opens Account / Models / Settings alert.",
   },
   {
     id: "prompt-orb",
     label: "Prompt orb",
-    mapsTo: "Siri-style spatial orb + bottom ornament",
-    role: "Summons the invisible prompt bar.",
+    mapsTo: "A-composer summon orb",
+    role: "Summons the invisible prompt cluster.",
   },
   {
     id: "prompt-bar",
-    label: "Prompt bar",
-    mapsTo: "Bottom toolbar ornament (~20pt overlap)",
-    role: "Compose. Auto-hides. Blurs canvas on send.",
+    label: "Prompt cluster",
+    mapsTo: "A-composer.png — consensus card + plus + probes",
+    role: "Compose. Relocatable. Returns on send and 3s idle.",
   },
   {
     id: "settings-pane",
-    label: "Settings pane",
-    mapsTo: "Small glass panel / popover",
-    role: "Tiny, draggable, no dim. Ember on model toggles.",
+    label: "Settings alert",
+    mapsTo: "Alert (1).png",
+    role: "Account / Models / Settings + app icons. Never Room. Relocatable.",
   },
   {
     id: "music",
     label: "Music widget",
     mapsTo: "visionOS Music now-playing",
-    role: "Draggable. Album art from the active live wallpaper.",
+    role: "Relocatable. Album art from the active live wallpaper.",
   },
 ] as const;
 

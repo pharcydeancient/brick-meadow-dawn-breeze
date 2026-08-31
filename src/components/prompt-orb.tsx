@@ -1,5 +1,4 @@
 import { useAether } from "@/lib/store";
-import { RegionTag } from "./guide-overlay";
 
 export function PromptOrb() {
   const open = useAether((s) => s.promptOpen);
@@ -13,7 +12,6 @@ export function PromptOrb() {
       onClick={() => setPromptOpen(true)}
     >
       <span className="orb-sphere" />
-      <RegionTag label="Prompt orb" style={{ top: -28, left: "50%", transform: "translateX(-50%)" }} />
     </button>
   );
 }

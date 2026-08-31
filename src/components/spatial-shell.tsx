@@ -6,63 +6,131 @@ import { HistoryView } from "./history-view";
 import { ThemeView } from "./theme-view";
 import { DiscoverView } from "./discover-view";
 import { UpgradeView } from "./upgrade-view";
-import { EdgeNav } from "./edge-nav";
+import { SmartGenView } from "./smart-gen-view";
 import { SettingsOrb } from "./settings-orb";
 import { SettingsPane } from "./settings-pane";
 import { PromptOrb } from "./prompt-orb";
 import { PromptBar } from "./prompt-bar";
+import { ConsensusPreview, ConsensusMap } from "./consensus-preview";
 import { MusicPlayer } from "./music-player";
-import { GuideOverlay, RegionTag } from "./guide-overlay";
+import { OverlaySheet } from "./overlay-sheet";
+import { WinClose } from "./win-close";
+import { EdgeNav } from "./edge-nav";
+import { Draggable } from "./draggable";
 import { useAether } from "@/lib/store";
+import { useRef } from "react";
+
+const WORKING = new Set(["discover", "themes", "upgrade", "smart", "files"]);
 
 export function SpatialShell() {
   const surface = useAether((s) => s.surface);
   const close = useAether((s) => s.closeToHome);
-  const heavy = surface !== "home";
+  const setSurface = useAether((s) => s.setSurface);
+  const settingsOpen = useAether((s) => s.settingsOpen);
+  const setSettingsOpen = useAether((s) => s.setSettingsOpen);
+  const historyOpen = useAether((s) => s.historyOpen);
+  const setHistoryOpen = useAether((s) => s.setHistoryOpen);
+  const cardModelId = useAether((s) => s.cardModelId);
+  const promptOpen = useAether((s) => s.promptOpen);
+  const inCard = Boolean(cardModelId) && surface === "card";
+  const working = WORKING.has(surface);
+  const swipe = useRef({ x: 0, y: 0, fromTop: false });
+
+  function backFromWork() {
+    if (cardModelId) setSurface("card");
+    else close();
+  }
+
+  const rootMode = inCard ? " untint" : working || historyOpen ? " work-tint" : " home-tint";
 
   return (
-    <div className="app-root">
+    <div className={`app-root${promptOpen ? " prompting" : ""}${rootMode}`}>
       <Environment />
-      <GuideOverlay />
       <div className="scene">
+        <EdgeNav />
         <div className="stage">
-          <EdgeNav />
-          <section className={`main-window glass-window${heavy ? " glass-heavy" : ""}`}>
-            <RegionTag label="Main window · glass" style={{ top: 10, left: 14 }} />
-            {surface !== "home" ? (
-              <button
-                type="button"
-                className="close-affordance"
-                aria-label="Close"
-                onClick={close}
-              >
-                ×
-              </button>
-            ) : null}
-            <div className="window-body" key={surface}>
-              {surface === "home" ? <CardCanvas /> : null}
-              {surface === "card" ? <CardView /> : null}
-              {surface === "files" ? <FilesView /> : null}
-              {surface === "history" ? <HistoryView /> : null}
-              {surface === "themes" ? <ThemeView /> : null}
-              {surface === "discover" ? <DiscoverView /> : null}
-              {surface === "upgrade" ? <UpgradeView /> : null}
+          <span className="window-shadow" aria-hidden />
+          <section
+            className={`main-window glass-window${promptOpen && !working ? " tucked" : ""}${working ? " work" : ""}${inCard ? " clear" : ""}`}
+            onPointerDown={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              swipe.current = {
+                x: e.clientX,
+                y: e.clientY,
+                fromTop: e.clientY - rect.top < 56,
+              };
+            }}
+            onPointerUp={(e) => {
+              if (!working || !swipe.current.fromTop) return;
+              const dy = e.clientY - swipe.current.y;
+              const dx = e.clientX - swipe.current.x;
+              if (Math.abs(dy) > 72 && Math.abs(dy) > Math.abs(dx) * 1.15) backFromWork();
+            }}
+          >
+            {working ? <div className="work-frost" aria-hidden /> : null}
+            {inCard || working ? <WinClose corner onClick={inCard ? close : backFromWork} /> : null}
+            <div className="window-body">
+              {surface === "discover" ? (
+                <DiscoverView />
+              ) : surface === "themes" ? (
+                <ThemeView />
+              ) : surface === "upgrade" ? (
+                <UpgradeView />
+              ) : surface === "smart" ? (
+                <SmartGenView />
+              ) : surface === "files" ? (
+                <FilesView />
+              ) : inCard ? (
+                <CardView />
+              ) : (
+                <CardCanvas />
+              )}
             </div>
-            <div className="window-bar glass-ornament" />
-            <RegionTag
-              label="Window bar"
-              style={{ bottom: -38, left: "50%", transform: "translateX(-50%)" }}
-            />
           </section>
+          <div className="window-bar glass-ornament">
+            <span className="window-grip" />
+          </div>
         </div>
+        <OverlaySheet
+          open={historyOpen}
+          title={cardModelId && inCard ? "This model" : "History"}
+          size="list"
+          onClose={() => setHistoryOpen(false)}
+        >
+          <HistoryView />
+        </OverlaySheet>
+        {settingsOpen ? (
+          <button
+            type="button"
+            className="alert-dim"
+            aria-label="Dismiss settings"
+            onClick={() => setSettingsOpen(false)}
+          />
+        ) : null}
         <SettingsPane />
       </div>
       <MusicPlayer />
       <div className="dock">
+        {working ? null : <PromptOrb />}
         <SettingsOrb />
-        <PromptOrb />
       </div>
-      <PromptBar />
+      {working ? null : <PromptCluster />}
+      {working ? null : <ConsensusMap />}
+    </div>
+  );
+}
+
+function PromptCluster() {
+  const open = useAether((s) => s.promptOpen);
+  const pos = useAether((s) => s.promptPos);
+  const setPos = useAether((s) => s.setPromptPos);
+
+  return (
+    <div className={`prompt-seat${open ? " open" : ""}`}>
+      <Draggable x={pos.x} y={pos.y} onMove={setPos} armMs={240} className="prompt-drag">
+        <ConsensusPreview />
+        <PromptBar />
+      </Draggable>
     </div>
   );
 }

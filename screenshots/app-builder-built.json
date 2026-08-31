@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aether",
+      "hasCanvas": false,
+      "bodyTextLen": 262,
+      "bodyTextHash": "664d39ec4c7e30989a520c1a1a857d91e84986ac42c171a6cd7f32502a0ed63b",
+      "bodyTextPrefix": "Gemini 3.6 Flash Lite Tap to start a conversation. Mistral Small",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aether",
+      "hasCanvas": false,
+      "bodyTextLen": 262,
+      "bodyTextHash": "664d39ec4c7e30989a520c1a1a857d91e84986ac42c171a6cd7f32502a0ed63b",
+      "bodyTextPrefix": "Gemini 3.6 Flash Lite Tap to start a conversation. Mistral Small",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

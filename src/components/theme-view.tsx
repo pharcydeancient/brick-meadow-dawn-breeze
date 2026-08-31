@@ -1,8 +1,9 @@
-import { Check, Lock, Play } from "lucide-react";
-import { useRef, type CSSProperties, type PointerEvent } from "react";
-import { WALLPAPERS } from "@/lib/themes";
+import { Check, Lock, Search } from "lucide-react";
+import { useRef, useState, type PointerEvent } from "react";
+import { THEME_YEARS, WALLPAPERS } from "@/lib/themes";
 import { useAether } from "@/lib/store";
-import { RegionTag } from "./guide-overlay";
+import type { Wallpaper } from "@/lib/types";
+import { PreviewStage } from "./preview-stage";
 
 export function ThemeView() {
   const tab = useAether((s) => s.themeMarketTab);
@@ -19,12 +20,19 @@ export function ThemeView() {
   const setMusicOpen = useAether((s) => s.setMusicOpen);
   const setSurface = useAether((s) => s.setSurface);
   const swipe = useRef({ x: 0, t: 0 });
+  const [q, setQ] = useState("");
 
-  const marketLocked = tier === "free";
-  const list =
-    tab === 0
+  const paid = tier !== "free";
+  const marketLocked = tab === 1 && !paid;
+  const list = (tab === 0
       ? WALLPAPERS.filter((w) => !w.premium || purchased.includes(w.id))
-      : WALLPAPERS.filter((w) => w.premium);
+      : WALLPAPERS.filter((w) => w.premium)
+    ).filter(
+      (w) =>
+        !q.trim() ||
+        w.name.toLowerCase().includes(q.toLowerCase()) ||
+        w.category.toLowerCase().includes(q.toLowerCase()),
+    );
   const open = WALLPAPERS.find((w) => w.id === exploded);
 
   const onPointerDown = (e: PointerEvent) => {
@@ -37,186 +45,209 @@ export function ThemeView() {
     if (dx > 0 && tab === 1) setTab(0);
   };
 
-  return (
-    <div className="flex h-full min-h-0 flex-col surface-in" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
-      <RegionTag label="Themes · real rooms · tap to live in" style={{ top: 0, right: 0 }} />
-      <h2 className="type-display text-[32px]">Themes</h2>
-      <p className="mb-2 mt-1 text-[12px]" style={{ color: "var(--color-fg-tertiary)" }}>
-        Photographs. Tap one — the room becomes it.
-      </p>
-      <div className="mb-3 mt-1 flex items-center justify-center gap-2">
-        <button type="button" className={tab === 0 ? "glass-ornament" : "glass-thin"} style={dotTab} onClick={() => setTab(0)}>
-          Room
-        </button>
-        <button
-          type="button"
-          className={tab === 1 ? "glass-ornament" : "glass-thin"}
-          style={dotTab}
-          onClick={() => setTab(1)}
-        >
-          Market
-        </button>
-      </div>
-      <div className="mb-2 flex justify-center gap-1.5">
-        <span style={dot(tab === 0)} />
-        <span style={dot(tab === 1)} />
-      </div>
+  function listen(w: Wallpaper, i = 0) {
+    setWallpaper(w.id);
+    setTrackIndex(i);
+    setMusicOpen(true);
+    setPlaying(true);
+  }
 
-      {tab === 1 && marketLocked ? (
-        <button
-          type="button"
-          className="glass-heavy mb-3 flex items-center justify-between px-3 py-2 text-left"
-          style={{ borderRadius: 16, border: 0, color: "var(--color-fg)", width: "100%" }}
-          onClick={() => setSurface("upgrade")}
-        >
-          <span className="text-[12px]">Market needs a paid plan. Rooms you own stay.</span>
-          <Lock size={14} />
+  return (
+    <div className="gallery-wrap" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
+      <h2 className="surface-label">{tab === 0 ? "Wallpapers" : "Live wallpapers"}</h2>
+      <div className="chip-row">
+        <button type="button" className={`chip${tab === 0 ? " on" : ""}` } onClick={() => setTab(0)}>
+          Selector
         </button>
+        <button type="button" className={`chip${tab === 1 ? " on" : ""}`} onClick={() => setTab(1)}>
+          Store
+        </button>
+      </div>
+      <div className="dots" aria-hidden>
+        <span className={tab === 0 ? "on" : ""} />
+        <span className={tab === 1 ? "on" : ""} />
+      </div>
+      {tab === 1 && !marketLocked ? (
+        <label className="pin-search">
+          <Search size={14} />
+          <input
+            className="pin-search-field"
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Search live wallpapers"
+          />
+        </label>
       ) : null}
 
-      {open ? (
-        <div className="quiet-scroll min-h-0 flex-1 surface-in">
-          <button
-            type="button"
-            onClick={() => setExploded(null)}
-            className="mb-2 text-[12px]"
-            style={{ border: 0, background: "transparent", color: "var(--color-fg-secondary)" }}
-          >
-            Back
-          </button>
-          <div className="theme-hero overflow-hidden">
-            <img src={open.src} alt="" />
-          </div>
-          <h3 className="mt-3 text-[18px] font-medium">{open.name}</h3>
-          <p className="mb-3 text-[12px]" style={{ color: "var(--color-fg-tertiary)" }}>
-            {open.category} · five rooms of sound
-          </p>
-          <button
-            type="button"
-            className="glass-ornament mb-3 w-full"
-            style={{ height: 40, borderRadius: 14, border: 0, color: "var(--color-fg)" }}
-            onClick={() => {
-              if (!purchased.includes(open.id) && open.premium && marketLocked) {
-                setSurface("upgrade");
-                return;
-              }
-              setWallpaper(open.id);
-              setExploded(null);
-            }}
-          >
-            Live in this room
-          </button>
-          <div className="space-y-1.5">
-            {open.tracks.map((t, i) => (
-              <button
-                key={t.id}
-                type="button"
-                className="glass-thin flex w-full items-center gap-3 px-2 py-2 text-left"
-                style={{ borderRadius: 14, border: 0, color: "var(--color-fg)" }}
-                onClick={() => {
-                  if (!purchased.includes(open.id) && open.premium && marketLocked) {
-                    setSurface("upgrade");
-                    return;
-                  }
-                  setWallpaper(open.id);
-                  setTrackIndex(i);
-                  setMusicOpen(true);
-                  setPlaying(true);
-                }}
-              >
-                <img src={open.src} alt="" className="h-10 w-10 rounded-[10px] object-cover" />
-                <div className="min-w-0 flex-1">
-                  <div className="truncate text-[13px]">{t.title}</div>
-                  <div className="text-[11px]" style={{ color: "var(--color-fg-tertiary)" }}>
-                    {t.artist}
-                  </div>
-                </div>
-                <Play size={14} />
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="quiet-scroll min-h-0 flex-1">
-          <div className="grid grid-cols-2 gap-2">
-            {list.map((w) => {
-              const owned = purchased.includes(w.id);
-              const locked = w.premium && !owned && marketLocked && tab === 1;
-              const live = wallpaperId === w.id;
-              return (
-                <button
-                  key={w.id}
-                  type="button"
-                  className={`theme-tile${live ? " live" : ""}`}
-                  onClick={() => {
-                    if (locked) {
-                      setSurface("upgrade");
-                      return;
-                    }
-                    if (tab === 1 && w.premium && !owned) purchase(w.id);
-                    if (owned || !w.premium || !marketLocked) setWallpaper(w.id);
-                  }}
-                  onDoubleClick={() => {
-                    if (locked) return;
-                    setExploded(w.id);
-                  }}
-                >
-                  <img src={w.src} alt="" />
-                  <div className="theme-tile-meta">
-                    <div className="text-[12px] font-medium">{w.name}</div>
-                    <div className="text-[10px] uppercase tracking-widest" style={{ color: "var(--color-fg-tertiary)" }}>
-                      {w.category}
-                    </div>
-                  </div>
-                  {live ? (
-                    <span className="theme-live">
-                      <Check size={12} />
-                    </span>
-                  ) : null}
-                  {locked ? (
-                    <span className="theme-lock">
-                      <Lock size={12} />
-                    </span>
-                  ) : null}
-                  <span
-                    className="theme-listen"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (locked) {
-                        setSurface("upgrade");
-                        return;
-                      }
-                      setExploded(w.id);
-                    }}
-                  >
-                    <Play size={11} />
-                  </span>
+      {marketLocked ? (
+        <button type="button" className="gate" onClick={() => setSurface("upgrade")}>
+          <Lock size={14} />
+          <span>Store needs a paid plan. Wallpapers you own stay in Themes.</span>
+        </button>
+      ) : open ? (
+        <PreviewStage
+          title={open.name}
+          kicker={open.premium ? open.price ?? "Live" : open.category}
+          src={open.src}
+          video={open.video}
+          onClose={() => setExploded(null)}
+          actions={[
+            {
+              id: "set",
+              label: wallpaperId === open.id ? "Current" : "Set wallpaper",
+              primary: true,
+              onClick: () => {
+                if (open.premium && !purchased.includes(open.id)) purchase(open.id);
+                setWallpaper(open.id);
+                setExploded(null);
+              },
+            },
+            ...(open.tracks.length
+              ? [{ id: "listen", label: "Listen", onClick: () => listen(open) }]
+              : []),
+          ]}
+          related={list
+            .filter((w) => w.id !== open.id)
+            .slice(0, 8)
+            .map((w) => ({ id: w.id, src: w.src, video: w.video, title: w.name }))}
+          onRelated={setExploded}
+        >
+          {open.tracks.length ? (
+            <div className="f1-tracks">
+              {open.tracks.map((t, i) => (
+                <button key={t.id} type="button" className="f1-track" onClick={() => listen(open, i)}>
+                  {t.title}
                 </button>
-              );
-            })}
-          </div>
-        </div>
+              ))}
+            </div>
+          ) : null}
+        </PreviewStage>
+      ) : tab === 1 ? (
+        <StoreShelves
+          list={list}
+          wallpaperId={wallpaperId}
+          onOpen={(id) => {
+            const w = WALLPAPERS.find((x) => x.id === id);
+            if (w?.premium && !purchased.includes(w.id)) purchase(w.id);
+            setExploded(id);
+          }}
+        />
+      ) : (
+        <YearsGallery
+          list={list}
+          wallpaperId={wallpaperId}
+          onPick={(w) => {
+            setWallpaper(w.id);
+            setExploded(w.id);
+          }}
+        />
       )}
     </div>
   );
 }
 
-const dotTab: CSSProperties = {
-  height: 30,
-  padding: "0 14px",
-  borderRadius: 999,
-  border: 0,
-  color: "var(--color-fg)",
-  fontSize: 12,
-};
+function YearsGallery({
+  list,
+  wallpaperId,
+  onPick,
+}: {
+  list: Wallpaper[];
+  wallpaperId: string;
+  onPick: (w: Wallpaper) => void;
+}) {
+  const groups = THEME_YEARS.map((year) => [year, list.filter((w) => w.category === year)] as const).filter(
+    ([, items]) => items.length,
+  );
+  return (
+    <div className="mem-scroll">
+      {groups.map(([year, items]) => (
+        <section key={year} className="years-block">
+          <h2 className="years-label">{year}</h2>
+          <div className="years-grid">
+            {items.map((w, i) => {
+              const live = wallpaperId === w.id;
+              return (
+                <button
+                  key={w.id}
+                  type="button"
+                  className={`years-tile${i % 5 === 0 ? " wide" : ""}${live ? " live" : ""}`}
+                  onClick={() => onPick(w)}
+                >
+                  {w.video ? (
+                    <video src={w.video} poster={w.src} muted loop playsInline autoPlay />
+                  ) : (
+                    <img src={w.src} alt="" />
+                  )}
+                  <span className="theme-tile-name">{w.name}</span>
+                  {live ? (
+                    <span className="theme-live">
+                      <Check size={11} />
+                    </span>
+                  ) : null}
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
 
-function dot(on: boolean): CSSProperties {
-  return {
-    width: on ? 14 : 6,
-    height: 6,
-    borderRadius: 999,
-    background: on ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.3)",
-    display: "inline-block",
-    transition: "width 280ms cubic-bezier(0.22, 1, 0.36, 1)",
-  };
+function StoreShelves({
+  list,
+  wallpaperId,
+  onOpen,
+}: {
+  list: Wallpaper[];
+  wallpaperId: string;
+  onOpen: (id: string) => void;
+}) {
+  const hero = list[0];
+  const shelves = [
+    { title: "Live wallpapers", items: list },
+    { title: "Aurora", items: list.filter((w) => w.motion === "aurora") },
+    { title: "Tide", items: list.filter((w) => w.motion === "tide") },
+    { title: "Drift", items: list.filter((w) => w.motion === "drift") },
+  ].filter((s) => s.items.length);
+
+  if (!hero) return <p className="empty-line">Nothing in the store.</p>;
+
+  return (
+    <div className="mem-scroll tv-wrap">
+      <button type="button" className="tv-hero" onClick={() => onOpen(hero.id)}>
+        {hero.video ? (
+          <video src={hero.video} poster={hero.src} muted loop playsInline autoPlay />
+        ) : (
+          <img src={hero.src} alt="" />
+        )}
+        <span className="tv-hero-meta">
+          <span className="tv-kicker">Featured</span>
+          <span className="tv-title">{hero.name}</span>
+        </span>
+      </button>
+      {shelves.map((shelf) => (
+        <section key={shelf.title} className="tv-row">
+          <h3>{shelf.title}</h3>
+          <div className="tv-shelf">
+            {shelf.items.map((w) => (
+              <button
+                key={w.id}
+                type="button"
+                className={`tv-card${wallpaperId === w.id ? " live" : ""}`}
+                onClick={() => onOpen(w.id)}
+              >
+                {w.video ? (
+                  <video src={w.video} poster={w.src} muted loop playsInline autoPlay />
+                ) : (
+                  <img src={w.src} alt="" />
+                )}
+                <span>{w.name}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
 }

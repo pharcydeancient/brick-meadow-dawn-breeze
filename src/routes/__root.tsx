@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#12141a" },
       {
         name: "description",
-        content: "A spatial room for talking to several models at once.",
+        content: "A spatial canvas for talking to several models at once.",
       },
     ],
     links: [
@@ -24,7 +24,7 @@ export const Route = createRootRoute({
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@200;300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap",
       },
     ],
   }),

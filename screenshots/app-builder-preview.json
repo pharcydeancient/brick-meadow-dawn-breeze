@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aether",
+      "hasCanvas": false,
+      "bodyTextLen": 483,
+      "bodyTextHash": "cabdec80379b4ca7bab33ac98a2fab47164630db30956748ab6496daa86e196f",
+      "bodyTextPrefix": "Files Themes Imagine Smart History Gemini 3.6 Flash Lite Home is",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aether",
+      "hasCanvas": false,
+      "bodyTextLen": 448,
+      "bodyTextHash": "5413b5ef447299e2fa269e20ba252740f68af93de7f749b741ffeef5ec084485",
+      "bodyTextPrefix": "Gemini 3.6 Flash Lite Home is a card grid. Themes and Imagine ar",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

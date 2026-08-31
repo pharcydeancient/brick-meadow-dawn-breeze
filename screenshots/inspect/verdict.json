@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1. LEADING NAV LABELS (desktop 1280x800)",
+    "pass": true,
+    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=22.9x13.5 font=9px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=38.1x13.5 font=9px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=39.3x13.5 font=9px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=28.9x13.5 font=9px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=35.3x13.5 font=9px via=text btn=\"History\""
+  },
+  {
+    "id": "2a. HISTORY titles (sentence or Untitled, not model name)",
+    "pass": true,
+    "evidence": "rows=3 overlay=2 titles=[\"Keep the wallpaper continuous under the cards.\",\"How should consensus sit with the prompt?\",\"What is home, then?\"]"
+  },
+  {
+    "id": "2b. HISTORY relative dates (now/12m/2h/2d)",
+    "pass": true,
+    "evidence": "metas=[\"MiniMax\\n2 turns · 12m\",\"Command\\n2 turns · 46m\",\"Lite\\n2 turns · 2d\"] all=[\"Keep the wallpaper continuous under the cards. MiniMax 2 turns · 12m\",\"How should consensus sit with the prompt? Command 2 turns · 46m\",\"What is home, then? Lite 2 turns · 2d\"]"
+  },
+  {
+    "id": "2c. HISTORY model short-name chips",
+    "pass": true,
+    "evidence": "tags=[\"MiniMax\",\"Command\",\"Lite\"]"
+  },
+  {
+    "id": "2d. HISTORY zero single-letter avatars / no .list-kind",
+    "pass": true,
+    "evidence": "list-kind=0 avatars=[] html0=<span class=\"hist-title\">Keep the wallpaper continuous under the cards.</span><span class=\"hist-meta\"><span class=\"hist-tag\" style=\"color: rgb(255, 158, 107); border-color: rgba(255, 158, 107, 0.467);\">MiniMax</span><span>2 turns · 12m</span></span>"
+  },
+  {
+    "id": "3a. PROMPT Attach control visible word \"Attach\"",
+    "pass": true,
+    "evidence": "{\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":27.96875,\"h\":8,\"text\":\"Attach\",\"fontSize\":\"8px\"}"
+  },
+  {
+    "id": "3b. PROMPT Investigation tray full phrases",
+    "pass": true,
+    "evidence": "trayOpen=true probeText=\"Search\" aria=\"Investigation\" rows=[\"Web search\",\"Research\",\"Deep research\"]"
+  },
+  {
+    "id": "4a. IMAGINE tabs include word \"Library\"",
+    "pass": true,
+    "evidence": "tabs=[\"Discover\",\"Images\",\"Videos\",\"Library\"]"
+  },
+  {
+    "id": "4b. IMAGINE tiles show titles",
+    "pass": true,
+    "evidence": "[{\"title\":\"Night bloom\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":78,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Alpine hush\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":74,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Soft figure\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":65,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Aurora drift\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":72,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Low coast\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":63,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Warm still\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":64,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Dusk glass\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":67,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Portrait hold\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":78,\"h\":18,\"fontSize\":\"12px\"}]"
+  },
+  {
+    "id": "1. LEADING NAV LABELS (desktop CARD VIEW header)",
+    "pass": true,
+    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=22.9x13.5 font=9px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=38.1x13.5 font=9px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=39.3x13.5 font=9px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=28.9x13.5 font=9px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=35.3x13.5 font=9px via=text btn=\"History\""
+  },
+  {
+    "id": "5. CARD VIEW Files and History visible words",
+    "pass": false,
+    "evidence": "inCard=0 [{\"lab\":\"Files\",\"visOk\":true,\"word\":\"Files\",\"opacity\":1,\"display\":\"block\",\"w\":22.90625,\"h\":13.5,\"found\":true},{\"lab\":\"History\",\"visOk\":true,\"word\":\"History\",\"opacity\":1,\"display\":\"block\",\"w\":35.265625,\"h\":13.5,\"found\":true}]"
+  },
+  {
+    "id": "6. No product UI text \"Room\"/\"Rooms\"",
+    "pass": true,
+    "evidence": "homeHits=[] settingsHits=[] settingsSample=[\"Account\",\"Models\",\"Settings\"]"
+  },
+  {
+    "id": "1. LEADING NAV LABELS (mobile 390x844)",
+    "pass": true,
+    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=18.8x12.0 font=8px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=33.0x12.0 font=8px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=35.1x12.0 font=8px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=24.8x12.0 font=8px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=30.1x12.0 font=8px via=text btn=\"History\""
+  },
+  {
+    "id": "2e. HISTORY overlay also works on mobile (rows present)",
+    "pass": true,
+    "evidence": "rows=3 titles=[\"Keep the wallpaper continuous under the cards.\",\"How should consensus sit with the prompt?\",\"What is home, then?\"]"
+  },
+  {
+    "id": "3c. PROMPT Attach visible on mobile",
+    "pass": true,
+    "evidence": "{\"text\":\"Attach\",\"opacity\":\"1\",\"display\":\"block\",\"w\":27.96875,\"h\":8}"
+  },
+  {
+    "id": "3d. PROMPT Investigation tray on mobile",
+    "pass": true,
+    "evidence": "tray=1 rows=[\"Web search\",\"Research\",\"Deep research\"]"
+  },
+  {
+    "id": "4c. IMAGINE Library tab on mobile",
+    "pass": true,
+    "evidence": "tabs=[\"Discover\",\"Images\",\"Videos\",\"Library\"]"
+  }
+]

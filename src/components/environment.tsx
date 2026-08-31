@@ -6,10 +6,8 @@ import type { Wallpaper } from "@/lib/types";
 export function Environment() {
   const wallpaperId = useAether((s) => s.wallpaperId);
   const surface = useAether((s) => s.surface);
-  const sendFlash = useAether((s) => s.sendFlash);
-  const blurOnSend = useAether((s) => s.blurOnSend);
+  const historyOpen = useAether((s) => s.historyOpen);
   const paper = WALLPAPERS.find((w) => w.id === wallpaperId) ?? WALLPAPERS[0];
-  const dim = surface !== "home" && surface !== "card";
 
   const [front, setFront] = useState<Wallpaper>(paper);
   const [back, setBack] = useState<Wallpaper | null>(null);
@@ -22,21 +20,54 @@ export function Environment() {
     return () => window.clearTimeout(t);
   }, [paper, front]);
 
+  const veil =
+    surface === "card"
+      ? "untint"
+      : surface === "discover" ||
+          surface === "themes" ||
+          surface === "upgrade" ||
+          surface === "smart" ||
+          surface === "files" ||
+          historyOpen
+        ? "work"
+        : "home";
+
   return (
     <div className="env-root" aria-hidden>
       {back ? (
         <div className="env-layer leaving" key={`b-${back.id}`}>
-          <img src={back.src} alt="" className={`env-photo motion-${back.motion}`} />
+          <Layer paper={back} />
         </div>
       ) : null}
       <div className="env-layer entering" key={`f-${front.id}`}>
-        <img src={front.src} alt="" className={`env-photo motion-${front.motion}`} />
+        <Layer paper={front} />
       </div>
-      {front.motion === "aurora" ? <div className="env-aurora" /> : null}
-      <div className="env-veil" />
+      <div className={`env-veil veil-${veil}`} />
       <div className="env-grain" />
-      <div className={`env-dim${dim ? " on" : ""}`} />
-      <div className={`env-send-blur${sendFlash && blurOnSend ? " on" : ""}`} />
     </div>
+  );
+}
+
+function Layer({ paper }: { paper: Wallpaper }) {
+  return (
+    <>
+      {paper.video ? (
+        <video
+          className={`env-photo live-${paper.motion}`}
+          src={paper.video}
+          poster={paper.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      ) : (
+        <img src={paper.src} alt="" className={`env-photo live-${paper.motion}`} />
+      )}
+      <div className={`live-fx live-${paper.motion}`} />
+      {paper.motion === "aurora" ? <div className="env-aurora" /> : null}
+      {paper.motion === "tide" ? <div className="live-caustic" /> : null}
+      {paper.motion === "drift" ? <div className="live-mist" /> : null}
+    </>
   );
 }

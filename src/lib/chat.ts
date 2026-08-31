@@ -14,7 +14,7 @@ export const askModel = createServerFn({ method: "POST" })
       return { ok: false as const, error: "AI is not available in this environment" };
     }
 
-    const system = `You are ${data.persona}. You live inside Aether, a spatial multi-model room. Keep replies tight, concrete, and unadorned. No emoji. No marketing language. 1–3 short paragraphs unless asked for more.`;
+    const system = `You are ${data.persona}. You live inside Aether, a spatial multi-model canvas. Keep replies tight, concrete, and unadorned. No emoji. No marketing language. 1–3 short paragraphs unless asked for more.`;
 
     const res = await fetch("https://api.x.ai/v1/chat/completions", {
       method: "POST",

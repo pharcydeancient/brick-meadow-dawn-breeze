@@ -26,37 +26,18 @@ export function ContextMenu({
 
   return (
     <div
-      className="glass-ornament"
-      style={{
-        position: "fixed",
-        left: x,
-        top: y,
-        zIndex: 80,
-        minWidth: 168,
-        padding: 6,
-        borderRadius: 16,
-      }}
+      className="ctx-menu"
+      style={{ left: x, top: y }}
       onPointerDown={(e) => e.stopPropagation()}
     >
       {items.map((it) => (
         <button
           key={it.id}
           type="button"
-          className="gaze"
+          className={it.danger ? "danger" : ""}
           onClick={() => {
             it.onSelect();
             onClose();
-          }}
-          style={{
-            display: "block",
-            width: "100%",
-            textAlign: "left",
-            border: 0,
-            background: "transparent",
-            color: it.danger ? "var(--color-danger)" : "var(--color-fg)",
-            fontSize: 13,
-            padding: "10px 12px",
-            borderRadius: 12,
           }}
         >
           {it.label}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Aether OG</title>
+  <style>
+    @font-face {
+      font-family: "Sora";
+      font-weight: 400;
+      src: url("fonts/Sora-400.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Sora";
+      font-weight: 600;
+      src: url("fonts/Sora-600.ttf") format("truetype");
+    }
+    @font-face {
+      font-family: "Sora";
+      font-weight: 700;
+      src: url("fonts/Sora-700.ttf") format("truetype");
+    }
+    html, body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0c0e12;
+    }
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+    .veil {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(90% 70% at 50% 42%, rgba(8, 10, 16, 0.18), transparent 62%),
+        radial-gradient(120% 80% at 50% 100%, rgba(8, 10, 16, 0.42), transparent 58%),
+        radial-gradient(80% 50% at 50% 0%, rgba(8, 10, 16, 0.18), transparent 52%);
+    }
+    .glow {
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      width: 760px;
+      height: 280px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(closest-side, rgba(10, 132, 255, 0.28), transparent 72%);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 43%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 48px 80px 40px;
+      border-radius: 34px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.22) 0%,
+          rgba(255, 255, 255, 0.08) 42%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+      border: 0.5px solid rgba(255, 255, 255, 0.42);
+      box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.42),
+        0 12px 28px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(48px) saturate(180%);
+      -webkit-backdrop-filter: blur(48px) saturate(180%);
+    }
+    .lockup::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.38) 0%, transparent 18%);
+      mix-blend-mode: overlay;
+    }
+    h1 {
+      position: relative;
+      margin: 0;
+      font-family: "Sora", ui-sans-serif, sans-serif;
+      font-weight: 600;
+      font-size: 148px;
+      line-height: 1;
+      letter-spacing: 0.045em;
+      color: #ffffff;
+      text-shadow: 0 10px 36px rgba(0, 0, 0, 0.35);
+    }
+    p {
+      position: relative;
+      margin: 16px 0 0;
+      font-family: "Sora", ui-sans-serif, sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      color: rgba(243, 244, 247, 0.78);
+    }
+    .orbs {
+      position: absolute;
+      left: 50%;
+      bottom: 72px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 26px;
+    }
+    .orb {
+      width: 68px;
+      height: 68px;
+      border-radius: 999px;
+      box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.4),
+        inset 0 -10px 16px rgba(0, 0, 0, 0.28),
+        inset 0 8px 14px rgba(255, 255, 255, 0.35);
+    }
+    .orb.silver {
+      background: radial-gradient(circle at 32% 28%, rgba(255,255,255,0.95) 0%, rgba(190,214,255,0.55) 26%, rgba(90,130,190,0.5) 58%, rgba(18,28,48,0.92) 100%);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4), 0 0 28px rgba(100,170,255,0.28), inset 0 -10px 16px rgba(0,0,0,0.28), inset 0 8px 14px rgba(255,255,255,0.35);
+    }
+    .orb.green {
+      background: radial-gradient(circle at 32% 28%, #e8ffe8 0%, #30d158 32%, #0d5c28 78%, #04140a 100%);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4), 0 0 22px rgba(48,209,88,0.32), inset 0 -10px 16px rgba(0,0,0,0.28), inset 0 8px 14px rgba(255,255,255,0.35);
+    }
+    .orb.blue {
+      background: radial-gradient(circle at 32% 28%, #e4f1ff 0%, #0a84ff 34%, #053a80 78%, #041018 100%);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4), 0 0 22px rgba(10,132,255,0.4), inset 0 -10px 16px rgba(0,0,0,0.28), inset 0 8px 14px rgba(255,255,255,0.35);
+    }
+    .orb.amber {
+      background: radial-gradient(circle at 32% 28%, #fff3d6 0%, #ff9f0a 34%, #8a4a04 78%, #1a0c02 100%);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.4), 0 0 22px rgba(255,159,10,0.32), inset 0 -10px 16px rgba(0,0,0,0.28), inset 0 8px 14px rgba(255,255,255,0.35);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="bg" src="og-bg-night.jpg" alt="" />
+    <div class="veil"></div>
+    <div class="glow"></div>
+    <div class="lockup">
+      <h1>Aether</h1>
+      <p>Talk to several models at once</p>
+    </div>
+    <div class="orbs">
+      <span class="orb silver"></span>
+      <span class="orb green"></span>
+      <span class="orb blue"></span>
+      <span class="orb amber"></span>
+    </div>
+  </div>
+</body>
+</html>
