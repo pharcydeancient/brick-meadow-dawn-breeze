@@ -1,0 +1,87 @@
+{
+  "themesClick": true,
+  "themes": {
+    "title": "Aether",
+    "text": "Wallpapers\nSelector\nStore\nInterior\nObservatory\nCabin\nCabin Space\nSanctuary\nDeck\nDune Hall\nHorizons\nOcean\nGarden\nRainfall\nTwilight\nTwin Suns\nNight\nStar Bridge\nNeon City\nTransit\nBlade\nAlley\nAlley Night\nAlley Rain",
+    "floats": []
+  },
+  "storeClick": true,
+  "store": {
+    "title": "Aether",
+    "text": "Live wallpapers\nSelector\nStore\nFEATURED\nAurora Drift\nLive wallpapers\nAurora Drift\nNebula Bloom\nLow Tide\nEmber Fall\nAurora\nAurora Drift\nNebula Bloom\nTide\nLow Tide\nDrift\nEmber Fall",
+    "floats": []
+  },
+  "histClick": true,
+  "history": {
+    "title": "Aether",
+    "text": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nHistory\nKeep the wallpaper continuous under the cards.\nMiniMax\n2 turns · 12m\nHow should consensus sit with the prompt?\nComma",
+    "floats": [
+      {
+        "cls": "float-window sheet-list",
+        "r": {
+          "x": 480,
+          "y": 194,
+          "w": 320,
+          "h": 349
+        },
+        "t": "History Keep the wallpaper continuous under the cards. MiniMax 2 turns · 12m How should consensus sit with the prompt? Command 2 turns · 46m What is home, then?"
+      }
+    ]
+  },
+  "historyAfter": {
+    "title": "Aether",
+    "text": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nAttach\n↑\nSearch",
+    "floats": []
+  },
+  "filesClick": true,
+  "files": {
+    "title": "Aether",
+    "text": "Files\nImagine\nAlpine hush\nLow coast\nDusk glass\nAurora drift\nValley mist\nGlass still\nNight bloom\nWarm still\nField light\nEmber fall",
+    "floats": []
+  },
+  "imagineClick": true,
+  "imagine": {
+    "title": "Aether",
+    "text": "Discover\nImages\nVideos\nLibrary\nNight bloom\nAlpine hush\nSoft figure\nAurora drift\nLow coast\nWarm still\nDusk glass\nPortrait hold\nField light\nGlass still\nQuiet hall\nEmber fall\nValley mist\nClose study\nOpen hall\nLow tide\nTall dusk\nHeld face\nNebula bloom\n↑",
+    "floats": []
+  },
+  "smartClick": true,
+  "smart": {
+    "title": "Aether",
+    "text": "Smart Cards\nSmart Boards\nSmart Canvas\nSmart Genie",
+    "floats": []
+  },
+  "smartCards": {
+    "title": "Aether",
+    "text": "Cards\nBoards\nCanvas\nGenie\nMemory\nAlpine hush\nMemory\nLow coast\nMemory\nValley mist\nMemory\nArtifact\nDusk glass\nArtifact\nGlass still\nArtifact\nTask\ntask\nBoard the week\nTask\nNote\nnote\nCards vs boards\nNote\nMemory\nTask\nArtifact\nNote\nPop out",
+    "floats": []
+  },
+  "card": {
+    "title": "Aether",
+    "text": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nAttach\n↑\nSearch",
+    "floats": []
+  },
+  "cardHistCount": 0,
+  "cardHist": {
+    "title": "Aether",
+    "text": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nAttach\n↑\nSearch",
+    "floats": []
+  },
+  "promptHidden": {
+    "seatOp": "0",
+    "seatPe": "none",
+    "ta": false
+  },
+  "prompt": {
+    "text": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash",
+    "cons": {
+      "cls": "consensus-card",
+      "y": 623.40625,
+      "bottom": 710,
+      "t": "Gemini 3.6 Flash Lite\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate."
+    },
+    "bar": null,
+    "above": null
+  },
+  "invest": true
+}

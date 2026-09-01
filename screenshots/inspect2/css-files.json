@@ -1,0 +1,31 @@
+{
+  "filesClick": {
+    "ok": true,
+    "cls": "app-icon",
+    "x": 74,
+    "y": 269,
+    "w": 75.328125,
+    "h": 96
+  },
+  "filesInfo": {
+    "body": "Files\nImagine\nAlpine hush\nLow coast\nDusk glass\nAurora drift\nValley mist\nGlass still\nNight bloom\nWarm still\nField light\nEmber fall",
+    "close": [
+      {
+        "text": "Close",
+        "aria": "Close",
+        "cls": "close-affordance",
+        "w": 14,
+        "h": 14,
+        "x": 498.3125,
+        "y": 0,
+        "font": "16px",
+        "line": "24px",
+        "bg": "rgba(255, 255, 255, 0.55)",
+        "radius": "999px",
+        "color": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "yearsDays": false,
+    "room": false
+  }
+}

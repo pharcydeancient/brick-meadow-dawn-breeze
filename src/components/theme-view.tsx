@@ -56,10 +56,26 @@ export function ThemeView() {
     <div className="gallery-wrap" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
       <h2 className="surface-label">{tab === 0 ? "Wallpapers" : "Live wallpapers"}</h2>
       <div className="chip-row">
-        <button type="button" className={`chip${tab === 0 ? " on" : ""}` } onClick={() => setTab(0)}>
+        <button
+          type="button"
+          className={`chip${tab === 0 ? " on" : ""}`}
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            setTab(0);
+          }}
+        >
           Selector
         </button>
-        <button type="button" className={`chip${tab === 1 ? " on" : ""}`} onClick={() => setTab(1)}>
+        <button
+          type="button"
+          className={`chip${tab === 1 ? " on" : ""}`}
+          onPointerDown={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            setTab(1);
+          }}
+        >
           Store
         </button>
       </div>

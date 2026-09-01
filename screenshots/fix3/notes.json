@@ -1,0 +1,34 @@
+{
+  "orbStyle": {
+    "w": 72,
+    "h": 72,
+    "opacity": "1",
+    "z": "16",
+    "display": "block",
+    "visible": true,
+    "label": "Open composer",
+    "away": "prompt-orb"
+  },
+  "seat": {
+    "opacity": "1",
+    "transform": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "className": "prompt-seat open"
+  },
+  "fonts": {
+    "body": "Manrope, ui-sans-serif, system-ui, sans-serif",
+    "card": "Manrope, ui-sans-serif, system-ui, sans-serif"
+  },
+  "header": "Back\nGemini 3.6 Flash Lite",
+  "hasFiles": false,
+  "hasHistory": false,
+  "hasBack": 1,
+  "titleFont": {
+    "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+    "weight": "600",
+    "size": "17px",
+    "color": "rgb(127, 216, 196)",
+    "text": "Gemini 3.6 Flash Lite"
+  },
+  "rows": "1\n2\n3",
+  "sheetClose": 1
+}

@@ -1,0 +1,132 @@
+{
+  "vis": {
+    "label": "files",
+    "vw": 1280,
+    "vh": 800,
+    "visCount": 12,
+    "vis": [
+      {
+        "tag": "BUTTON",
+        "text": "Dismiss settings",
+        "aria": "Dismiss settings",
+        "cls": "alert-dim",
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 800
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Account",
+        "aria": null,
+        "cls": "alert-tab",
+        "x": 74,
+        "y": 229,
+        "w": 81,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Models",
+        "aria": null,
+        "cls": "alert-tab",
+        "x": 155,
+        "y": 229,
+        "w": 81,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Settings",
+        "aria": null,
+        "cls": "alert-tab on",
+        "x": 235,
+        "y": 229,
+        "w": 81,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Tuck after send On",
+        "aria": null,
+        "cls": "alert-row",
+        "x": 62,
+        "y": 263,
+        "w": 266,
+        "h": 36
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Tuck when idle On",
+        "aria": null,
+        "cls": "alert-row",
+        "x": 62,
+        "y": 299,
+        "w": 266,
+        "h": 36
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Summon prompt",
+        "aria": "Summon prompt",
+        "cls": "prompt-orb",
+        "x": 608,
+        "y": 726,
+        "w": 64,
+        "h": 64
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Settings",
+        "aria": "Settings",
+        "cls": "settings-orb glass-ornament gaze-scale",
+        "x": 1218,
+        "y": 746,
+        "w": 44,
+        "h": 44
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Attach",
+        "aria": "Attach",
+        "cls": "prompt-plus",
+        "x": 439,
+        "y": 732,
+        "w": 40,
+        "h": 34
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "aria": null,
+        "cls": "",
+        "x": 487,
+        "y": 739,
+        "w": 259,
+        "h": 21
+      },
+      {
+        "tag": "BUTTON",
+        "text": "↑",
+        "aria": "Send",
+        "cls": "send-btn",
+        "x": 754,
+        "y": 729,
+        "w": 40,
+        "h": 40
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Search",
+        "aria": "Investigation",
+        "cls": "probe",
+        "x": 802,
+        "y": 733,
+        "w": 41,
+        "h": 32
+      }
+    ],
+    "bodyText": "Mistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nAccount\nModels\nSettings\nTuck after send\nOn\nTuck when idle\nOn\nAttach\n↑\nSearch"
+  },
+  "xs": []
+}

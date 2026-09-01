@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { MODELS } from "@/lib/models";
 import { useAether } from "@/lib/store";
-import { WinClose } from "./win-close";
 
 function useVoices() {
   const enabled = useAether((s) => s.enabledModelIds);
@@ -17,12 +16,9 @@ function useVoices() {
 }
 
 export function ConsensusPreview() {
-  const promptOpen = useAether((s) => s.promptOpen);
   const setOpen = useAether((s) => s.setConsensusOpen);
   const voices = useVoices();
   const lead = voices[0];
-
-  if (!promptOpen) return null;
 
   return (
     <button
@@ -69,7 +65,6 @@ export function ConsensusMap() {
       >
         <div className="consensus-head">
           <p>Consensus</p>
-          <WinClose onClick={() => setOpen(false)} />
         </div>
         {voices.map((s) => (
           <div key={s.id} className="consensus-node" style={{ ["--node-accent" as string]: s.accent }}>

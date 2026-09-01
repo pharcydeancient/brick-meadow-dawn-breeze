@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { WinClose } from "./win-close";
 
 export function OverlaySheet({
   open,
@@ -50,6 +49,7 @@ export function OverlaySheet({
         className={`float-window sheet-${size}`}
         onPointerDown={(e) => {
           const t = e.target as HTMLElement;
+          if (t.closest("button, a, input, textarea")) return;
           const head = t.closest("[data-sheet-handle]");
           const rect = e.currentTarget.getBoundingClientRect();
           const fromTop = e.clientY - rect.top < 56;
@@ -72,8 +72,17 @@ export function OverlaySheet({
         }}
       >
         <div className="float-head" data-sheet-handle>
-          <WinClose corner onClick={onClose} />
           <span className="float-title">{title || "\u00a0"}</span>
+          <button
+            type="button"
+            className="sheet-close"
+            aria-label="Close"
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+          />
         </div>
         <div className="sheet-body">{children}</div>
       </div>

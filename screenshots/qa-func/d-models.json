@@ -1,0 +1,75 @@
+{
+  "native": 0,
+  "align": true,
+  "chips": [
+    {
+      "name": "Lite",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Small",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Command",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "MiniMax",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Ling",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Nemo",
+      "on": true,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Gemma",
+      "on": false,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "edge": true,
+      "light": true
+    },
+    {
+      "name": "Qwen",
+      "on": false,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "edge": true,
+      "light": true
+    }
+  ],
+  "bands": [
+    {
+      "title": "Free",
+      "locked": false,
+      "lockBtn": false
+    },
+    {
+      "title": "Pro",
+      "locked": false,
+      "lockBtn": false
+    }
+  ],
+  "cat": "General"
+}

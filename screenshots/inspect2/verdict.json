@@ -1,0 +1,46 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "1. HOME",
+      "result": "PASS",
+      "evidence": "d-01-home.png / m-01-home.png: no Files/Themes/Imagine/Smart/History rail (only prompt+settings orbs). Forest wallpaper runs continuously under the 6 phone-aspect cards (ratio 2.05, count=6). model-card bg rgba(255,255,255,0.05) no backdrop-blur; pixel sample card interior var=1725 (scene detail shows through) — clear glass, not milky. No close control on home."
+    },
+    {
+      "id": "2. SETTINGS pane",
+      "result": "PASS",
+      "evidence": "d-02-settings-account.png / crop-settings-pane.png / m-02-settings.png: tabs Account / Models / Settings. App icons Files, History, Themes, Imagine, Smart, Store. cancelButtons=0. No ×. .alert-card bg=rgba(28,28,32,0.97) isolation=isolate; card titles sit to the right (x~513) and do not intersect the pane (x=61,w=268); titles cannot be read through the plate."
+    },
+    {
+      "id": "3. MODELS chips + category overlay",
+      "result": "PASS",
+      "evidence": "d-03-settings-models.png / d-models-2x.png: chips are dark glass (sampled body rgb~24,24,26) with a circular light-ring+light-core beside the name and a 2px chip-edge. Not filled teal/orange/blue pills. d-05-category-open.png / crop-cat-menu.png / css-cat.json: .cat-overlay position=fixed z=40; paneH 400→400 grew=0; options General/Image/Video/Audio/Coding overlay the grid (native <select> count=0). d-06 shows Image models; d-07 returns to General. Chip toggle d-04 dims Lite."
+    },
+    {
+      "id": "4. HISTORY overlay",
+      "result": "PASS",
+      "evidence": "clean-history.png / crop-history-sheet.png / d-16-card-history.png: no giant × (close is 14×14 .close-affordance circle at y=0). sheet bg=rgba(16,18,24,0.98). scrim rgba(6,8,12,0.72) + blur(18px) — background darkened/blurred. Rows: title (first user line) + short-name chip (MiniMax/Command/Lite) + '2 turns · 12m/46m/2d'. avatars=[]. clean-history-dismiss.png: scrim click returns to home."
+    },
+    {
+      "id": "5. FILES / IMAGINE / SMART / CARD VIEW close + destinations",
+      "result": "PASS",
+      "evidence": "Crops px-files-close/px-smart-close/crop-files-x/crop-imagine-x/crop-smart-x: ~14px circular traffic-light (pale red) at the overlay corner — not a 36px × covering content. d-15-card-view.png / m-09-card.png: Files + History words in card header; small circle close. Clean clicks: Files, History, Imagine, Smart, Themes, Store, Smart Cards, Image category, model chip, prompt orb all opened their destinations (clean-files/imagine/smart/themes/store/history + d-15/d-16)."
+    },
+    {
+      "id": "6. SMART hub",
+      "result": "PASS",
+      "evidence": "d-13-smart-hub.png / clean-smart.png: first screen is four full-width text buttons, no icons, html='Smart Cards'|'Smart Boards'|'Smart Canvas'|'Smart Genie' (w=277 h=48). clean-smart-cards.png opens the Cards surface."
+    },
+    {
+      "id": "7. PROMPT",
+      "result": "PASS",
+      "evidence": "Home: .prompt-seat opacity=0 pointer-events=none; only orbs visible (d-01). After prompt-orb: d-17-prompt.png / px-prompt-stack.png / clean-prompt.png — consensus-card (y=623–710) sits ABOVE the prompt bar (~y=720). Attach present. d-18-investigate.png / clean-invest.png / m-11-investigate.png: tray rows are the full phrases 'Web search', 'Research', 'Deep research'."
+    },
+    {
+      "id": "8. No Room/Rooms copy; no Years/Days grouping",
+      "result": "PASS",
+      "evidence": "Live DOM bodyHasRoom=false, htmlRoom=[], placeholder='Ask anything…' (not Room). Settings/History/Files/Imagine/Smart/Themes/Store innerText have no Room/Rooms. Files+Imagine galleries are flat names (Alpine hush, Night bloom, …) with no Years/Days headings (yearsDays=false)."
+    }
+  ],
+  "blockers": []
+}

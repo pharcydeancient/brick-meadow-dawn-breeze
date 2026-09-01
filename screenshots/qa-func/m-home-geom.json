@@ -1,0 +1,117 @@
+{
+  "vp": {
+    "w": 390,
+    "h": 844
+  },
+  "stage": {
+    "x": 10,
+    "y": 10,
+    "w": 705,
+    "h": 726,
+    "b": 736,
+    "t": 10,
+    "l": 10,
+    "right": 715,
+    "op": 1,
+    "vis": "visible",
+    "disp": "flex",
+    "pe": "auto"
+  },
+  "orb": {
+    "x": 326.5,
+    "y": 756,
+    "w": 72,
+    "h": 72,
+    "b": 828,
+    "t": 756,
+    "l": 326.5,
+    "right": 398.5,
+    "op": 1,
+    "vis": "visible",
+    "disp": "block",
+    "pe": "auto",
+    "aria": "Open composer",
+    "cls": "prompt-orb"
+  },
+  "settings": {
+    "x": 20,
+    "y": 756,
+    "w": 44,
+    "h": 44,
+    "b": 800,
+    "t": 756,
+    "l": 20,
+    "right": 64,
+    "op": 1,
+    "vis": "visible",
+    "disp": "grid",
+    "pe": "auto",
+    "aria": "Settings"
+  },
+  "cards": [
+    {
+      "name": "Gemini 3.6 Flash Lite",
+      "x": 33,
+      "y": 33,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(127, 216, 196)"
+    },
+    {
+      "name": "Mistral Small 3.2",
+      "x": 33,
+      "y": 373,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(255, 176, 102)"
+    },
+    {
+      "name": "Command R",
+      "x": 255.19354248046875,
+      "y": 33,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(242, 193, 78)"
+    },
+    {
+      "name": "MiniMax M3",
+      "x": 255.19354248046875,
+      "y": 373,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(255, 158, 107)"
+    },
+    {
+      "name": "Ling 2.6 Flash",
+      "x": 477.3870849609375,
+      "y": 33,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(158, 203, 255)"
+    },
+    {
+      "name": "Mistral Nemo",
+      "x": 477.3870849609375,
+      "y": 373,
+      "w": 214.1875,
+      "h": 332,
+      "ratio": 1.5500437700612781,
+      "font": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "color": "rgb(103, 232, 249)"
+    }
+  ],
+  "env": {
+    "src": "/themes/free/observatory.jpg"
+  },
+  "nav": false
+}

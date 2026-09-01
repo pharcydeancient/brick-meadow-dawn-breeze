@@ -17,6 +17,7 @@ import type {
   Surface,
   Tier,
   Investigation,
+  DiscoverItem,
 } from "./types";
 import type { CardRows } from "./card-layout";
 
@@ -126,6 +127,8 @@ interface AetherState {
 
   discoverQuery: string;
   discoverFilter: DiscoverFilter;
+  imagineMade: DiscoverItem[];
+  imagineLikedIds: string[];
   historyQuery: string;
   filesQuery: string;
   filesFilter: "all" | GenFile["kind"];
@@ -183,6 +186,9 @@ interface AetherState {
   setTrackIndex: (n: number) => void;
   setDiscoverQuery: (q: string) => void;
   setDiscoverFilter: (f: AetherState["discoverFilter"]) => void;
+  addImagineMade: (item: DiscoverItem) => void;
+  toggleImagineLike: (id: string) => void;
+  removeImagineMade: (id: string) => void;
   setHistoryQuery: (q: string) => void;
   setFilesQuery: (q: string) => void;
   setFilesFilter: (f: AetherState["filesFilter"]) => void;
@@ -205,6 +211,7 @@ interface AetherState {
   setBlurOnSend: (v: boolean) => void;
   setConsensusOpen: (v: boolean) => void;
   setInvestigation: (v: Investigation) => void;
+  clearGenie: () => void;
   bumpStat: (k: "messages" | "images" | "minutes", n?: number) => void;
 }
 
@@ -256,13 +263,15 @@ export const useAether = create<AetherState>()(
 
       discoverQuery: "",
       discoverFilter: "all",
+      imagineMade: [],
+      imagineLikedIds: [],
       historyQuery: "",
       filesQuery: "",
       filesFilter: "all",
       filesGroup: "years",
       previewFileId: null,
 
-      smartPage: "cards",
+      smartPage: "hub",
       smartTabsAt: "top",
       smartCards: seedSmartCards(),
       smartOpenId: null,
@@ -363,7 +372,7 @@ export const useAether = create<AetherState>()(
         set({ gridSnap: v });
         if (v) set({ cardLayout: snapLayout(get().cardLayout, get().cardRows) });
       },
-      setCardRows: (n) => set({ cardRows: n }),
+      setCardRows: (n) => set({ cardRows: n, alignRequest: Date.now() }),
       setRearranging: (v) => set({ rearranging: v }),
       requestAlign: () => set({ alignRequest: Date.now() }),
       setCardLayout: (layout) => set({ cardLayout: layout }),
@@ -388,6 +397,20 @@ export const useAether = create<AetherState>()(
       setTrackIndex: (n) => set({ trackIndex: n }),
       setDiscoverQuery: (q) => set({ discoverQuery: q }),
       setDiscoverFilter: (f) => set({ discoverFilter: f }),
+      addImagineMade: (item) =>
+        set((s) => ({
+          imagineMade: [item, ...s.imagineMade.filter((x) => x.id !== item.id)],
+        })),
+      toggleImagineLike: (id) =>
+        set((s) => ({
+          imagineLikedIds: s.imagineLikedIds.includes(id)
+            ? s.imagineLikedIds.filter((x) => x !== id)
+            : [...s.imagineLikedIds, id],
+        })),
+      removeImagineMade: (id) =>
+        set((s) => ({
+          imagineMade: s.imagineMade.filter((x) => x.id !== id),
+        })),
       setHistoryQuery: (q) => set({ historyQuery: q }),
       setFilesQuery: (q) => set({ filesQuery: q }),
       setFilesFilter: (f) => set({ filesFilter: f }),
@@ -416,10 +439,15 @@ export const useAether = create<AetherState>()(
             y: 14 + (s.smartCards.length % 4) * 18,
             createdAt: Date.now(),
           };
-          return { smartCards: [next, ...s.smartCards], smartOpenId: id, smartPage: "cards" };
+          return {
+            smartCards: [next, ...s.smartCards],
+            smartOpenId: s.smartPage === "genie" ? s.smartOpenId : id,
+            smartPage: s.smartPage === "genie" ? "genie" : "cards",
+          };
         }),
       addGenieMessage: (msg) =>
         set((s) => ({ genieMessages: [...s.genieMessages, msg] })),
+      clearGenie: () => set({ genieMessages: [] }),
       moveSmartLane: (id, lane) =>
         set((s) => ({
           smartCards: s.smartCards.map((c) => (c.id === id ? { ...c, lane } : c)),
@@ -444,7 +472,7 @@ export const useAether = create<AetherState>()(
         set((s) => ({ stats: { ...s.stats, [k]: s.stats[k] + n } })),
     }),
     {
-      name: "collider-spatial-v10",
+      name: "collider-spatial-v12",
       partialize: (s) => ({
         tier: s.tier,
         enabledModelIds: s.enabledModelIds,
@@ -461,6 +489,9 @@ export const useAether = create<AetherState>()(
         smartCards: s.smartCards,
         smartPage: s.smartPage,
         smartTabsAt: s.smartTabsAt,
+        imagineMade: s.imagineMade,
+        imagineLikedIds: s.imagineLikedIds,
+        genieMessages: s.genieMessages,
       }),
     },
   ),

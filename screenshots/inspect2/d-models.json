@@ -1,0 +1,1600 @@
+{
+  "chipCount": 21,
+  "chips": [
+    {
+      "text": "Lite",
+      "cls": "model-chip on",
+      "x": 76,
+      "y": 368,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 22,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.723922 0.915882 0.872745)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "Small",
+      "cls": "model-chip on",
+      "x": 215,
+      "y": 368,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 31,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 1 0.829608 0.67)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "Command",
+      "cls": "model-chip on",
+      "x": 76,
+      "y": 414,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(242, 193, 78)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 60,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(242, 193, 78)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.971961 0.866275 0.618235)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(242, 193, 78)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "MiniMax",
+      "cls": "model-chip on",
+      "x": 215,
+      "y": 414,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 51,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 1 0.790784 0.680784)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "Ling",
+      "cls": "model-chip on",
+      "x": 76,
+      "y": 460,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(158, 203, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 25,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(158, 203, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.790784 0.887843 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(158, 203, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "Nemo",
+      "cls": "model-chip on",
+      "x": 215,
+      "y": 460,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "bgImg": "none",
+      "border": "0px none rgb(255, 255, 255)",
+      "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+      "color": "rgb(255, 255, 255)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(103, 232, 249)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 35,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 38,
+          "h": 38,
+          "bg": "rgb(103, 232, 249)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.672157 0.950392 0.987059)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 8,
+          "h": 8,
+          "bg": "rgb(103, 232, 249)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgb(255, 255, 255)"
+        }
+      ]
+    },
+    {
+      "text": "Gemma",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 506,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 45,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.723922 0.915882 0.872745)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Qwen",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 506,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 34,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.883529 0.810196 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Nano",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 552,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 31,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.918039 0.905098 0.879216)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Laguna",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 552,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(142, 232, 120)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 42,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(142, 232, 120)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.756275 0.950392 0.708824)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(142, 232, 120)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Flash",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 645,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 29,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.723922 0.915882 0.872745)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(127, 216, 196)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Mercury",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 645,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 48,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.883529 0.810196 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "MiMo",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 691,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 33,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 1 0.790784 0.680784)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "GLM",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 691,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(126, 226, 168)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 26,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(126, 226, 168)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.721765 0.937451 0.812353)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(126, 226, 168)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Luna",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 737,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 27,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.918039 0.905098 0.879216)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(217, 211, 199)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Plus",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 737,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 23,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.883529 0.810196 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(201, 167, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Grok",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 783,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(77, 202, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 28,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(77, 202, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.616078 0.885686 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(77, 202, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Grok 4.5",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 783,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 47,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 1 0.790784 0.680784)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(255, 158, 107)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Sonar",
+      "cls": "model-chip",
+      "x": 76,
+      "y": 829,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(107, 184, 255)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 33,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(107, 184, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 0.680784 0.846863 1)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(107, 184, 255)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Large",
+      "cls": "model-chip",
+      "x": 215,
+      "y": 829,
+      "w": 131,
+      "h": 38,
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "shadow": "rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "kids": [
+        {
+          "tag": "SPAN",
+          "cls": "chip-edge",
+          "w": 2,
+          "h": 22,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "2px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "chip-name",
+          "w": 33,
+          "h": 17,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-bloom",
+          "w": 13,
+          "h": 13,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-ring",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "1px solid color(srgb 1 0.829608 0.67)"
+        },
+        {
+          "tag": "SPAN",
+          "cls": "light-core",
+          "w": 4,
+          "h": 4,
+          "bg": "rgb(255, 176, 102)",
+          "bgImg": "none",
+          "radius": "50%",
+          "border": "0px solid rgba(255, 255, 255, 0.55)"
+        }
+      ]
+    },
+    {
+      "text": "Search",
+      "cls": "probe",
+      "x": 802,
+      "y": 733,
+      "w": 41,
+      "h": 32,
+      "bg": "rgba(255, 255, 255, 0.1)",
+      "bgImg": "none",
+      "border": "0px none rgba(255, 255, 255, 0.82)",
+      "shadow": "none",
+      "color": "rgba(255, 255, 255, 0.82)",
+      "kids": [
+        {
+          "tag": "svg",
+          "cls": "[object SVGAnimatedString]",
+          "w": 16,
+          "h": 16,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 9,
+          "h": 6,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 3,
+          "h": 1,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 2,
+          "h": 4,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 4,
+          "h": 6,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 1,
+          "h": 3,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "path",
+          "cls": "[object SVGAnimatedString]",
+          "w": 2,
+          "h": 4,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        },
+        {
+          "tag": "circle",
+          "cls": "[object SVGAnimatedString]",
+          "w": 3,
+          "h": 3,
+          "bg": "rgba(0, 0, 0, 0)",
+          "bgImg": "none",
+          "radius": "0px",
+          "border": "0px solid rgba(255, 255, 255, 0.82)"
+        }
+      ]
+    }
+  ]
+}

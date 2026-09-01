@@ -1,0 +1,26 @@
+{
+  "catClick": {
+    "ok": true,
+    "cls": "cat-row",
+    "text": "General"
+  },
+  "catCss": {
+    "paneHBefore": 400,
+    "paneH": 400,
+    "grew": 0,
+    "menu": {
+      "tag": "DIV",
+      "cls": "cat-overlay",
+      "pos": "fixed",
+      "z": "40",
+      "display": "block",
+      "x": 70,
+      "y": 339,
+      "w": 282,
+      "h": 184,
+      "bg": "rgba(28, 28, 32, 0.97)",
+      "text": "General\nImage\nVideo\nAudio\nCoding"
+    },
+    "selects": []
+  }
+}

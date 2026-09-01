@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Pin, Plus, ArrowUp } from "lucide-react";
 import { SMART_KINDS, SMART_LANES, SMART_PAGES } from "@/lib/smart";
 import { uid, useAether } from "@/lib/store";
 import type { SmartCard, SmartKind, SmartLane } from "@/lib/types";
 import { Draggable } from "./draggable";
 import { PreviewStage } from "./preview-stage";
-import { askModel } from "@/lib/chat";
+import { askModel, imagineEdit, imagineStill } from "@/lib/chat";
 
 export function SmartGenView() {
   const page = useAether((s) => s.smartPage);
@@ -44,14 +44,15 @@ export function SmartGenView() {
 
   return (
     <div className={`smart-shell tabs-${tabsAt}`}>
-      {tabsAt === "top" ? nav : null}
+      {page !== "hub" && tabsAt === "top" ? nav : null}
       <div className="smart-body">
+        {page === "hub" ? <HubPage /> : null}
         {page === "cards" ? <CardsPage cards={cards} onOpen={setOpen} /> : null}
         {page === "boards" ? <BoardsPage cards={cards} onOpen={setOpen} onLane={moveLane} /> : null}
         {page === "canvas" ? <CanvasPage cards={cards} onOpen={setOpen} /> : null}
         {page === "genie" ? <GeniePage /> : null}
       </div>
-      {tabsAt === "bottom" ? nav : null}
+      {page !== "hub" && tabsAt === "bottom" ? nav : null}
       {open ? (
         <PreviewStage
           title={open.title}
@@ -94,6 +95,27 @@ export function SmartGenView() {
           {open.body ? <p className="f1-body">{open.body}</p> : null}
         </PreviewStage>
       ) : null}
+    </div>
+  );
+}
+
+function HubPage() {
+  const setPage = useAether((s) => s.setSmartPage);
+  const tier = useAether((s) => s.tier);
+  return (
+    <div className="smart-hub">
+      <button type="button" className="hub-btn" onClick={() => setPage("cards")}>
+        Smart Cards
+      </button>
+      <button type="button" className="hub-btn" onClick={() => setPage("boards")}>
+        Smart Boards
+      </button>
+      <button type="button" className="hub-btn" onClick={() => setPage("canvas")}>
+        Smart Canvas
+      </button>
+      <button type="button" className="hub-btn" onClick={() => setPage("genie")}>
+        Smart Genie{tier === "free" ? " · Pro" : ""}
+      </button>
     </div>
   );
 }
@@ -241,9 +263,14 @@ function GeniePage() {
   const setSurface = useAether((s) => s.setSurface);
   const messages = useAether((s) => s.genieMessages);
   const addMsg = useAether((s) => s.addGenieMessage);
+  const clearGenie = useAether((s) => s.clearGenie);
   const addCard = useAether((s) => s.addSmartCard);
+  const addFile = useAether((s) => s.addFile);
+  const bumpStat = useAether((s) => s.bumpStat);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
+  const [attach, setAttach] = useState<{ name: string; dataUri: string } | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   if (tier === "free") {
     return (
@@ -259,32 +286,76 @@ function GeniePage() {
 
   async function send() {
     const line = text.trim();
-    if (!line || busy) return;
+    if ((!line && !attach) || busy) return;
     setText("");
-    addMsg({ id: uid("g"), role: "user", text: line, createdAt: Date.now() });
+    const held = attach;
+    setAttach(null);
+    addMsg({
+      id: uid("g"),
+      role: "user",
+      text: line || "Use the attached still.",
+      imageUrl: held?.dataUri,
+      createdAt: Date.now(),
+    });
     setBusy(true);
+
+    const wantsStill =
+      Boolean(held) ||
+      /\b(image|still|photo|picture|poster|render|imagine|illustration|artwork|scene)\b/i.test(line);
+
+    let stillUrl = held?.dataUri;
+    if (wantsStill) {
+      const made = held
+        ? await imagineEdit({ data: { prompt: line || "Remix this still.", src: held.dataUri } })
+        : await imagineStill({ data: { prompt: line } });
+      if (made.ok && made.url) {
+        stillUrl = made.url;
+        bumpStat("images");
+        addFile({
+          id: uid("f"),
+          modelId: "genie",
+          name: `${(line || "genie").slice(0, 18)}.png`,
+          kind: "image",
+          sizeLabel: "1k",
+          createdAt: Date.now(),
+          preview: made.url,
+        });
+      }
+    }
+
     const history = useAether
       .getState()
       .genieMessages.slice(-8)
-      .map((m) => ({ role: m.role, content: m.text }));
+      .map((m) => ({
+        role: m.role,
+        content: m.imageUrl ? `${m.text}\n[Attached still]` : m.text,
+      }));
     const res = await askModel({
       data: {
         modelId: "genie",
         persona:
-          "Smart Genie, an agent inside Aether. You make and reorganize Smart Cards, Boards, and Canvas objects. Speak plainly. When you create something, say its title and type in one short line starting with MADE:",
-        messages: history,
+          "Smart Genie, an agent inside Aether. You make and reorganize Smart Cards, Boards, and Canvas objects. Speak plainly. When you create something, start one line with MADE: then the title and type. If a still was generated, name it.",
+        messages: stillUrl
+          ? [...history, { role: "user" as const, content: stillUrl === held?.dataUri ? "A still is attached as source." : `A still was generated: ${stillUrl}` }]
+          : history,
       },
     });
     const reply = res.ok ? res.text : res.error;
-    addMsg({ id: uid("g"), role: "assistant", text: reply, createdAt: Date.now() });
-    const made = reply.match(/MADE:\s*(.+)/i);
-    if (made) {
+    addMsg({
+      id: uid("g"),
+      role: "assistant",
+      text: reply,
+      imageUrl: stillUrl && stillUrl !== held?.dataUri ? stillUrl : undefined,
+      createdAt: Date.now(),
+    });
+    const madeLine = reply.match(/MADE:\s*(.+)/i);
+    if (madeLine || stillUrl) {
       addCard({
-        kind: "artifact",
-        title: made[1].slice(0, 48),
+        kind: stillUrl ? "artifact" : "note",
+        title: (madeLine?.[1] ?? line).slice(0, 48),
         body: line,
         lane: "inbox",
-        preview: "/imagine/glass.jpg",
+        preview: stillUrl,
       });
     }
     setBusy(false);
@@ -292,19 +363,48 @@ function GeniePage() {
 
   return (
     <div className="genie-chat">
-      <p className="genie-kicker">Smart Genie</p>
-      <p className="genie-hint">Ask for a card, a board, or a rearrangement. It stays in this canvas.</p>
+      <div className="genie-head">
+        <div>
+          <p className="genie-kicker">Smart Genie</p>
+          <p className="genie-hint">Ask for a card, a board, or a still. It stays in this canvas.</p>
+        </div>
+        <button
+          type="button"
+          className="text-btn"
+          aria-label="New conversation"
+          onClick={() => {
+            clearGenie();
+            setText("");
+            setAttach(null);
+            setBusy(false);
+          }}
+        >
+          New
+        </button>
+      </div>
       <div className="genie-thread quiet-scroll">
         {messages.length === 0 ? (
           <p className="empty-line">What should we make.</p>
         ) : (
           messages.map((m) => (
-            <div key={m.id} className={m.role === "user" ? "bubble you" : "bubble"}>
-              <p className="whitespace-pre-wrap text-[14px] leading-relaxed">{m.text}</p>
-            </div>
+            <article key={m.id} className={`line ${m.role === "user" ? "you" : "them"}`}>
+              {m.imageUrl ? <img src={m.imageUrl} alt="" className="line-still" /> : null}
+              <p className="whitespace-pre-wrap">{m.text}</p>
+            </article>
           ))
         )}
       </div>
+      {attach ? (
+        <div className="attach-row">
+          <figure className="attach-chip">
+            <img src={attach.dataUri} alt="" />
+            <figcaption>{attach.name}</figcaption>
+            <button type="button" aria-label="Remove attachment" onClick={() => setAttach(null)}>
+              ×
+            </button>
+          </figure>
+        </div>
+      ) : null}
       <form
         className="genie-compose"
         onSubmit={(e) => {
@@ -313,13 +413,46 @@ function GeniePage() {
         }}
       >
         <input
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          hidden
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            e.target.value = "";
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = () => {
+              const url = String(reader.result || "");
+              if (url) setAttach({ name: file.name, dataUri: url });
+            };
+            reader.readAsDataURL(file);
+          }}
+        />
+        <button
+          type="button"
+          className="prompt-plus"
+          aria-label="Attach"
+          title="Attach"
+          onClick={() => fileRef.current?.click()}
+        >
+          <Plus size={16} />
+          <span className="ctrl-label">Attach</span>
+        </button>
+        <input
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder={busy ? "" : "Ask Genie"}
+          placeholder={busy ? "Making…" : "Ask Genie"}
           disabled={busy}
         />
-        <button type="submit" className="send-btn" aria-label="Send" disabled={busy || !text.trim()}>
+        <button
+          type="submit"
+          className="send-btn imagine-go"
+          aria-label="Send"
+          disabled={busy || (!text.trim() && !attach)}
+        >
           <ArrowUp size={16} />
+          <span className="ctrl-label">Send</span>
         </button>
       </form>
     </div>

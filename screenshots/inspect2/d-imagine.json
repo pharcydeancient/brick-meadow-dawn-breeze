@@ -1,0 +1,255 @@
+{
+  "vis": {
+    "label": "imagine",
+    "vw": 1280,
+    "vh": 800,
+    "visCount": 23,
+    "vis": [
+      {
+        "tag": "BUTTON",
+        "text": "Close",
+        "aria": "Close",
+        "cls": "close-affordance",
+        "x": 498,
+        "y": 0,
+        "w": 14,
+        "h": 14
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "aria": null,
+        "cls": "pin-search-field",
+        "x": 519,
+        "y": 27,
+        "w": 263,
+        "h": 21
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Discover",
+        "aria": null,
+        "cls": "on",
+        "x": 497,
+        "y": 57,
+        "w": 68,
+        "h": 31
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Images",
+        "aria": null,
+        "cls": "",
+        "x": 583,
+        "y": 57,
+        "w": 56,
+        "h": 31
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Videos",
+        "aria": null,
+        "cls": "",
+        "x": 657,
+        "y": 57,
+        "w": 54,
+        "h": 31
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Library",
+        "aria": null,
+        "cls": "",
+        "x": 729,
+        "y": 57,
+        "w": 54,
+        "h": 31
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Night bloom",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 484,
+        "y": 96,
+        "w": 154,
+        "h": 274
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Alpine hush",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 484,
+        "y": 377,
+        "w": 154,
+        "h": 87
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Soft figure",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 642,
+        "y": 96,
+        "w": 154,
+        "h": 206
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Aurora drift",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 642,
+        "y": 308,
+        "w": 154,
+        "h": 274
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Low coast",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 799,
+        "y": 96,
+        "w": 154,
+        "h": 103
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Warm still",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 799,
+        "y": 205,
+        "w": 154,
+        "h": 193
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Dusk glass",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 799,
+        "y": 405,
+        "w": 154,
+        "h": 87
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Portrait hold",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 956,
+        "y": 96,
+        "w": 154,
+        "h": 206
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Field light",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 956,
+        "y": 308,
+        "w": 154,
+        "h": 231
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Glass still",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 1113,
+        "y": 96,
+        "w": 154,
+        "h": 154
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Quiet hall",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 1113,
+        "y": 257,
+        "w": 154,
+        "h": 274
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ember fall",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 1270,
+        "y": 96,
+        "w": 154,
+        "h": 206
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Valley mist",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 1270,
+        "y": 308,
+        "w": 154,
+        "h": 87
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Close study",
+        "aria": null,
+        "cls": "imagine-tile",
+        "x": 1270,
+        "y": 402,
+        "w": 154,
+        "h": 193
+      },
+      {
+        "tag": "INPUT",
+        "text": "",
+        "aria": null,
+        "cls": "",
+        "x": 508,
+        "y": 644,
+        "w": 227,
+        "h": 23
+      },
+      {
+        "tag": "BUTTON",
+        "text": "↑",
+        "aria": "Generate",
+        "cls": "send-btn",
+        "x": 744,
+        "y": 635,
+        "w": 40,
+        "h": 40
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Settings",
+        "aria": "Settings",
+        "cls": "settings-orb glass-ornament gaze-scale",
+        "x": 1218,
+        "y": 746,
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "bodyText": "Discover\nImages\nVideos\nLibrary\nNight bloom\nAlpine hush\nSoft figure\nAurora drift\nLow coast\nWarm still\nDusk glass\nPortrait hold\nField light\nGlass still\nQuiet hall\nEmber fall\nValley mist\nClose study\nOpen hall\nLow tide\nTall dusk\nHeld face\nNebula bloom\n↑"
+  },
+  "x": {
+    "xs": [
+      {
+        "text": "Close",
+        "w": 14,
+        "h": 14,
+        "font": "16px",
+        "x": 498,
+        "y": 0,
+        "op": "1"
+      }
+    ],
+    "body": "Discover\nImages\nVideos\nLibrary\nNight bloom\nAlpine hush\nSoft figure\nAurora drift\nLow coast\nWarm still\nDusk glass\nPortrait hold\nField light\nGlass still\nQuiet hall\nEmber fall\nValley mist\nClose study\nOpen hall\nLow tide\nTall dusk\nHeld face\nNebula bloom\n↑"
+  }
+}

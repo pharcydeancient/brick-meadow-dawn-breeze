@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUp, Globe, FileText, Library, Plus, Telescope } from "lucide-react";
+import { ArrowUp, FileText, Globe, Library, Plus, Telescope } from "lucide-react";
 import { MODELS } from "@/lib/models";
 import { askModel, imagineStill } from "@/lib/chat";
 import { uid, useAether } from "@/lib/store";
@@ -9,7 +9,7 @@ import type { Investigation } from "@/lib/types";
 const INVESTIGATION: { id: Investigation; label: string; Icon: typeof Globe; color: string }[] = [
   { id: "web", label: "Web search", Icon: Globe, color: "#f5e000" },
   { id: "research", label: "Research", Icon: FileText, color: "#5dbdff" },
-  { id: "deep", label: "Deep research", Icon: Library, color: "#a78bfa" },
+  { id: "deep", label: "Deep research", Icon: Library, color: "#9ad0f5" },
 ];
 
 type PromptAttach = { id: string; name: string; kind: "image"; dataUri: string };
@@ -25,6 +25,7 @@ export function PromptBar() {
   const setInvestigation = useAether((s) => s.setInvestigation);
   const inputRef = useRef<HTMLInputElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const idleTimer = useRef<number | null>(null);
   const [tray, setTray] = useState(false);
   const [attaches, setAttaches] = useState<PromptAttach[]>([]);
@@ -33,9 +34,7 @@ export function PromptBar() {
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
-    else {
-      setTray(false);
-    }
+    else setTray(false);
   }, [open]);
 
   useEffect(() => {
@@ -54,21 +53,22 @@ export function PromptBar() {
     if (!open || !idle) return;
     const bump = () => {
       if (idleTimer.current) window.clearTimeout(idleTimer.current);
-      idleTimer.current = window.setTimeout(() => setOpen(false), 3000);
+      idleTimer.current = window.setTimeout(() => {
+        if (useAether.getState().promptOpen) setOpen(false);
+      }, 3500);
     };
     bump();
-    const el = inputRef.current;
-    el?.addEventListener("input", bump);
-    el?.addEventListener("focus", bump);
+    const host = rootRef.current?.closest(".prompt-seat") ?? rootRef.current;
+    const events = ["pointerdown", "pointermove", "keydown", "input", "focusin"] as const;
+    events.forEach((ev) => host?.addEventListener(ev, bump));
     return () => {
       if (idleTimer.current) window.clearTimeout(idleTimer.current);
-      el?.removeEventListener("input", bump);
-      el?.removeEventListener("focus", bump);
+      events.forEach((ev) => host?.removeEventListener(ev, bump));
     };
-  }, [open, idle, setOpen, text]);
+  }, [open, idle, setOpen, tray]);
 
   return (
-    <div className="composer">
+    <div ref={rootRef} className="composer">
       {attaches.length ? (
         <div className="attach-row">
           {attaches.map((a) => (
@@ -83,30 +83,28 @@ export function PromptBar() {
         </div>
       ) : null}
 
-      {tray ? (
-        <div className="investigate-tray">
-          {INVESTIGATION.map((opt) => {
-            const Icon = opt.Icon;
-            const on = investigation === opt.id;
-            return (
-              <button
-                key={opt.id}
-                type="button"
-                className={`investigate-row${on ? " on" : ""}`}
-                style={on ? { color: opt.color, borderColor: `${opt.color}59`, background: `${opt.color}1f` } : undefined}
-                onClick={() => {
-                  setInvestigation(opt.id);
-                  setTray(false);
-                }}
-              >
-                <Icon size={15} />
-                <span>{opt.label}</span>
-                {on ? <span className="investigate-check">✓</span> : null}
-              </button>
-            );
-          })}
-        </div>
-      ) : null}
+      <div className={`investigate-tray${tray ? " open" : ""}`} aria-hidden={!tray} inert={!tray || undefined}>
+        {INVESTIGATION.map((opt) => {
+          const Icon = opt.Icon;
+          const on = investigation === opt.id;
+          return (
+            <button
+              key={opt.id}
+              type="button"
+              className={`investigate-row${on ? " on" : ""}`}
+              style={on ? { color: opt.color, borderColor: `${opt.color}59`, background: `${opt.color}1f` } : undefined}
+              onClick={() => {
+                setInvestigation(opt.id);
+                setTray(false);
+              }}
+            >
+              <Icon size={15} />
+              <span>{opt.label}</span>
+              {on ? <span className="investigate-check">✓</span> : null}
+            </button>
+          );
+        })}
+      </div>
 
       <form
         className={`prompt-bar glass-ornament${open ? " open" : ""}`}
@@ -149,7 +147,7 @@ export function PromptBar() {
           disabled={sending}
         />
         <button type="submit" className="send-btn" aria-label="Send" disabled={sending || (!text.trim() && !attaches.length)}>
-          <span aria-hidden>↑</span>
+          <ArrowUp size={16} strokeWidth={2.4} />
         </button>
         <button
           type="button"
@@ -280,6 +278,7 @@ async function sendPrompt(attaches: PromptAttach[], clearAttaches: () => void) {
           modelId: id,
           persona: `${model.name} — ${model.blurb}`,
           messages: history,
+          investigation: s.investigation,
         },
       });
       s.addMessage(id, {

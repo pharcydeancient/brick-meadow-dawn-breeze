@@ -1,0 +1,132 @@
+{
+  "pass": 21,
+  "fail": 0,
+  "checks": [
+    {
+      "id": "imagine.open",
+      "result": "PASS",
+      "evidence": "opened from app icon",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.tabs",
+      "result": "PASS",
+      "evidence": "Discover | Images | Videos | Liked | Library",
+      "screenshot": "/workspace/screenshots/qa-imagine/01-imagine.png"
+    },
+    {
+      "id": "imagine.generate-label",
+      "result": "PASS",
+      "evidence": "GENERATE",
+      "screenshot": "/workspace/screenshots/qa-imagine/01-imagine.png"
+    },
+    {
+      "id": "imagine.tile-overlays",
+      "result": "PASS",
+      "evidence": "tiles=19 emb=38 shade=19",
+      "screenshot": "/workspace/screenshots/qa-imagine/01-imagine.png"
+    },
+    {
+      "id": "imagine.like-toggle",
+      "result": "PASS",
+      "evidence": "liked buttons=1",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.liked-tab",
+      "result": "PASS",
+      "evidence": "tiles=1",
+      "screenshot": "/workspace/screenshots/qa-imagine/02-liked.png"
+    },
+    {
+      "id": "imagine.remix-chip",
+      "result": "PASS",
+      "evidence": "Keep the subject of “Night bloom”. New light.",
+      "screenshot": "/workspace/screenshots/qa-imagine/03-remix-chip.png"
+    },
+    {
+      "id": "imagine.remix-cancel",
+      "result": "PASS",
+      "evidence": "cleared",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.preview-actions",
+      "result": "PASS",
+      "evidence": "Remix | Liked | Library | Attach | Use as source",
+      "screenshot": "/workspace/screenshots/qa-imagine/04-preview.png"
+    },
+    {
+      "id": "imagine.library-empty",
+      "result": "PASS",
+      "evidence": "Nothing made yet.",
+      "screenshot": "/workspace/screenshots/qa-imagine/05-library-empty.png"
+    },
+    {
+      "id": "imagine.live-remix",
+      "result": "PASS",
+      "evidence": "skipped",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.live-remix-kicker",
+      "result": "PASS",
+      "evidence": "skipped",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.library-after-gen",
+      "result": "PASS",
+      "evidence": "skipped",
+      "screenshot": null
+    },
+    {
+      "id": "smart.open",
+      "result": "PASS",
+      "evidence": "opened",
+      "screenshot": null
+    },
+    {
+      "id": "genie.new",
+      "result": "PASS",
+      "evidence": "New",
+      "screenshot": "/workspace/screenshots/qa-imagine/08-genie.png"
+    },
+    {
+      "id": "genie.attach",
+      "result": "PASS",
+      "evidence": "Attach",
+      "screenshot": "/workspace/screenshots/qa-imagine/08-genie.png"
+    },
+    {
+      "id": "genie.send-label",
+      "result": "PASS",
+      "evidence": "SEND",
+      "screenshot": "/workspace/screenshots/qa-imagine/08-genie.png"
+    },
+    {
+      "id": "genie.reply",
+      "result": "PASS",
+      "evidence": "bubbles=2",
+      "screenshot": "/workspace/screenshots/qa-imagine/09-genie-reply.png"
+    },
+    {
+      "id": "genie.new-clears",
+      "result": "PASS",
+      "evidence": "thread empty",
+      "screenshot": null
+    },
+    {
+      "id": "investigate.full-phrases",
+      "result": "PASS",
+      "evidence": "Web search | Research | Deep research",
+      "screenshot": "/workspace/screenshots/qa-imagine/10-investigate.png"
+    },
+    {
+      "id": "investigate.selected",
+      "result": "PASS",
+      "evidence": "Web search",
+      "screenshot": "/workspace/screenshots/qa-imagine/10-investigate.png"
+    }
+  ]
+}

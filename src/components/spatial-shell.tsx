@@ -14,8 +14,6 @@ import { PromptBar } from "./prompt-bar";
 import { ConsensusPreview, ConsensusMap } from "./consensus-preview";
 import { MusicPlayer } from "./music-player";
 import { OverlaySheet } from "./overlay-sheet";
-import { WinClose } from "./win-close";
-import { EdgeNav } from "./edge-nav";
 import { Draggable } from "./draggable";
 import { useAether } from "@/lib/store";
 import { useRef } from "react";
@@ -47,9 +45,16 @@ export function SpatialShell() {
     <div className={`app-root${promptOpen ? " prompting" : ""}${rootMode}`}>
       <Environment />
       <div className="scene">
-        <EdgeNav />
         <div className="stage">
           <span className="window-shadow" aria-hidden />
+          {working ? (
+            <button
+              type="button"
+              className="close-affordance"
+              aria-label="Close"
+              onClick={backFromWork}
+            />
+          ) : null}
           <section
             className={`main-window glass-window${promptOpen && !working ? " tucked" : ""}${working ? " work" : ""}${inCard ? " clear" : ""}`}
             onPointerDown={(e) => {
@@ -68,7 +73,6 @@ export function SpatialShell() {
             }}
           >
             {working ? <div className="work-frost" aria-hidden /> : null}
-            {inCard || working ? <WinClose corner onClick={inCard ? close : backFromWork} /> : null}
             <div className="window-body">
               {surface === "discover" ? (
                 <DiscoverView />
@@ -90,6 +94,9 @@ export function SpatialShell() {
           <div className="window-bar glass-ornament">
             <span className="window-grip" />
           </div>
+          {working ? null : <PromptOrb />}
+          <SettingsOrb />
+          {working ? null : <PromptCluster />}
         </div>
         <OverlaySheet
           open={historyOpen}
@@ -110,11 +117,6 @@ export function SpatialShell() {
         <SettingsPane />
       </div>
       <MusicPlayer />
-      <div className="dock">
-        {working ? null : <PromptOrb />}
-        <SettingsOrb />
-      </div>
-      {working ? null : <PromptCluster />}
       {working ? null : <ConsensusMap />}
     </div>
   );

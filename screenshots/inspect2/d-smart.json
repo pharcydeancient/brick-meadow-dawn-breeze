@@ -1,0 +1,47 @@
+{
+  "body": "Smart Cards\nSmart Boards\nSmart Canvas\nSmart Genie",
+  "btns": [
+    {
+      "text": "Close",
+      "w": 14,
+      "h": 14,
+      "x": 498,
+      "y": 0
+    },
+    {
+      "text": "Smart Cards",
+      "w": 277,
+      "h": 48,
+      "x": 501,
+      "y": 254
+    },
+    {
+      "text": "Smart Boards",
+      "w": 277,
+      "h": 48,
+      "x": 501,
+      "y": 310
+    },
+    {
+      "text": "Smart Canvas",
+      "w": 277,
+      "h": 48,
+      "x": 501,
+      "y": 366
+    },
+    {
+      "text": "Smart Genie",
+      "w": 277,
+      "h": 48,
+      "x": 501,
+      "y": 422
+    },
+    {
+      "text": "Settings",
+      "w": 44,
+      "h": 44,
+      "x": 1218,
+      "y": 746
+    }
+  ]
+}

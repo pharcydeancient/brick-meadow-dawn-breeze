@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { ChevronLeft } from "lucide-react";
 import { MODELS } from "@/lib/models";
 import { useAether } from "@/lib/store";
 import { ContextMenu, type CtxItem } from "./context-menu";
@@ -7,7 +8,6 @@ export function CardView() {
   const id = useAether((s) => s.cardModelId);
   const enabled = useAether((s) => s.enabledModelIds);
   const conv = useAether((s) => (id ? s.conversations[id] : undefined));
-  const setSurface = useAether((s) => s.setSurface);
   const openCard = useAether((s) => s.openCard);
   const hideMessage = useAether((s) => s.hideMessage);
   const close = useAether((s) => s.closeToHome);
@@ -87,21 +87,18 @@ export function CardView() {
       }}
     >
       <header className="card-view-head">
+        <button type="button" className="card-back" onClick={close} aria-label="Back">
+          <ChevronLeft size={18} strokeWidth={2.25} />
+          <span>Back</span>
+        </button>
         <h2 className="card-view-title">{model.name}</h2>
-        <div className="flex gap-2">
-          <button type="button" className="text-btn" onClick={() => setSurface("files")}>
-            Files
-          </button>
-          <button type="button" className="text-btn" onClick={() => useAether.getState().setHistoryOpen(true)}>
-            History
-          </button>
-        </div>
+        <span className="card-head-spacer" aria-hidden />
       </header>
       <div ref={list} className="quiet-scroll card-view-thread">
         {messages.map((m) => (
-          <div
+          <article
             key={m.id}
-            className={m.role === "user" ? "ml-8" : "mr-6"}
+            className={`line ${m.role === "user" ? "you" : "them"}`}
             onContextMenu={(e) => {
               e.preventDefault();
               openMenu(e.clientX, e.clientY, m.id, m.text);
@@ -119,11 +116,9 @@ export function CardView() {
               if (hold.current) window.clearTimeout(hold.current);
             }}
           >
-            <div className={m.role === "user" ? "bubble you" : "bubble"}>
-              {m.imageUrl ? <img src={m.imageUrl} alt="" className="mb-2 w-full rounded-[12px] object-cover" /> : null}
-              <p className="whitespace-pre-wrap text-[14px] leading-relaxed">{m.text}</p>
-            </div>
-          </div>
+            {m.imageUrl ? <img src={m.imageUrl} alt="" className="line-still" /> : null}
+            <p className="whitespace-pre-wrap">{m.text}</p>
+          </article>
         ))}
       </div>
       {ctx ? <ContextMenu {...ctx} onClose={() => setCtx(null)} /> : null}

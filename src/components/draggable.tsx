@@ -1,8 +1,21 @@
 import { useRef, type ReactNode, type PointerEvent, type CSSProperties } from "react";
 
+function isInteractive(t: HTMLElement) {
+  return Boolean(
+    t.closest("button") ||
+      t.closest("input") ||
+      t.closest("textarea") ||
+      t.closest("select") ||
+      t.closest("a") ||
+      t.closest("label") ||
+      t.closest("[contenteditable='true']"),
+  );
+}
+
 /**
  * Free 2D drag. One component for cards, settings, music.
  * armMs > 0: long-press to pick up. Release drops. Glow lives on the child.
+ * Buttons / fields never arm the drag — capturing them is why clicks died.
  */
 export function Draggable({
   x,
@@ -46,8 +59,8 @@ export function Draggable({
   function onPointerDown(e: PointerEvent<HTMLDivElement>) {
     if (!enabled) return;
     const t = e.target as HTMLElement;
+    if (isInteractive(t)) return;
     if (handleSelector && !t.closest(handleSelector)) return;
-    if ((t.closest("button") || t.closest("input") || t.closest("a")) && handleSelector) return;
     moved.current = false;
     armed.current = armMs <= 0;
     origin.current = { x, y, px: e.clientX, py: e.clientY };
@@ -78,11 +91,14 @@ export function Draggable({
     });
   }
 
-  function onPointerUp() {
+  function onPointerUp(e: PointerEvent<HTMLDivElement>) {
     const wasArmed = armed.current;
     const wasMoved = moved.current;
     clearTimer();
     armed.current = false;
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
     if (wasArmed) onDrop?.();
     if (!wasMoved && !wasArmed) onTap?.();
   }

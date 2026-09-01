@@ -1,0 +1,171 @@
+{
+  "result": "FAIL",
+  "summary": "Desktop home is the only screen that looks like a product. Mobile 390 is a cropped, overflowing desktop canvas (stage computed 705px wide in a 390px viewport). The orb sits on the far-right chrome. Card-view Back is off-canvas. Font-weight 650 is used on chips and 8px labels (Manrope only ships 400/600/700/800). Overlay chrome is unlabeled 14px red dots. The prompt stack covers the cards instead of tucking the canvas enough to make visOS space.",
+  "blockers": [
+    {
+      "id": "MOBILE-LAYOUT",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/m-home.png",
+        "/workspace/screenshots/qa-vis/m-card.png",
+        "/workspace/screenshots/qa-vis/m-prompt-open2.png",
+        "/workspace/screenshots/qa-vis/m-imagine.png",
+        "/workspace/screenshots/qa-vis/m-files.png",
+        "/workspace/screenshots/qa-vis/m-smart-hub.png",
+        "/workspace/screenshots/qa-vis/m-themes.png"
+      ],
+      "evidence": "390×844: .stage computed width=705px height=726px (innerWidth=390). Canvas overflows left/right. Home shows only the right-hand cards (Ling / Nemo) with Gemini clipped off-screen. Imagine/Files/Themes/Smart/Card are the same cropped phone. A paying user on a phone would think the build is broken."
+    },
+    {
+      "id": "3. ORB",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/m-home.png",
+        "/workspace/screenshots/qa-vis/d-home.png"
+      ],
+      "evidence": "Desktop PASS-shaped: 72px hit / 58px sphere, opacity=1, glyphless radial sphere, under the phone canvas (orb y=730, canvas bottom=710), hit-tests to .orb-sphere. Mobile FAIL: orb box x=326.5 w=72 on a 390 viewport — sits on the far-right wallpaper chrome, not under the phone canvas. Checklist: 'If it sits on the far desktop chrome or is <40px or opacity <0.5, FAIL.'"
+    },
+    {
+      "id": "4. CARD VIEW HEADER",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/m-card.png",
+        "/workspace/screenshots/qa-vis/d-card.png"
+      ],
+      "evidence": "Desktop: header is Back + Gemini 3.6 Flash Lite only. filesHistoryInHeader=[]. Back and title are Manrope 600. Matches zip comment (orientation only). Mobile: title clipped to 'ite'; Back is off the left edge of the overflowing canvas. Checklist: 'amateur if … there is no Back.' On a phone there is no visible Back."
+    },
+    {
+      "id": "1. FONTS",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/d-settings-models.png",
+        "/workspace/screenshots/qa-vis/d-prompt-open2.png",
+        "/workspace/screenshots/qa-vis/d-home.png"
+      ],
+      "evidence": "Family is Manrope on body, .card-name, .card-view-title, .card-back, .alert-row, .hist-title (good). Illegal weights: computed font-weight 650 on .model-chip (20 chips), .ctrl-label (Attach/Search at 8px), .consensus-name, .smart-nav. Manrope is loaded as 400/600/700/800 only. font-synthesis includes 'weight' → faux interpolation between 600 and 700. Alert tabs are Manrope 400 at 10px — a different optical size than body 16 / title 17, reads as a leftover system caption."
+    },
+    {
+      "id": "6. OUT OF PLACE — mystery red dots",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/d-history.png",
+        "/workspace/screenshots/qa-vis/d-files.png",
+        "/workspace/screenshots/qa-vis/d-imagine.png",
+        "/workspace/screenshots/qa-vis/d-smart-hub.png",
+        "/workspace/screenshots/qa-vis/d-themes.png",
+        "/workspace/screenshots/qa-vis/m-imagine.png"
+      ],
+      "evidence": ".sheet-close and .close-affordance are 14×14 circles, background rgb(255, 95, 87), empty text, aria=Close only. They sit on the history sheet corner and floating above Files/Imagine/Smart/Themes. Unlabeled macOS traffic-lights on a visOS canvas. Checklist literally lists 'mystery red dots'."
+    },
+    {
+      "id": "5. CANVAS vs PROMPT — covers cards, does not make space",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/d-prompt-open2.png",
+        "/workspace/screenshots/qa-vis/d-prompt-invest2.png",
+        "/workspace/screenshots/qa-vis/d-prompt-t0.png",
+        "/workspace/screenshots/qa-vis/m-prompt-open2.png",
+        "/workspace/screenshots/qa-vis/m-prompt-t0.png",
+        "/workspace/screenshots/qa-vis/m-prompt-invest2.png"
+      ],
+      "evidence": "Prompt+consensus are supposed to shrink the canvas enough to feel like visOS space. Actual tuck is translateY(-8%) scale(0.9). Bottom-row cards (MiniMax / Small / Nemo) remain under the consensus plate and composer. Investigation tray then stacks a third opaque sheet on the same cards. Mobile: the stack sits on a clipped grid; probe hit-tests through to .window-body when the seat is racing the 3.5s idle tuck. Controls covering cards."
+    },
+    {
+      "id": "8. WHOLE-SCREEN ELEGANCE",
+      "result": "FAIL",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/d-home.png",
+        "/workspace/screenshots/qa-vis/m-home.png",
+        "/workspace/screenshots/qa-vis/d-themes.png",
+        "/workspace/screenshots/qa-vis/d-prompt-invest2.png",
+        "/workspace/screenshots/qa-vis/m-settings-account-tab.png"
+      ],
+      "evidence": "Desktop home is one product (forest wallpaper, clear glass 6-up, orb under the phone). Everything else is a pile: Photos-app years mosaic on Themes (Interior/Horizons/Night via .years-label), iOS-folder settings pane, macOS red close dots, 8px Attach/Search captions, a research tray stacked on the home grid, and a mobile frame that is just the desktop canvas overflowing a 390 window. Does not look like one visOS app."
+    }
+  ],
+  "checks": [
+    {
+      "id": "MOBILE-LAYOUT",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/m-home.png", "/workspace/screenshots/qa-vis/m-card.png"],
+      "evidence": "stage 705×726 CSS px inside 390×844. Cards, Back, Imagine, Files, Themes all clip. See blockers."
+    },
+    {
+      "id": "1. FONTS — Manrope 400/600/700/800 only",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-settings-models.png", "/workspace/screenshots/qa-vis/d-home.png"],
+      "evidence": "Family Manrope everywhere sampled (body 400 16px, .card-name 600 15px, .card-view-title 600 17px, .card-back 600 15px, .alert-row 400 13px, .hist-title 600 13px). FAIL: font-weight 650 on model chips + 8px ctrl-labels. font-synthesis: weight style small-caps."
+    },
+    {
+      "id": "2. MOTION — composer/orb crossfade, sheets ease",
+      "result": "PASS",
+      "screenshots": [
+        "/workspace/screenshots/qa-vis/d-home.png",
+        "/workspace/screenshots/qa-vis/d-prompt-t0.png",
+        "/workspace/screenshots/qa-vis/d-prompt-open2.png",
+        "/workspace/screenshots/qa-vis/d-prompt-invest2.png"
+      ],
+      "evidence": ".prompt-seat stays mounted (opacity 0 + translateY(28px) + blur(8px) when closed; 320–480ms cubic-bezier on open/close). .prompt-orb.away opacity 0 scale 0.25 blur 6px over 380ms. Investigation tray translateY(10px)→0 with max-height. OverlaySheet rAF-mounts then 360ms scale/opacity. Not a display:none pop. (Screenshot cadence often lands on end states because 3.5s idle tuck + PNG encode; CSS is the motion.)"
+    },
+    {
+      "id": "3. ORB — 3D sphere under the phone canvas",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-home.png", "/workspace/screenshots/qa-vis/m-home.png"],
+      "evidence": "Desktop: under canvas, 58px sphere, opacity 1, no glyph. Mobile: x=326.5 on 390-wide view — far chrome, not under the canvas."
+    },
+    {
+      "id": "4. CARD VIEW HEADER — back+title only",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-card.png", "/workspace/screenshots/qa-vis/m-card.png"],
+      "evidence": "Desktop headerHTML='Back\\nGemini 3.6 Flash Lite', no Files/History (zip {false &&} honored), same Manrope 600 as body titles. Mobile Back is off-canvas; title clipped to 'ite'."
+    },
+    {
+      "id": "5. CANVAS vs WALLPAPER",
+      "result": "PASS",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-home.png", "/workspace/screenshots/qa-vis/d-card.png"],
+      "evidence": "Desktop: .model-card bg rgba(255,255,255,0.05) backdrop-filter none; .main-window transparent; .env-veil tints the wallpaper (linear+radial rgba(8,10,16,…)); bubbles in card view background transparent. Cards are clear glass, wallpaper continuous. (Prompt covering cards is a separate fail.)"
+    },
+    {
+      "id": "5b. PROMPT COVERS CARDS / NO VISOS SPACE",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-prompt-open2.png", "/workspace/screenshots/qa-vis/d-prompt-invest2.png", "/workspace/screenshots/qa-vis/m-prompt-open2.png"],
+      "evidence": "Canvas tuck is only -8%/0.9. Consensus + composer + investigate tray sit on the bottom cards instead of the grid receding to make space."
+    },
+    {
+      "id": "6. OUT OF PLACE",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-history.png", "/workspace/screenshots/qa-vis/d-files.png", "/workspace/screenshots/qa-vis/d-themes.png"],
+      "evidence": "Mystery red 14px closes on History/Files/Imagine/Smart/Themes. 8px Attach/Search captions. Themes still uses Photos-years mosaic (.years-label Interior/Horizons/Night) even though copy is not the word Years. No Room copy (pass). No letter avatars (pass). No literal Years/Days headings (pass). History rows are first-user titles + short chip + '2 turns · 12m' (pass)."
+    },
+    {
+      "id": "7. SETTINGS ROW PICKER",
+      "result": "PASS",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-settings-settings.png", "/workspace/screenshots/qa-vis/d-settings-account-tab.png", "/workspace/screenshots/qa-vis/d-settings-cat.png"],
+      "evidence": "Grid rows 1/2/3 .row-pills sit in the alert, same 13px Manrope as the rows, not a native <select> leftover. Category overlay is position:fixed, options General/Image/Video/Audio/Coding, pane does not reflow. Account tab: Pro / $19.99/mo / Upgrade. Default open pane is the apps grid (Files History Themes Imagine Smart Store) — not a Room tab."
+    },
+    {
+      "id": "8. WHOLE-SCREEN ELEGANCE",
+      "result": "FAIL",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-home.png", "/workspace/screenshots/qa-vis/m-home.png", "/workspace/screenshots/qa-vis/d-prompt-invest2.png"],
+      "evidence": "One good desktop home, then a stack of experiments: Photos mosaic, folder settings, traffic-light closes, overlapping prompt chrome, and a mobile viewport that cannot contain the stage."
+    },
+    {
+      "id": "HOME desktop glass / 6 phone cards",
+      "result": "PASS",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-home.png"],
+      "evidence": "6 cards, ratio 2.05, names in model color, clear glass, observatory/forest wallpaper running under, prompt hidden (seat opacity 0), settings orb + prompt orb only."
+    },
+    {
+      "id": "HISTORY overlay",
+      "result": "PASS",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-history.png"],
+      "evidence": "Opaque sheet rgba(16,18,24,0.98), scrim rgba(6,8,12,0.72) blur 18px, no avatars, titles are first user lines, chips MiniMax/Command/Lite, '2 turns · 12m'. (Red close is the separate mystery-dot fail.)"
+    },
+    {
+      "id": "SMART HUB",
+      "result": "PASS",
+      "screenshots": ["/workspace/screenshots/qa-vis/d-smart-hub.png"],
+      "evidence": "Four full-width text buttons, no icons: Smart Cards / Boards / Canvas / Genie. Matches layout spec. Desktop only — mobile hub is cropped."
+    }
+  ]
+}

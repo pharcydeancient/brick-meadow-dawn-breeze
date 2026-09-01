@@ -1,87 +1,161 @@
-[
-  {
-    "id": "1. LEADING NAV LABELS (desktop 1280x800)",
-    "pass": true,
-    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=22.9x13.5 font=9px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=38.1x13.5 font=9px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=39.3x13.5 font=9px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=28.9x13.5 font=9px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=35.3x13.5 font=9px via=text btn=\"History\""
-  },
-  {
-    "id": "2a. HISTORY titles (sentence or Untitled, not model name)",
-    "pass": true,
-    "evidence": "rows=3 overlay=2 titles=[\"Keep the wallpaper continuous under the cards.\",\"How should consensus sit with the prompt?\",\"What is home, then?\"]"
-  },
-  {
-    "id": "2b. HISTORY relative dates (now/12m/2h/2d)",
-    "pass": true,
-    "evidence": "metas=[\"MiniMax\\n2 turns · 12m\",\"Command\\n2 turns · 46m\",\"Lite\\n2 turns · 2d\"] all=[\"Keep the wallpaper continuous under the cards. MiniMax 2 turns · 12m\",\"How should consensus sit with the prompt? Command 2 turns · 46m\",\"What is home, then? Lite 2 turns · 2d\"]"
-  },
-  {
-    "id": "2c. HISTORY model short-name chips",
-    "pass": true,
-    "evidence": "tags=[\"MiniMax\",\"Command\",\"Lite\"]"
-  },
-  {
-    "id": "2d. HISTORY zero single-letter avatars / no .list-kind",
-    "pass": true,
-    "evidence": "list-kind=0 avatars=[] html0=<span class=\"hist-title\">Keep the wallpaper continuous under the cards.</span><span class=\"hist-meta\"><span class=\"hist-tag\" style=\"color: rgb(255, 158, 107); border-color: rgba(255, 158, 107, 0.467);\">MiniMax</span><span>2 turns · 12m</span></span>"
-  },
-  {
-    "id": "3a. PROMPT Attach control visible word \"Attach\"",
-    "pass": true,
-    "evidence": "{\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":27.96875,\"h\":8,\"text\":\"Attach\",\"fontSize\":\"8px\"}"
-  },
-  {
-    "id": "3b. PROMPT Investigation tray full phrases",
-    "pass": true,
-    "evidence": "trayOpen=true probeText=\"Search\" aria=\"Investigation\" rows=[\"Web search\",\"Research\",\"Deep research\"]"
-  },
-  {
-    "id": "4a. IMAGINE tabs include word \"Library\"",
-    "pass": true,
-    "evidence": "tabs=[\"Discover\",\"Images\",\"Videos\",\"Library\"]"
-  },
-  {
-    "id": "4b. IMAGINE tiles show titles",
-    "pass": true,
-    "evidence": "[{\"title\":\"Night bloom\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":78,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Alpine hush\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":74,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Soft figure\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":65,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Aurora drift\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":72,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Low coast\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":63,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Warm still\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":64,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Dusk glass\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":67,\"h\":18,\"fontSize\":\"12px\"},{\"title\":\"Portrait hold\",\"opacity\":\"1\",\"display\":\"block\",\"visibility\":\"visible\",\"w\":78,\"h\":18,\"fontSize\":\"12px\"}]"
-  },
-  {
-    "id": "1. LEADING NAV LABELS (desktop CARD VIEW header)",
-    "pass": true,
-    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=22.9x13.5 font=9px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=38.1x13.5 font=9px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=39.3x13.5 font=9px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=28.9x13.5 font=9px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=35.3x13.5 font=9px via=text btn=\"History\""
-  },
-  {
-    "id": "5. CARD VIEW Files and History visible words",
-    "pass": false,
-    "evidence": "inCard=0 [{\"lab\":\"Files\",\"visOk\":true,\"word\":\"Files\",\"opacity\":1,\"display\":\"block\",\"w\":22.90625,\"h\":13.5,\"found\":true},{\"lab\":\"History\",\"visOk\":true,\"word\":\"History\",\"opacity\":1,\"display\":\"block\",\"w\":35.265625,\"h\":13.5,\"found\":true}]"
-  },
-  {
-    "id": "6. No product UI text \"Room\"/\"Rooms\"",
-    "pass": true,
-    "evidence": "homeHits=[] settingsHits=[] settingsSample=[\"Account\",\"Models\",\"Settings\"]"
-  },
-  {
-    "id": "1. LEADING NAV LABELS (mobile 390x844)",
-    "pass": true,
-    "evidence": "Files: word=\"Files\" opacity=1 display=block vis=visible box=18.8x12.0 font=8px via=text btn=\"Files\" | Themes: word=\"Themes\" opacity=1 display=block vis=visible box=33.0x12.0 font=8px via=text btn=\"Themes\" | Imagine: word=\"Imagine\" opacity=1 display=block vis=visible box=35.1x12.0 font=8px via=text btn=\"Imagine\" | Smart: word=\"Smart\" opacity=1 display=block vis=visible box=24.8x12.0 font=8px via=text btn=\"Smart\" | History: word=\"History\" opacity=1 display=block vis=visible box=30.1x12.0 font=8px via=text btn=\"History\""
-  },
-  {
-    "id": "2e. HISTORY overlay also works on mobile (rows present)",
-    "pass": true,
-    "evidence": "rows=3 titles=[\"Keep the wallpaper continuous under the cards.\",\"How should consensus sit with the prompt?\",\"What is home, then?\"]"
-  },
-  {
-    "id": "3c. PROMPT Attach visible on mobile",
-    "pass": true,
-    "evidence": "{\"text\":\"Attach\",\"opacity\":\"1\",\"display\":\"block\",\"w\":27.96875,\"h\":8}"
-  },
-  {
-    "id": "3d. PROMPT Investigation tray on mobile",
-    "pass": true,
-    "evidence": "tray=1 rows=[\"Web search\",\"Research\",\"Deep research\"]"
-  },
-  {
-    "id": "4c. IMAGINE Library tab on mobile",
-    "pass": true,
-    "evidence": "tabs=[\"Discover\",\"Images\",\"Videos\",\"Library\"]"
-  }
-]
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "id": "1. RULE OF 3 — no permanent 5-item side pane",
+      "result": "PASS",
+      "evidence": "No leading nav. navExists=false display=n/a sideLabels=[] visibleButtons=[\"Summon prompt\",\"Settings\",\"Attach\",\"Send\",\"Investigation\"]"
+    },
+    {
+      "id": "1b. Settings orb bottom (not a Room tab)",
+      "result": "PASS",
+      "evidence": "settings orb aria=Settings visible=true bottom=790 viewport=800"
+    },
+    {
+      "id": "1c. No product UI 'Room' language on home",
+      "result": "PASS",
+      "evidence": "No visible Room/Rooms product copy on home"
+    },
+    {
+      "id": "HOME — up to 6 phone-aspect cards, tinted wallpaper, clear canvas/cards, model-color names",
+      "result": "PASS",
+      "evidence": "cards=6 ratios=[2.05,2.05,2.05,2.05,2.05,2.05] phoneish=true names=[{\"n\":\"Gemini 3.6 Flash Lite\",\"color\":\"rgb(127, 216, 196)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"},{\"n\":\"Mistral Small 3.2\",\"color\":\"rgb(255, 176, 102)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"},{\"n\":\"Command R\",\"color\":\"rgb(242, 193, 78)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"},{\"n\":\"MiniMax M3\",\"color\":\"rgb(255, 158, 107)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"},{\"n\":\"Ling 2.6 Flash\",\"color\":\"rgb(158, 203, 255)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"},{\"n\":\"Mistral Nemo\",\"color\":\"rgb(103, 232, 249)\",\"bg\":\"rgba(255, 255, 255, 0.05)\",\"filter\":\"none\"}] winBg=rgba(0, 0, 0, 0) winFilter=none veil=linear-gradient(rgba(8, 10, 16, 0.22) 0%, rgba(8, 10, 16, 0.08) 42%, rgba(8, 10, 16, 0.46) 100%), radial-gradient(68% 52 env=true"
+    },
+    {
+      "id": "PROMPT hidden until orb",
+      "result": "PASS",
+      "evidence": "promptSeat opacity=0 pointer=none class=prompt-seat orbVisible=true orbAria=Summon prompt"
+    },
+    {
+      "id": "5. BUTTONS — settings orb",
+      "result": "PASS",
+      "evidence": "click settings-orb → alert-card visible=true"
+    },
+    {
+      "id": "1d. Settings opens Account/Models/Settings + app icons; never Room tab",
+      "result": "PASS",
+      "evidence": "tabs=[\"Account\",\"Models\",\"Settings\"] apps=[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"] roomTabs=[]"
+    },
+    {
+      "id": "2. CANCEL — no oversized Cancel; dismiss by tapping outside",
+      "result": "PASS",
+      "evidence": "cancelButtons=0 texts=[] .alert-cancel=false dim=true aria=Dismiss settings"
+    },
+    {
+      "id": "3b. SETTINGS PANE material — one plane, opaque enough",
+      "result": "PASS",
+      "evidence": "bg=rgba(28, 28, 32, 0.94) alpha=0.94 filter=none isolation=isolate (need tint OR blur, not both poorly; alpha>=0.9)"
+    },
+    {
+      "id": "5. BUTTONS — Account tab",
+      "result": "PASS",
+      "evidence": "Account tab click → alert-action count=1 text=Pro\n\n$19.99/mo\n\nUpgrade"
+    },
+    {
+      "id": "4. MODEL SELECTOR — no flat pastel fills; physics ember/glow",
+      "result": "PASS",
+      "evidence": "chips=20 inlineFill=false pastelSolid=false emberOk=true onChips=[{\"name\":\"Lite\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 0.789176 0.756078 0.395608) 0%\",\"shadow\":\"color(srgb 0.498039 0.847059 0.768627 / 0.5) 0px 0px 10px 0px, color(srgb 0.4980\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #7fd8c4;\"},{\"name\":\"Small\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 1 0.690196 0.240784) 0%, rgba(\",\"shadow\":\"color(srgb 1 0.690196 0.4 / 0.5) 0px 0px 10px 0px, color(srgb 1 0.690196 0.4 / 0\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #ffb066;\"},{\"name\":\"Command\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 0.978588 0.718196 0.201255) 0%\",\"shadow\":\"color(srgb 0.94902 0.756863 0.305882 / 0.5) 0px 0px 10px 0px, color(srgb 0.94902\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #f2c14e;\"},{\"name\":\"MiniMax\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 1 0.660549 0.24902) 0%, rgba(1\",\"shadow\":\"color(srgb 1 0.619608 0.419608 / 0.5) 0px 0px 10px 0px, color(srgb 1 0.619608 0.\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #ff9e6b;\"},{\"name\":\"Ling\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 0.840235 0.734667 0.492784) 0%\",\"shadow\":\"color(srgb 0.619608 0.796078 1 / 0.5) 0px 0px 10px 0px, color(srgb 0.619608 0.79\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #9ecbff;\"},{\"name\":\"Nemo\",\"bg\":\"rgba(0, 0, 0, 0)\",\"img\":\"radial-gradient(120% 160% at 50% 130%, color(srgb 0.749647 0.782431 0.482902) 0%\",\"shadow\":\"color(srgb 0.403922 0.909804 0.976471 / 0.5) 0px 0px 10px 0px, color(srgb 0.4039\",\"ember\":true,\"emberOp\":\"1\",\"emberWH\":[26,12],\"inline\":\"--chip-accent: #67e8f9;\"}]"
+    },
+    {
+      "id": "5. BUTTONS — Models tab",
+      "result": "PASS",
+      "evidence": "Models tab → 20 chips, cat=General"
+    },
+    {
+      "id": "4b. Category dropdown OVERLAYS model list (does not reflow pane taller)",
+      "result": "PASS",
+      "evidence": "overlay=true position=absolute paneH 400 → 400 reflow=false opts=[\"General\",\"Image\",\"Video\",\"Audio\",\"Coding\"]"
+    },
+    {
+      "id": "5. BUTTONS — category pick",
+      "result": "PASS",
+      "evidence": "picked Image → overlayGone=true cat=Image chips=[\"FLUX\",\"Gemini\",\"Mini\",\"Klein\",\"Banana\",\"Kling\",\"GPT Img\",\"Seedream\"]"
+    },
+    {
+      "id": "5. BUTTONS — model chip toggle",
+      "result": "PASS",
+      "evidence": "chip click toggled on-count 6 → 5"
+    },
+    {
+      "id": "5. BUTTONS — Settings tab",
+      "result": "PASS",
+      "evidence": "Settings tab → Tuck after send count=1 body=Tuck after send\nOn\nTuck when idle\nOn"
+    },
+    {
+      "id": "5. BUTTONS — dim dismisses settings",
+      "result": "PASS",
+      "evidence": "click .alert-dim → alert-card count=0"
+    },
+    {
+      "id": "5. BUTTONS — Files app icon",
+      "result": "PASS",
+      "evidence": "{\"r\":{\"opened\":true},\"filesUi\":{\"gallery\":true,\"text\":\"×\\nFiles\\nImagine\\nAlpine hush\\nLow coast\\nDusk glass\\nAurora drift\\nValley mist\\nGlass still\\nNight bloom\\nWarm still\\nField light\\nEmber fall\",\"x\":true}}"
+    },
+    {
+      "id": "3. OVERLAY TYPE BLEED — history sheet opaque, one plane, cannot read card type through it",
+      "result": "PASS",
+      "evidence": "sheetBg=rgba(16, 18, 24, 0.96) alpha=0.96 sheetFilter=none scrimBg=rgba(6, 8, 12, 0.84) scrimFilter=none bothPlanes=false geminiThrough=false samples=[{\"x\":640,\"y\":316.25703125,\"tag\":\"SPAN\",\"cls\":\"hist-title\",\"text\":\"Keep the wallpaper continuous under the cards.\"},{\"x\":640,\"y\":385.24765625,\"tag\":\"SPAN\",\"cls\":\"hist-title\",\"text\":\"How should consensus sit with the prompt?\"},{\"x\":576,\"y\":350.75234375,\"tag\":\"SPAN\",\"cls\":\"hist-meta\",\"text\":\"MiniMax2 turns · 12m\"}] cardNames=[{\"text\":\"Mistral Small 3.2\",\"box\":{\"x\":513.3125,\"y\":87.17500305175781,\"width\":116.5,\"height\":36,\"top\":87.17500305175781,\"right\":629.8125,\"bottom\":123.17500305175781,\"left\":513.3125},\"vis\":true},{\"text\":\"Command R\",\"box\":{\"x\":513.3125,\"y\":375,\"width\":90.953125,\"height\":18,\"top\":375,\"right\":604.265625,\"bottom\":393,\"left\":513.3125},\"vis\":true},{\"text\":\"MiniMax M3\",\"box\":{\"x\":657.8125,\"y\":87.17500305175781,\"width\":87.515625,\"height\":18,\"top\":87.17500305175781,\"right\":745.328125,\"bottom\":105.17500305175781,\"left\":657.8125},\"vis\":true},{\"text\":\"Ling 2.6 Flash\",\"box\":{\"x\":657.8125,\"y\":375,\"width\":95.703125,\"height\":18,\"top\":375,\"right\":753.515625,\"bottom\":393,\"left\":657.8125},\"vis\":true},{\"text\":\"Mistral Nemo\",\"box\":{\"x\":802.3125,\"y\":87.17500305175781,\"width\":97.609375,\"height\":18,\"top\":87.17500305175781,\"right\":899.921875,\"bottom\":105.17500305175781,\"left\":802.3125},\"vis\":true},{\"text\":\"Gemini 3.6 Flash Lite\",\"box\":{\"x\":802.3125,\"y\":375,\"width\":116.5,\"height\":36,\"top\":375,\"right\":918.8125,\"bottom\":411,\"left\":802.3125},\"vis\":true}]"
+    },
+    {
+      "id": "HISTORY — independent overlay; first-user titles; turns · when; short-name chip; no letter avatar",
+      "result": "PASS",
+      "evidence": "opened=true title=History rows=[{\"title\":\"Keep the wallpaper continuous under the cards.\",\"meta\":\"MiniMax 2 turns · 12m\",\"tag\":\"MiniMax\"},{\"title\":\"How should consensus sit with the prompt?\",\"meta\":\"Command 2 turns · 46m\",\"tag\":\"Command\"},{\"title\":\"What is home, then?\",\"meta\":\"Lite 2 turns · 2d\",\"tag\":\"Lite\"}] avatars=[] letter=false"
+    },
+    {
+      "id": "5. BUTTONS — History app icon",
+      "result": "PASS",
+      "evidence": "History icon → sheet=true rows=3"
+    },
+    {
+      "id": "5. BUTTONS — Imagine app icon",
+      "result": "PASS",
+      "evidence": "{\"r\":{\"opened\":true},\"img\":{\"ui\":true,\"tabs\":[\"Discover\",\"Images\",\"Videos\",\"Library\"],\"text\":\"×\\nDiscover\\nImages\\nVideos\\nLibrary\\nNight bloom\\nAlpine hush\\nSoft figure\\nAurora drift\\nLow coast\\nWarm still\\nDusk glass\\nPortrait hold\\nField light\\nGlass still\\nQuiet ha\"}}"
+    },
+    {
+      "id": "5. BUTTONS — Smart app icon",
+      "result": "PASS",
+      "evidence": "{\"opened\":true,\"sm\":{\"text\":\"×\\nCards\\nBoards\\nCanvas\\nGenie\\nMemory\\nAlpine hush\\nMemory\\nLow coast\\nMemory\\nValley mist\\nMemory\\nArtifact\\nDusk glass\\nArtifact\\nGlass still\\nArtifact\\nTask\\ntask\\nBoard the week\\nTask\\nNote\\nnote\\nCards vs boards\\nNote\\nMemory\\nTask\\nArtifact\\nNote\\nPop out\",\"btns\":[\"×\",\"Cards\",\"Boards\",\"Canvas\",\"Genie\",\"Alpine hushMemory\",\"Low coastMemory\",\"Valley mistMemory\",\"Dusk glassArtifact\",\"Glass stillArtifact\",\"taskBoard the weekTask\",\"noteCards vs boardsNote\",\"Pop out\"],\"wrap\":true}}"
+    },
+    {
+      "id": "5. BUTTONS — Themes app icon",
+      "result": "PASS",
+      "evidence": "{\"opened\":true,\"th\":{\"tiles\":0,\"dots\":2,\"text\":\"×\\nWallpapers\\nSelector\\nStore\\nInterior\\nObservatory\\nCabin\\nCabin Space\\nSanctuary\\nDeck\\nDune Hall\\nHorizons\\nOcean\\nGarden\\nRainfall\\nTwilight\\nTwin Suns\\nNight\\nStar Bridge\\nNeon City\\nTransit\\nBl\"}}"
+    },
+    {
+      "id": "5. BUTTONS — card tap → card view",
+      "result": "PASS",
+      "evidence": "{\"view\":true,\"title\":\"Gemini 3.6 Flash Lite\",\"btns\":[{\"text\":\"Files\",\"vis\":true,\"w\":49,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"},{\"text\":\"History\",\"vis\":true,\"w\":66,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"}]}"
+    },
+    {
+      "id": "5. BUTTONS — Files/History words in card header",
+      "result": "PASS",
+      "evidence": "{\"files\":{\"text\":\"Files\",\"vis\":true,\"w\":49,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"},\"hist\":{\"text\":\"History\",\"vis\":true,\"w\":66,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"},\"btns\":[{\"text\":\"Files\",\"vis\":true,\"w\":49,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"},{\"text\":\"History\",\"vis\":true,\"w\":66,\"h\":28,\"font\":\"12px\",\"color\":\"rgb(255, 255, 255)\"}]}"
+    },
+    {
+      "id": "5. BUTTONS — card header History opens overlay",
+      "result": "PASS",
+      "evidence": "float-window=1"
+    },
+    {
+      "id": "5. BUTTONS — card header Files opens files",
+      "result": "PASS",
+      "evidence": "filesOpen=true"
+    },
+    {
+      "id": "5. BUTTONS — prompt orb",
+      "result": "PASS",
+      "evidence": "{\"open\":true,\"op\":\"1\",\"consensus\":true,\"consensusText\":\"Gemini 3.6 Flash LiteHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\",\"above\":true,\"cb\":{\"top\":623.40625,\"bottom\":710},\"bb\":{\"top\":720,\"bottom\":778}}"
+    },
+    {
+      "id": "CONSENSUS preview card ABOVE prompt",
+      "result": "PASS",
+      "evidence": "{\"open\":true,\"op\":\"1\",\"consensus\":true,\"consensusText\":\"Gemini 3.6 Flash LiteHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\",\"above\":true,\"cb\":{\"top\":623.40625,\"bottom\":710},\"bb\":{\"top\":720,\"bottom\":778}}"
+    },
+    {
+      "id": "5. BUTTONS — investigation tray (Web search / Research / Deep research full phrases)",
+      "result": "PASS",
+      "evidence": "{\"open\":true,\"rows\":[\"Web search\",\"Research\",\"Deep research\"]}"
+    }
+  ],
+  "blockers": []
+}

@@ -1,0 +1,45 @@
+{
+  "histClick": {
+    "ok": true,
+    "cls": "app-icon",
+    "x": 157.328125,
+    "y": 269,
+    "w": 75.328125,
+    "h": 96
+  },
+  "histInfo": {
+    "histClickOk": true,
+    "bodyHead": "Files\nImagine\nAlpine hush\nLow coast\nDusk glass\nAurora drift\nValley mist\nGlass still\nNight bloom\nWarm still\nField light\nEmber fall\nHistory\nKeep the wallpaper continuous under the cards.\nMiniMax\n2 turns · 12m\nHow should consensus sit with the prompt?\nCommand\n2 turns · 46m\nWhat is home, then?\nLite\n2 turns · 2d",
+    "sheet": {
+      "cls": "float-window sheet-list",
+      "bg": "rgba(16, 18, 24, 0.98)",
+      "blur": "none",
+      "op": "1",
+      "x": 480,
+      "y": 193.5234375,
+      "w": 320,
+      "h": 348.953125
+    },
+    "scrim": {
+      "cls": "sheet-scrim",
+      "bg": "rgba(6, 8, 12, 0.72)",
+      "blur": "blur(18px) saturate(1.4)"
+    },
+    "close": [
+      {
+        "text": "Close",
+        "cls": "close-affordance",
+        "w": 14,
+        "h": 14,
+        "x": 498.3125,
+        "y": 0,
+        "font": "16px",
+        "bg": "rgba(255, 255, 255, 0.55)",
+        "radius": "999px",
+        "color": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "avatars": [],
+    "room": false
+  }
+}

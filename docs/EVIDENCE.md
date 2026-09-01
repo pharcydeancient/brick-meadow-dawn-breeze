@@ -20,11 +20,11 @@ Sources:
 | **Apple TV + Movie Experience** | Theme store: cinematic hero + horizontal shelves | `.tv-hero`, `.tv-shelf` | Price grid |
 | **Formula 1** | Tap file / pin / wallpaper → preview, actions, related **in view** | `.f1-stage` | Separate page |
 | **Memories** | Smart Gen Cards mosaic; Boards are physical objects (notebook with spine + rings, portfolio flap, cork frame + pins, tray rim) | `.mem-card`, `.board-lane.object-*`, `.obj-chrome` | Generic kanban columns |
-| **Alert (1).png** | Light glass, dark type, blue Cancel, Account / Models / Settings. App icons on open. Never “Room”. | `.alert-card` | Kosmik-tinted alert |
+| **Alert (1).png** | Account / Models / Settings + app icons. Tap outside dismisses. No Cancel. Pane is tinted so type does not show through. | `.alert-card` | Oversized Cancel; translucent pane over card type |
 | **A-composer.png** | Consensus **card** above prompt. Plus. Web / Research / Deep probes. Orb summons. Relocatable cluster, returns to seat. | `.prompt-seat`, `.consensus-card`, `.prompt-plus`, `.probe` | Tiny “Listen” lip; sparkle icon |
 | **Kit window bar** | Controls under the canvas, contact shadow ellipse | `.window-bar`, `.window-shadow` | Traffic-light dots |
-| **Kit tab ornament** | Leading Files / Themes / Imagine / Smart / History, relocatable via top grip | `.nav-seat`, `.leading-ornament`, `.nav-grip` | Hidden on phone |
-| **User override** | Model color on the **name**, not the plate. Cards are clear glass. Long-press glow, no hover-scale. | `.card-name` `color: var(--card-accent)`; `.card-slot.lifted` drop-shadow | White names; hue-washed cards; `scale(1.015)` |
+| **Settings apps** | Files / History / Themes / Imagine / Smart / Store as icons inside the alert. Rule of 3 — never a permanent 5-item side pane. | `.apps-grid`, `.app-icon` | Leading ornament covering the canvas |
+| **User override** | Model color on the **name**, not the plate. Cards are clear glass. Long-press glow, no hover-scale. Ember chips, not flat pastel fills. | `.card-name` `color: var(--card-accent)`; `.model-chip.on` ember | White names; hue-washed cards; `scale(1.015)`; inline `background: accent` |
 
 ## Language
 
@@ -37,5 +37,4 @@ wallpaper / theme — never “room”. canvas — the product word for the main
 | Settings alert | Drag from `.alert-grip` | Stays where dropped |
 | Music widget | Drag the widget | Stays where dropped |
 | Prompt cluster | Long-press consensus card | Seat on send and 3s idle |
-| Leading nav | Drag `.nav-grip` | Stays where dropped |
 | Card canvas | Does not move | — |

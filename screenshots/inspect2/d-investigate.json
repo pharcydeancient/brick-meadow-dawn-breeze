@@ -1,0 +1,249 @@
+{
+  "label": "investigate",
+  "vw": 1280,
+  "vh": 800,
+  "visCount": 24,
+  "vis": [
+    {
+      "tag": "BUTTON",
+      "text": "Close",
+      "aria": "Close",
+      "cls": "close-affordance",
+      "x": 498,
+      "y": 0,
+      "w": 14,
+      "h": 14
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cards",
+      "aria": null,
+      "cls": "on",
+      "x": 493,
+      "y": 31,
+      "w": 57,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Boards",
+      "aria": null,
+      "cls": "",
+      "x": 556,
+      "y": 31,
+      "w": 63,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Canvas",
+      "aria": null,
+      "cls": "",
+      "x": 625,
+      "y": 31,
+      "w": 66,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Genie",
+      "aria": null,
+      "cls": "",
+      "x": 697,
+      "y": 31,
+      "w": 56,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Freeze tabs at the bottom",
+      "aria": "Freeze tabs at the bottom",
+      "cls": "smart-pin",
+      "x": 759,
+      "y": 31,
+      "w": 28,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Alpine hush Memory",
+      "aria": null,
+      "cls": "mem-card object-memory wide",
+      "x": 493,
+      "y": 118,
+      "w": 293,
+      "h": 196
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Low coast Memory",
+      "aria": null,
+      "cls": "mem-card object-memory",
+      "x": 493,
+      "y": 318,
+      "w": 145,
+      "h": 110
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Valley mist Memory",
+      "aria": null,
+      "cls": "mem-card object-memory",
+      "x": 642,
+      "y": 318,
+      "w": 145,
+      "h": 110
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Dusk glass Artifact",
+      "aria": null,
+      "cls": "mem-card object-artifact wide",
+      "x": 493,
+      "y": 489,
+      "w": 293,
+      "h": 196
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Glass still Artifact",
+      "aria": null,
+      "cls": "mem-card object-artifact",
+      "x": 493,
+      "y": 688,
+      "w": 145,
+      "h": 217
+    },
+    {
+      "tag": "SELECT",
+      "text": "Memory Task Artifact Note",
+      "aria": "Card type",
+      "cls": "pop-kind",
+      "x": 497,
+      "y": 649,
+      "w": 165,
+      "h": 40
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pop out",
+      "aria": null,
+      "cls": "genie-pop",
+      "x": 671,
+      "y": 649,
+      "w": 112,
+      "h": 40
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Dismiss settings",
+      "aria": "Dismiss settings",
+      "cls": "alert-dim",
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 800
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Account",
+      "aria": null,
+      "cls": "alert-tab",
+      "x": 74,
+      "y": 229,
+      "w": 81,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Models",
+      "aria": null,
+      "cls": "alert-tab",
+      "x": 155,
+      "y": 229,
+      "w": 81,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Settings",
+      "aria": null,
+      "cls": "alert-tab",
+      "x": 235,
+      "y": 229,
+      "w": 81,
+      "h": 28
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Files",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 74,
+      "y": 269,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "History",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 157,
+      "y": 269,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Themes",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 241,
+      "y": 269,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Imagine",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 74,
+      "y": 373,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Smart",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 157,
+      "y": 373,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Store",
+      "aria": null,
+      "cls": "app-icon",
+      "x": 241,
+      "y": 373,
+      "w": 75,
+      "h": 96
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Settings",
+      "aria": "Settings",
+      "cls": "settings-orb glass-ornament gaze-scale",
+      "x": 1218,
+      "y": 746,
+      "w": 44,
+      "h": 44
+    }
+  ],
+  "bodyText": "Cards\nBoards\nCanvas\nGenie\nMemory\nAlpine hush\nMemory\nLow coast\nMemory\nValley mist\nMemory\nArtifact\nDusk glass\nArtifact\nGlass still\nArtifact\nTask\ntask\nBoard the week\nTask\nNote\nnote\nCards vs boards\nNote\nMemory\nTask\nArtifact\nNote\nPop out\nAccount\nModels\nSettings\nFiles\nHistory\nThemes\nImagine\nSmart\nStore"
+}

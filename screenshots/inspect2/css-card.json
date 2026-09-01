@@ -1,0 +1,17 @@
+{
+  "close": [
+    {
+      "text": "Close",
+      "cls": "close-affordance",
+      "w": 14,
+      "h": 14,
+      "x": 498.3125,
+      "y": 0,
+      "font": "16px",
+      "bg": "rgba(255, 255, 255, 0.55)",
+      "radius": "999px"
+    }
+  ],
+  "headerBtns": [],
+  "body": "Cards\nBoards\nCanvas\nGenie\nMemory\nAlpine hush\nMemory\nLow coast\nMemory\nValley mist\nMemory\nArtifact\nDusk glass\nArtifact\nGlass still\nArtifact\nTask\ntask\nBoard the week\nTask\nNote\nnote\nCards vs boards\nNote\nMemory\nTask\nArtifact\nNote\nPop out"
+}

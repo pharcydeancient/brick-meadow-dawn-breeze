@@ -6,7 +6,7 @@
  *
  * Shared Space (full-bleed wallpaper — never chopped, never opaque-covered)
  * │
- * ├── CANVAS  (Kosmik tinted plate, portrait, centered)
+ * ├── CANVAS  (Kosmik tinted wallpaper, portrait, centered)
  * │     Home:     up to 6 model cards (Pinterest grid)
  * │     Card view: one model, chat — plate untinted
  * │     Working:  Files / Themes / Imagine / Smart / Upgrade (frosted plate)
@@ -14,12 +14,12 @@
  * ├── CANVAS BAR   (kit capsule under the canvas)
  * ├── CLOSE        (top-left of working / card view)
  * │
- * ├── LEADING ORNAMENT  (kit TabView — Files · Themes · Imagine · Smart · History)
+ * ├── SETTINGS ORB + ALERT  (Alert (1).png — Account / Models / Settings)
+ * │     Apps live here: Files · History · Themes · Imagine · Smart · Store
+ * │     Rule of 3: never a permanent 5-item side pane of those destinations
  * │
  * ├── PROMPT CLUSTER    (A-composer.png — consensus card above prompt)
  * │     Invisible until the 3D orb summons it. Relocatable. Returns on send / idle.
- * │
- * ├── SETTINGS ORB + ALERT  (Alert (1).png — Account / Models / Settings)
  * │
  * └── MUSIC WIDGET      (visionOS now-playing, relocatable)
  */
@@ -34,7 +34,7 @@ export const REGIONS = [
   {
     id: "canvas",
     label: "Canvas",
-    mapsTo: "Kosmik tinted plate + Pinterest card grid",
+    mapsTo: "Kosmik tinted wallpaper + Pinterest card grid",
     role: "Card canvas, card view, or a working surface.",
   },
   {
@@ -50,41 +50,27 @@ export const REGIONS = [
     role: "Move affordance. Anchors the canvas in space.",
   },
   {
-    id: "leading",
-    label: "Leading ornament",
-    mapsTo: "Kit vertical tab bar",
-    role: "Files, Themes, Imagine, Smart, History. Relocatable.",
-  },
-  {
     id: "settings-orb",
     label: "Settings orb",
-    mapsTo: "Persistent ornament (bottom trailing)",
-    role: "Opens Account / Models / Settings alert.",
+    mapsTo: "Alert (1).png — Account / Models / Settings + app icons",
+    role: "One package. Files, History, Themes, Imagine, Smart, Store live as apps inside it. Not a 5-item side pane.",
   },
   {
     id: "prompt-orb",
     label: "Prompt orb",
-    mapsTo: "A-composer summon orb",
-    role: "Summons the invisible prompt cluster.",
+    mapsTo: "A-composer.png 3D sphere",
+    role: "Summons the prompt cluster.",
   },
   {
-    id: "prompt-bar",
+    id: "prompt",
     label: "Prompt cluster",
-    mapsTo: "A-composer.png — consensus card + plus + probes",
-    role: "Compose. Relocatable. Returns on send and 3s idle.",
-  },
-  {
-    id: "settings-pane",
-    label: "Settings alert",
-    mapsTo: "Alert (1).png",
-    role: "Account / Models / Settings + app icons. Never Room. Relocatable.",
+    mapsTo: "A-composer.png",
+    role: "Consensus preview above composer. Relocatable. Returns on send / idle.",
   },
   {
     id: "music",
-    label: "Music widget",
-    mapsTo: "visionOS Music now-playing",
-    role: "Relocatable. Album art from the active live wallpaper.",
+    label: "Music",
+    mapsTo: "visionOS now-playing",
+    role: "Relocatable widget. Bundled with live wallpapers.",
   },
-] as const;
-
-export type RegionId = (typeof REGIONS)[number]["id"];
+];

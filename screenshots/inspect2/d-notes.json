@@ -1,0 +1,14 @@
+{
+  "settingsClicked": "Settings",
+  "chipToggle": {
+    "clicked": "Lite",
+    "before": 6,
+    "count": 21
+  },
+  "category": {
+    "paneHBefore": 400,
+    "paneH": 400,
+    "grew": false,
+    "menus": []
+  }
+}

@@ -1,0 +1,375 @@
+{
+  "pane": {
+    "cls": "alert-card",
+    "bg": "rgba(28, 28, 32, 0.97)",
+    "bgImg": "none",
+    "blur": "none",
+    "filter": "none",
+    "isolation": "isolate",
+    "op": "1",
+    "overflow": "hidden",
+    "x": 61,
+    "y": 210,
+    "w": 268,
+    "h": 268
+  },
+  "dim": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "blur": "none",
+    "cls": "alert-dim"
+  },
+  "titles": [
+    {
+      "t": "Gemini 3.6 Flash Lite\n\nWhat is home, the",
+      "x": 499.3125,
+      "y": 41,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Gemini 3.6 Flash Lite\n\nWhat is home, the",
+      "x": 499.3125,
+      "y": 41,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Gemini 3.6 Flash Lite\n\nWhat is home, the",
+      "x": 503.3125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Gemini 3.6 Flash Lite\n\nWhat is home, the",
+      "x": 503.3125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Gemini 3.6 Flash Lite",
+      "x": 513.3125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Gemini 3.6 Flash Lite",
+      "x": 513.3125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "What is home, then?\n\nHome is a card grid",
+      "x": 513.3125,
+      "y": 131.1750030517578,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "What is home, then?",
+      "x": 513.3125,
+      "y": 200.6125030517578,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Home is a card grid. Themes and Imagine ",
+      "x": 513.3125,
+      "y": 247.2062530517578,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Small 3.2\n\nTap to start a conver",
+      "x": 503.3125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Small 3.2\n\nTap to start a conver",
+      "x": 503.3125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Small 3.2",
+      "x": 513.3125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Small 3.2",
+      "x": 513.3125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 513.3125,
+      "y": 419,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 513.3125,
+      "y": 600.4375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Command R\n\nHow should consensus sit with",
+      "x": 647.8125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Command R\n\nHow should consensus sit with",
+      "x": 647.8125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Command R",
+      "x": 657.8125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Command R",
+      "x": 657.8125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "How should consensus sit with the prompt",
+      "x": 657.8125,
+      "y": 113.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "How should consensus sit with the prompt",
+      "x": 657.8125,
+      "y": 172.0187530517578,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tint the wallpaper, not the cards. Names",
+      "x": 657.8125,
+      "y": 232.9093780517578,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "MiniMax M3\n\nKeep the wallpaper continuou",
+      "x": 647.8125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "MiniMax M3\n\nKeep the wallpaper continuou",
+      "x": 647.8125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "MiniMax M3",
+      "x": 657.8125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "MiniMax M3",
+      "x": 657.8125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Keep the wallpaper continuous under the ",
+      "x": 657.8125,
+      "y": 401,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Keep the wallpaper continuous under the ",
+      "x": 657.8125,
+      "y": 445.546875,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "A glass canvas over a live wallpaper. Ca",
+      "x": 657.8125,
+      "y": 520.734375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Ling 2.6 Flash\n\nTap to start a conversat",
+      "x": 792.3125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Ling 2.6 Flash\n\nTap to start a conversat",
+      "x": 792.3125,
+      "y": 76.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Ling 2.6 Flash",
+      "x": 802.3125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Ling 2.6 Flash",
+      "x": 802.3125,
+      "y": 87.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 802.3125,
+      "y": 113.17500305175781,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 802.3125,
+      "y": 312.61248779296875,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Nemo\n\nTap to start a conversatio",
+      "x": 792.3125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Nemo\n\nTap to start a conversatio",
+      "x": 792.3125,
+      "y": 364,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Nemo",
+      "x": 802.3125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Mistral Nemo",
+      "x": 802.3125,
+      "y": 375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 802.3125,
+      "y": 401,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Tap to start a conversation.",
+      "x": 802.3125,
+      "y": 600.4375,
+      "through": false,
+      "vis": "visible",
+      "op": "1"
+    },
+    {
+      "t": "Account\nModels\nSettings\nFiles\nHistory\nTh",
+      "x": 61,
+      "y": 210,
+      "through": true,
+      "vis": "visible",
+      "op": "1"
+    }
+  ],
+  "bodyHasRoom": false,
+  "roomSnippets": [],
+  "cancel": [],
+  "tabs": [
+    "Account",
+    "Models",
+    "Settings"
+  ],
+  "apps": [
+    "Files",
+    "History",
+    "Themes",
+    "Imagine",
+    "Smart",
+    "Store"
+  ]
+}

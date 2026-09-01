@@ -1,5 +1,4 @@
-import type { ReactNode } from "react";
-import { WinClose } from "./win-close";
+import { useRef, type ReactNode } from "react";
 
 export interface PreviewAction {
   id: string;
@@ -37,9 +36,19 @@ export function PreviewStage({
   onRelated?: (id: string) => void;
   children?: ReactNode;
 }) {
+  const startY = useRef(0);
+
   return (
-    <div className="f1-stage">
-      <WinClose corner onClick={onClose} />
+    <div
+      className="f1-stage"
+      onPointerDown={(e) => {
+        startY.current = e.clientY;
+      }}
+      onPointerUp={(e) => {
+        if (e.clientY - startY.current > 72) onClose();
+      }}
+    >
+      <button type="button" className="close-affordance in-stage" aria-label="Close" onClick={onClose} />
       <div className="f1-hero">
         {video ? (
           <video src={video} poster={src} autoPlay muted loop playsInline />

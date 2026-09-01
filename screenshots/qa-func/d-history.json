@@ -1,0 +1,36 @@
+{
+  "sheet": true,
+  "scrim": true,
+  "close": true,
+  "closeBox": {
+    "x": 773,
+    "y": 208.5234375,
+    "w": 14,
+    "h": 14
+  },
+  "closeBg": "rgb(255, 95, 87)",
+  "cardsUnder": 6,
+  "canvas": true,
+  "title": "History",
+  "rows": [
+    {
+      "title": "Keep the wallpaper continuous under the cards.",
+      "meta": "MiniMax 2 turns · 13m",
+      "tag": "MiniMax"
+    },
+    {
+      "title": "How should consensus sit with the prompt?",
+      "meta": "Command 2 turns · 47m",
+      "tag": "Command"
+    },
+    {
+      "title": "What is home, then?",
+      "meta": "Lite 2 turns · 2d",
+      "tag": "Lite"
+    }
+  ],
+  "avatars": 0,
+  "concat": false,
+  "named": true,
+  "dates": true
+}

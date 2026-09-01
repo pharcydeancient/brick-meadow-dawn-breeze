@@ -1,0 +1,667 @@
+{
+  "result": "FAIL",
+  "failCount": 3,
+  "passCount": 107,
+  "checks": [
+    {
+      "id": "home.six-cards",
+      "result": "PASS",
+      "evidence": "count=6 ratios=[2.05,2.05,2.05,2.05,2.05,2.05] names=Gemini 3.6 Flash Lite | Mistral Small 3.2 | Command R | MiniMax M3 | Ling 2.6 Flash | Mistral Nemo",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.wallpaper",
+      "result": "PASS",
+      "evidence": "src=/themes/free/observatory.jpg",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.no-side-rail",
+      "result": "PASS",
+      "evidence": "no visible side rail",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room/Rooms copy",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.prompt-orb-visible",
+      "result": "PASS",
+      "evidence": "op=1 72x72 aria=Open composer",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.prompt-orb-on-phone",
+      "result": "PASS",
+      "evidence": "orb 72x72 at (604,730) glued to phone stage, not a desktop-wide dock",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "home.settings-orb-phone-left",
+      "result": "PASS",
+      "evidence": "at (488,734) 44x44",
+      "screenshot": "/workspace/screenshots/qa-func/d-01-home.png"
+    },
+    {
+      "id": "prompt.hidden-until-orb",
+      "result": "PASS",
+      "evidence": "{\"op\":\"0\",\"pe\":\"none\",\"tf\":\"matrix(1, 0, 0, 1, -149.688, 28)\"}",
+      "screenshot": "/workspace/screenshots/qa-func/d-02-home-pre-prompt.png"
+    },
+    {
+      "id": "prompt.open-animation",
+      "result": "PASS",
+      "evidence": "animated early dt=56 op=0.000 -> 1.000",
+      "screenshot": "/workspace/screenshots/qa-func/d-03-prompt-mid.png"
+    },
+    {
+      "id": "prompt.orb-summons",
+      "result": "PASS",
+      "evidence": "opened",
+      "screenshot": "/workspace/screenshots/qa-func/d-04-prompt-open.png"
+    },
+    {
+      "id": "prompt.consensus-above",
+      "result": "PASS",
+      "evidence": "gap=18.0 text=Gemini 3.6 Flash Lite\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.",
+      "screenshot": "/workspace/screenshots/qa-func/d-04-prompt-open.png"
+    },
+    {
+      "id": "prompt.attach-label",
+      "result": "PASS",
+      "evidence": "{\"aria\":\"Attach\",\"label\":\"Attach\",\"labelVis\":true,\"fontSize\":\"8px\"}",
+      "screenshot": "/workspace/screenshots/qa-func/d-04-prompt-open.png"
+    },
+    {
+      "id": "prompt.investigate-tray",
+      "result": "PASS",
+      "evidence": "rows=[\"Web search\",\"Research\",\"Deep research\"] aboveBar=true",
+      "screenshot": "/workspace/screenshots/qa-func/d-05-investigate.png"
+    },
+    {
+      "id": "prompt.investigate-select",
+      "result": "PASS",
+      "evidence": "probe 'Web search'",
+      "screenshot": "/workspace/screenshots/qa-func/d-05-investigate.png"
+    },
+    {
+      "id": "prompt.close-animation",
+      "result": "PASS",
+      "evidence": "fade mid op=0.854 dt=115",
+      "screenshot": "/workspace/screenshots/qa-func/d-06-prompt-closing.png"
+    },
+    {
+      "id": "prompt.orb-returns",
+      "result": "PASS",
+      "evidence": "{\"away\":false,\"op\":1,\"pe\":\"auto\"}",
+      "screenshot": "/workspace/screenshots/qa-func/d-07-prompt-closed.png"
+    },
+    {
+      "id": "settings.opens",
+      "result": "PASS",
+      "evidence": "alert-card visible",
+      "screenshot": "/workspace/screenshots/qa-func/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.tabs",
+      "result": "PASS",
+      "evidence": "[\"Account\",\"Models\",\"Settings\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.apps",
+      "result": "PASS",
+      "evidence": "[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.no-cancel",
+      "result": "PASS",
+      "evidence": "no Cancel",
+      "screenshot": "/workspace/screenshots/qa-func/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.dim-exists",
+      "result": "PASS",
+      "evidence": "dim present",
+      "screenshot": "/workspace/screenshots/qa-func/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.account-tab",
+      "result": "PASS",
+      "evidence": "Pro |  | $19.99/mo |  | Upgrade",
+      "screenshot": "/workspace/screenshots/qa-func/d-09-settings-account.png"
+    },
+    {
+      "id": "models.align",
+      "result": "PASS",
+      "evidence": "Align present",
+      "screenshot": "/workspace/screenshots/qa-func/d-10-settings-models.png"
+    },
+    {
+      "id": "models.category-not-native-select",
+      "result": "PASS",
+      "evidence": "cat='General'",
+      "screenshot": "/workspace/screenshots/qa-func/d-10-settings-models.png"
+    },
+    {
+      "id": "models.ember-chips",
+      "result": "PASS",
+      "evidence": "Lite,Small,Command,MiniMax,Ling,Nemo",
+      "screenshot": "/workspace/screenshots/qa-func/d-10-settings-models.png"
+    },
+    {
+      "id": "models.category-overlay",
+      "result": "PASS",
+      "evidence": "pos=fixed paneH 400->400 opts=[\"General\",\"Image\",\"Video\",\"Audio\",\"Coding\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-11-category-overlay.png"
+    },
+    {
+      "id": "models.category-pick",
+      "result": "PASS",
+      "evidence": "Image chips=FLUX,Gemini,Mini,Klein,Banana,Kling,GPT Img,Seedream,Qwen Img,DALL\u00b7E,Midjourney,Banana+,Gemini+,FLUX Max,GPT 5.4,Seed 4.5",
+      "screenshot": "/workspace/screenshots/qa-func/d-12-category-image.png"
+    },
+    {
+      "id": "models.locked-groups",
+      "result": "PASS",
+      "evidence": "Coding Elite locked=true Pro locked=false. bands=[{\"title\":\"Pro\",\"locked\":false,\"lockBtn\":false,\"visible\":true,\"lockSize\":null},{\"title\":\"Elite\",\"locked\":true,\"lockBtn\":true,\"visible\":true,\"lockSize\":{\"w\":282,\"h\":133}}]",
+      "screenshot": "/workspace/screenshots/qa-func/d-12b-coding-elite.png"
+    },
+    {
+      "id": "models.elite-lock-taps-store",
+      "result": "PASS",
+      "evidence": "lock overlay opened Upgrade",
+      "screenshot": "/workspace/screenshots/qa-func/d-12c-elite-lock-tap.png"
+    },
+    {
+      "id": "models.chip-toggle",
+      "result": "PASS",
+      "evidence": "6 -> 5",
+      "screenshot": "/workspace/screenshots/qa-func/d-13-chip-toggle.png"
+    },
+    {
+      "id": "models.align-click",
+      "result": "PASS",
+      "evidence": "Align clicked",
+      "screenshot": "/workspace/screenshots/qa-func/d-10-settings-models.png"
+    },
+    {
+      "id": "settings.grid-rows",
+      "result": "PASS",
+      "evidence": "[{\"n\":\"1\",\"on\":false},{\"n\":\"2\",\"on\":true},{\"n\":\"3\",\"on\":false}]",
+      "screenshot": "/workspace/screenshots/qa-func/d-14-settings-prefs.png"
+    },
+    {
+      "id": "settings.tuck-toggles-present",
+      "result": "PASS",
+      "evidence": "Grid rows 1 2 3 || Tuck after send On || Tuck when idle On",
+      "screenshot": "/workspace/screenshots/qa-func/d-14-settings-prefs.png"
+    },
+    {
+      "id": "settings.tuck-toggles-work",
+      "result": "PASS",
+      "evidence": "On -> Off",
+      "screenshot": "/workspace/screenshots/qa-func/d-15-tuck-toggle.png"
+    },
+    {
+      "id": "settings.rows-reflow",
+      "result": "PASS",
+      "evidence": "default [{\"w\":137,\"h\":280,\"x\":503,\"y\":76},{\"w\":137,\"h\":280,\"x\":503,\"y\":364},{\"w\":137,\"h\":280,\"x\":648,\"y\":76},{\"w\":137,\"h\":280,\"x\":648,\"y\":364},{\"w\":137,\"h\":280,\"x\":792,\"y\":76},{\"w\":137,\"h\":280,\"x\":792,\"y\":364}] -> rows3 [{\"w\":134,\"h\":207,\"x\":502,\"y\":41},{\"w\":134,\"h\":207,\"x\":502,\"y\":256},{\"w\":134,\"h\":207,\"x\":502,\"y\":472},{\"w\":134,\"h\":207,\"x\":644,\"y\":41},{\"w\":134,\"h\":207,\"x\":644,\"y\":256},{\"w\":134,\"h\":207,\"x\":644,\"y\":472}]",
+      "screenshot": "/workspace/screenshots/qa-func/d-18-rows-3-home.png"
+    },
+    {
+      "id": "settings.rows-1-reflow",
+      "result": "PASS",
+      "evidence": "[{\"w\":137,\"h\":280,\"x\":503,\"y\":220,\"inside\":true},{\"w\":137,\"h\":280,\"x\":648,\"y\":220,\"inside\":true},{\"w\":137,\"h\":280,\"x\":792,\"y\":220,\"inside\":false},{\"w\":137,\"h\":280,\"x\":937,\"y\":220,\"inside\":false},{\"w\":137,\"h\":280,\"x\":1081,\"y\":220,\"inside\":false},{\"w\":137,\"h\":280,\"x\":1226,\"y\":220,\"inside\":false}]",
+      "screenshot": "/workspace/screenshots/qa-func/d-19-rows-1-home.png"
+    },
+    {
+      "id": "settings.rows-1-fits-phone",
+      "result": "FAIL",
+      "evidence": "PNG d-19-rows-1-home.png: Grid rows=1 lays six 137x280 cards in a single horizontal strip. Only ~2 cards sit on the phone canvas; 4/6 spill into the desktop void (x=792,937,1081,1226 vs stage ~445\u2013835). The row picker reflows, but row 1 does not keep the home grid on the phone.",
+      "screenshot": "/workspace/screenshots/qa-func/d-19-rows-1-home.png"
+    },
+    {
+      "id": "settings.tap-outside-dismisses",
+      "result": "PASS",
+      "evidence": "closed",
+      "screenshot": "/workspace/screenshots/qa-func/d-20-dim-dismiss.png"
+    },
+    {
+      "id": "card.opens",
+      "result": "PASS",
+      "evidence": "title=Mistral Small 3.2",
+      "screenshot": "/workspace/screenshots/qa-func/d-22-card-view.png"
+    },
+    {
+      "id": "card.back-exists",
+      "result": "PASS",
+      "evidence": "back='Back'",
+      "screenshot": "/workspace/screenshots/qa-func/d-22-card-view.png"
+    },
+    {
+      "id": "card.header-back-title-only",
+      "result": "PASS",
+      "evidence": "head='Back | Mistral Small 3.2'",
+      "screenshot": "/workspace/screenshots/qa-func/d-22-card-view.png"
+    },
+    {
+      "id": "card.title-manrope",
+      "result": "PASS",
+      "evidence": "Manrope, ui-sans-serif, system-ui, sans-serif 17px 600 rgb(255, 176, 102)",
+      "screenshot": "/workspace/screenshots/qa-func/d-22-card-view.png"
+    },
+    {
+      "id": "card.title-accent",
+      "result": "PASS",
+      "evidence": "rgb(255, 176, 102)",
+      "screenshot": "/workspace/screenshots/qa-func/d-22-card-view.png"
+    },
+    {
+      "id": "card.escape-back",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-23-card-escape.png"
+    },
+    {
+      "id": "card.back-returns-home",
+      "result": "PASS",
+      "evidence": "cards=6",
+      "screenshot": "/workspace/screenshots/qa-func/d-25-card-back-home.png"
+    },
+    {
+      "id": "card.tap-2",
+      "result": "PASS",
+      "evidence": "MiniMax M3",
+      "screenshot": "/workspace/screenshots/qa-func/d-44-card-2.png"
+    },
+    {
+      "id": "card.tap-3",
+      "result": "PASS",
+      "evidence": "Ling 2.6 Flash",
+      "screenshot": "/workspace/screenshots/qa-func/d-44-card-3.png"
+    },
+    {
+      "id": "card.tap-4",
+      "result": "PASS",
+      "evidence": "Mistral Nemo",
+      "screenshot": "/workspace/screenshots/qa-func/d-44-card-4.png"
+    },
+    {
+      "id": "card.tap-5",
+      "result": "PASS",
+      "evidence": "Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/qa-func/d-44-card-5.png"
+    },
+    {
+      "id": "history.overlay",
+      "result": "PASS",
+      "evidence": "title=History cardsUnder=6",
+      "screenshot": "/workspace/screenshots/qa-func/d-26-history.png"
+    },
+    {
+      "id": "history.keeps-home-under",
+      "result": "PASS",
+      "evidence": "cardsUnder=6",
+      "screenshot": "/workspace/screenshots/qa-func/d-26-history.png"
+    },
+    {
+      "id": "history.named-conversations",
+      "result": "PASS",
+      "evidence": "[{\"title\":\"Keep the wallpaper continuous under the cards.\",\"meta\":\"MiniMax 2 turns \u00b7 13m\",\"tag\":\"MiniMax\"},{\"title\":\"How should consensus sit with the prompt?\",\"meta\":\"Command 2 turns \u00b7 47m\",\"tag\":\"Command\"},{\"title\":\"What is home, then?\",\"meta\":\"Lite 2 turns \u00b7 2d\",\"tag\":\"Lite\"}]",
+      "screenshot": "/workspace/screenshots/qa-func/d-26-history.png"
+    },
+    {
+      "id": "history.dates",
+      "result": "PASS",
+      "evidence": "MiniMax 2 turns \u00b7 13m | Command 2 turns \u00b7 47m | Lite 2 turns \u00b7 2d",
+      "screenshot": "/workspace/screenshots/qa-func/d-26-history.png"
+    },
+    {
+      "id": "history.close-control",
+      "result": "PASS",
+      "evidence": "14px red {\"x\":773,\"y\":208.5234375,\"w\":14,\"h\":14} rgb(255, 95, 87)",
+      "screenshot": "/workspace/screenshots/qa-func/d-26-history.png"
+    },
+    {
+      "id": "history.close-returns",
+      "result": "FAIL",
+      "evidence": "PNG d-27-history-after-red-close.png still shows the History sheet fully open after clicking the 14px red .sheet-close at (773,209). The close sits inside [data-sheet-handle]; pointerdown on the red light is captured as a sheet-drag, so click never fires onClose. Unclickable close. Scrim DOES dismiss (d-27b-history-after-scrim.png is home).",
+      "screenshot": "/workspace/screenshots/qa-func/d-27-history-after-red-close.png"
+    },
+    {
+      "id": "history.scrim-returns",
+      "result": "PASS",
+      "evidence": "scrim dismissed after close failed",
+      "screenshot": "/workspace/screenshots/qa-func/d-27b-history-after-scrim.png"
+    },
+    {
+      "id": "history.lands-on-home",
+      "result": "PASS",
+      "evidence": "cards=6",
+      "screenshot": "/workspace/screenshots/qa-func/d-27-history-after-red-close.png"
+    },
+    {
+      "id": "files.opens",
+      "result": "PASS",
+      "evidence": "Files | Imagine | Alpine hush | Low coast | Dusk glass | Aurora drift | Valley mist | Glass still | Night bloom | Warm still | Field light | Ember fall",
+      "screenshot": "/workspace/screenshots/qa-func/d-28-files.png"
+    },
+    {
+      "id": "files.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[\"Files\",\"Imagine\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-28-files.png"
+    },
+    {
+      "id": "files.close-exists",
+      "result": "PASS",
+      "evidence": "{\"w\":14,\"h\":14,\"x\":498,\"y\":0}",
+      "screenshot": "/workspace/screenshots/qa-func/d-28-files.png"
+    },
+    {
+      "id": "files.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-29-files-closed.png"
+    },
+    {
+      "id": "themes.opens",
+      "result": "PASS",
+      "evidence": "Wallpapers | Selector | Store | Interior | Observatory | Cabin | Cabin Space | Sanctuary | Deck | Dune Hall | Horizons | Ocean | Garden | Rainfall | Twilight | Twin Suns | Night | Star Bridge | Neon City | Transit | Blad",
+      "screenshot": "/workspace/screenshots/qa-func/d-30-themes.png"
+    },
+    {
+      "id": "themes.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[\"Wallpapers\",\"Interior\",\"Horizons\",\"Night\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-30-themes.png"
+    },
+    {
+      "id": "themes.close-exists",
+      "result": "PASS",
+      "evidence": "{\"w\":14,\"h\":14,\"x\":498,\"y\":0}",
+      "screenshot": "/workspace/screenshots/qa-func/d-30-themes.png"
+    },
+    {
+      "id": "themes.store-chip",
+      "result": "PASS",
+      "evidence": "PNG d-31-themes-store.png: after tapping Store chip, heading is 'Live wallpapers', Store chip is the selected (filled) chip, Selector is hollow. Featured Aurora Drift + Aurora/Tide/Drift shelves. Store chip did switch the pane. Earlier FAIL was a selector miss (.years-tile/.gate absent on this shelf layout).",
+      "screenshot": "/workspace/screenshots/qa-func/d-31-themes-store.png"
+    },
+    {
+      "id": "themes.tile-opens",
+      "result": "PASS",
+      "evidence": "preview",
+      "screenshot": "/workspace/screenshots/qa-func/d-32-theme-preview.png"
+    },
+    {
+      "id": "themes.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-33-themes-closed.png"
+    },
+    {
+      "id": "imagine.opens",
+      "result": "PASS",
+      "evidence": "Discover | Images | Videos | Library | Night bloom | Alpine hush | Soft figure | Aurora drift | Low coast | Warm still | Dusk glass | Portrait hold | Field light | Glass still | Quiet hall | Ember fall | Valley mist | Cl",
+      "screenshot": "/workspace/screenshots/qa-func/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[]",
+      "screenshot": "/workspace/screenshots/qa-func/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.close-exists",
+      "result": "PASS",
+      "evidence": "{\"w\":14,\"h\":14,\"x\":498,\"y\":0}",
+      "screenshot": "/workspace/screenshots/qa-func/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-37-imagine-closed.png"
+    },
+    {
+      "id": "smart.opens",
+      "result": "PASS",
+      "evidence": "Smart Cards | Smart Boards | Smart Canvas | Smart Genie",
+      "screenshot": "/workspace/screenshots/qa-func/d-38-smart.png"
+    },
+    {
+      "id": "smart.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[]",
+      "screenshot": "/workspace/screenshots/qa-func/d-38-smart.png"
+    },
+    {
+      "id": "smart.close-exists",
+      "result": "PASS",
+      "evidence": "{\"w\":14,\"h\":14,\"x\":498,\"y\":0}",
+      "screenshot": "/workspace/screenshots/qa-func/d-38-smart.png"
+    },
+    {
+      "id": "smart.hub",
+      "result": "PASS",
+      "evidence": "[\"Smart Cards\",\"Smart Boards\",\"Smart Canvas\",\"Smart Genie\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-38-smart.png"
+    },
+    {
+      "id": "smart.smart-cards",
+      "result": "PASS",
+      "evidence": "",
+      "screenshot": "/workspace/screenshots/qa-func/d-39-smart-cards.png"
+    },
+    {
+      "id": "smart.smart-boards",
+      "result": "PASS",
+      "evidence": "Tray | 2 | Dusk glass | artifact | Board the week | task | Cork | 2 | Low coast | memory | Cards vs boards | note | Notebook | 2 | Alpine hush | memory | Valley mist | memory | Portfolio | 1 | Glass s",
+      "screenshot": "/workspace/screenshots/qa-func/d-39-smart-boards.png"
+    },
+    {
+      "id": "smart.smart-canvas",
+      "result": "PASS",
+      "evidence": "Alpine hush | Low coast | Dusk glass | Valley mist | task | Board the week | note | Cards vs boards | Glass still",
+      "screenshot": "/workspace/screenshots/qa-func/d-39-smart-canvas.png"
+    },
+    {
+      "id": "smart.smart-genie",
+      "result": "PASS",
+      "evidence": "Smart Genie |  | Ask for a card, a board, or a rearrangement. It stays in this canvas. |  | What should we make.",
+      "screenshot": "/workspace/screenshots/qa-func/d-39-smart-genie.png"
+    },
+    {
+      "id": "smart.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-40-smart-closed.png"
+    },
+    {
+      "id": "store.opens",
+      "result": "PASS",
+      "evidence": "PNG d-41-store.png: Settings > Store on a Pro account opens the Live wallpapers marketplace (FEATURED Aurora Drift, shelves), not a dead surface. Close 14px red present. Upgrade/plan stack is reached separately via Account Upgrade and Elite lock (d-12c-elite-lock-tap.png shows Free/Pro/Elite/Enterprise plans). Store control does what it says for a paid tier.",
+      "screenshot": "/workspace/screenshots/qa-func/d-41-store.png"
+    },
+    {
+      "id": "store.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[\"Live wallpapers\",\"Live wallpapers\",\"Aurora\",\"Tide\",\"Drift\"]",
+      "screenshot": "/workspace/screenshots/qa-func/d-41-store.png"
+    },
+    {
+      "id": "store.close-exists",
+      "result": "PASS",
+      "evidence": "{\"w\":14,\"h\":14,\"x\":498,\"y\":0}",
+      "screenshot": "/workspace/screenshots/qa-func/d-41-store.png"
+    },
+    {
+      "id": "store.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/d-43-store-closed.png"
+    },
+    {
+      "id": "prompt.consensus-click",
+      "result": "PASS",
+      "evidence": "map opened",
+      "screenshot": "/workspace/screenshots/qa-func/d-45-consensus-map.png"
+    },
+    {
+      "id": "desktop.tour-complete",
+      "result": "PASS",
+      "evidence": "desktop checks 85",
+      "screenshot": "/workspace/screenshots/qa-func/d-46-home-final.png"
+    },
+    {
+      "id": "m.home.six-cards",
+      "result": "PASS",
+      "evidence": "ratios=1.55,1.55,1.55,1.55,1.55,1.55",
+      "screenshot": "/workspace/screenshots/qa-func/m-01-home.png"
+    },
+    {
+      "id": "m.home.prompt-orb",
+      "result": "PASS",
+      "evidence": "orb 72x72 y=756",
+      "screenshot": "/workspace/screenshots/qa-func/m-01-home.png"
+    },
+    {
+      "id": "m.home.settings-orb",
+      "result": "PASS",
+      "evidence": "at (20,756)",
+      "screenshot": "/workspace/screenshots/qa-func/m-01-home.png"
+    },
+    {
+      "id": "m.prompt.consensus-above",
+      "result": "PASS",
+      "evidence": "{\"ok\":true,\"above\":true,\"attach\":\"Attach\",\"cTop\":563.40625,\"bTop\":668}",
+      "screenshot": "/workspace/screenshots/qa-func/m-02-prompt.png"
+    },
+    {
+      "id": "m.prompt.attach-label",
+      "result": "PASS",
+      "evidence": "Attach",
+      "screenshot": "/workspace/screenshots/qa-func/m-02-prompt.png"
+    },
+    {
+      "id": "m.prompt.investigate",
+      "result": "PASS",
+      "evidence": "[{\"t\":\"Web search\",\"onScreen\":true},{\"t\":\"Research\",\"onScreen\":true},{\"t\":\"Deep research\",\"onScreen\":true}]",
+      "screenshot": "/workspace/screenshots/qa-func/m-03-investigate.png"
+    },
+    {
+      "id": "m.settings.tabs",
+      "result": "PASS",
+      "evidence": "[\"Account\",\"Models\",\"Settings\"]",
+      "screenshot": "/workspace/screenshots/qa-func/m-04-settings.png"
+    },
+    {
+      "id": "m.settings.apps",
+      "result": "PASS",
+      "evidence": "[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/qa-func/m-04-settings.png"
+    },
+    {
+      "id": "m.models.category-overlay",
+      "result": "PASS",
+      "evidence": "overlay",
+      "screenshot": "/workspace/screenshots/qa-func/m-06-category.png"
+    },
+    {
+      "id": "m.settings.grid-rows",
+      "result": "PASS",
+      "evidence": "[\"1\",\"2\",\"3\"]",
+      "screenshot": "/workspace/screenshots/qa-func/m-07-prefs.png"
+    },
+    {
+      "id": "m.card.header",
+      "result": "PASS",
+      "evidence": "Back | Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/qa-func/m-08-card.png"
+    },
+    {
+      "id": "m.card.back-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-09-card-back.png"
+    },
+    {
+      "id": "m.history.overlay",
+      "result": "PASS",
+      "evidence": "overlay",
+      "screenshot": "/workspace/screenshots/qa-func/m-10-history.png"
+    },
+    {
+      "id": "m.history.close-returns",
+      "result": "FAIL",
+      "evidence": "PNG m-10b-history-close.png: History overlay still covering the phone after tapping the red 14px close on mobile. Same drag-handle swallow as desktop.",
+      "screenshot": "/workspace/screenshots/qa-func/m-10b-history-close.png"
+    },
+    {
+      "id": "m.files.opens",
+      "result": "PASS",
+      "evidence": "close=1",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-files.png"
+    },
+    {
+      "id": "m.files.returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-files.png"
+    },
+    {
+      "id": "m.imagine.opens",
+      "result": "PASS",
+      "evidence": "close=1",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-imagine.png"
+    },
+    {
+      "id": "m.imagine.returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-imagine.png"
+    },
+    {
+      "id": "m.smart.opens",
+      "result": "PASS",
+      "evidence": "close=1",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-smart.png"
+    },
+    {
+      "id": "m.smart.returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-smart.png"
+    },
+    {
+      "id": "m.themes.opens",
+      "result": "PASS",
+      "evidence": "close=1",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-themes.png"
+    },
+    {
+      "id": "m.themes.returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-themes.png"
+    },
+    {
+      "id": "m.store.opens",
+      "result": "PASS",
+      "evidence": "close=1",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-store.png"
+    },
+    {
+      "id": "m.store.returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-func/m-11-store.png"
+    }
+  ]
+}

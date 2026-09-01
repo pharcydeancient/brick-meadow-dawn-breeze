@@ -1,0 +1,69 @@
+{
+  "label": "home",
+  "vw": 1280,
+  "vh": 800,
+  "visCount": 6,
+  "vis": [
+    {
+      "tag": "BUTTON",
+      "text": "Summon prompt",
+      "aria": "Summon prompt",
+      "cls": "prompt-orb",
+      "x": 608,
+      "y": 726,
+      "w": 64,
+      "h": 64
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Settings",
+      "aria": "Settings",
+      "cls": "settings-orb glass-ornament gaze-scale",
+      "x": 1218,
+      "y": 746,
+      "w": 44,
+      "h": 44
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Attach",
+      "aria": "Attach",
+      "cls": "prompt-plus",
+      "x": 439,
+      "y": 732,
+      "w": 40,
+      "h": 34
+    },
+    {
+      "tag": "INPUT",
+      "text": "",
+      "aria": null,
+      "cls": "",
+      "x": 487,
+      "y": 739,
+      "w": 259,
+      "h": 21
+    },
+    {
+      "tag": "BUTTON",
+      "text": "↑",
+      "aria": "Send",
+      "cls": "send-btn",
+      "x": 754,
+      "y": 729,
+      "w": 40,
+      "h": 40
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Search",
+      "aria": "Investigation",
+      "cls": "probe",
+      "x": 802,
+      "y": 733,
+      "w": 41,
+      "h": 32
+    }
+  ],
+  "bodyText": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nMistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nAttach\n↑\nSearch"
+}

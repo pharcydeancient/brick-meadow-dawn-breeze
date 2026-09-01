@@ -1,0 +1,17 @@
+{
+  "paneH": 400,
+  "chipCount": 20,
+  "first": {
+    "cls": "model-chip on",
+    "text": "Lite",
+    "bg": "rgba(10, 10, 14, 0.88)",
+    "bgImg": "none",
+    "shadow": "rgba(255, 255, 255, 0.16) 0px 0px 0px 1px inset",
+    "html": "<span class=\"chip-edge\" aria-hidden=\"true\"></span><span class=\"chip-name\">Lite</span><span class=\"light\" aria-hidden=\"true\"><span class=\"light-bloom\"></span><span class=\"light-ring\"></span><span class=\"light-core\"></span></span>"
+  },
+  "catBtn": {
+    "text": "General",
+    "cls": "cat-row",
+    "tag": "BUTTON"
+  }
+}

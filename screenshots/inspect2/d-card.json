@@ -1,0 +1,166 @@
+{
+  "vis": {
+    "label": "card-view",
+    "vw": 1280,
+    "vh": 800,
+    "visCount": 14,
+    "vis": [
+      {
+        "tag": "BUTTON",
+        "text": "Close",
+        "aria": "Close",
+        "cls": "close-affordance",
+        "x": 498,
+        "y": 0,
+        "w": 14,
+        "h": 14
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Cards",
+        "aria": null,
+        "cls": "on",
+        "x": 493,
+        "y": 31,
+        "w": 57,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Boards",
+        "aria": null,
+        "cls": "",
+        "x": 556,
+        "y": 31,
+        "w": 63,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Canvas",
+        "aria": null,
+        "cls": "",
+        "x": 625,
+        "y": 31,
+        "w": 66,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Genie",
+        "aria": null,
+        "cls": "",
+        "x": 697,
+        "y": 31,
+        "w": 56,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Freeze tabs at the bottom",
+        "aria": "Freeze tabs at the bottom",
+        "cls": "smart-pin",
+        "x": 759,
+        "y": 31,
+        "w": 28,
+        "h": 28
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Alpine hush Memory",
+        "aria": null,
+        "cls": "mem-card object-memory wide",
+        "x": 493,
+        "y": 118,
+        "w": 293,
+        "h": 196
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Low coast Memory",
+        "aria": null,
+        "cls": "mem-card object-memory",
+        "x": 493,
+        "y": 318,
+        "w": 145,
+        "h": 110
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Valley mist Memory",
+        "aria": null,
+        "cls": "mem-card object-memory",
+        "x": 642,
+        "y": 318,
+        "w": 145,
+        "h": 110
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Dusk glass Artifact",
+        "aria": null,
+        "cls": "mem-card object-artifact wide",
+        "x": 493,
+        "y": 489,
+        "w": 293,
+        "h": 196
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Glass still Artifact",
+        "aria": null,
+        "cls": "mem-card object-artifact",
+        "x": 493,
+        "y": 688,
+        "w": 145,
+        "h": 217
+      },
+      {
+        "tag": "SELECT",
+        "text": "Memory Task Artifact Note",
+        "aria": "Card type",
+        "cls": "pop-kind",
+        "x": 497,
+        "y": 649,
+        "w": 165,
+        "h": 40
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Pop out",
+        "aria": null,
+        "cls": "genie-pop",
+        "x": 671,
+        "y": 649,
+        "w": 112,
+        "h": 40
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Settings",
+        "aria": "Settings",
+        "cls": "settings-orb glass-ornament gaze-scale",
+        "x": 1218,
+        "y": 746,
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "bodyText": "Cards\nBoards\nCanvas\nGenie\nMemory\nAlpine hush\nMemory\nLow coast\nMemory\nValley mist\nMemory\nArtifact\nDusk glass\nArtifact\nGlass still\nArtifact\nTask\ntask\nBoard the week\nTask\nNote\nnote\nCards vs boards\nNote\nMemory\nTask\nArtifact\nNote\nPop out"
+  },
+  "x": {
+    "xs": [
+      {
+        "text": "Close",
+        "w": 14,
+        "h": 14,
+        "font": "16px",
+        "x": 498,
+        "y": 0,
+        "op": "1",
+        "cls": "close-affordance"
+      }
+    ],
+    "body": "Cards\nBoards\nCanvas\nGenie\nMemory\nAlpine hush\nMemory\nLow coast\nMemory\nValley mist\nMemory\nArtifact\nDusk glass\nArtifact\nGlass still\nArtifact\nTask\ntask\nBoard the week\nTask\nNote\nnote\nCards vs boards\nNote\nMemory\nTask\nArtifact\nNote\nPop out"
+  }
+}

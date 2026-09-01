@@ -1,0 +1,721 @@
+{
+  "result": "FAIL",
+  "failCount": 2,
+  "passCount": 117,
+  "checks": [
+    {
+      "id": "home.six-cards",
+      "result": "PASS",
+      "evidence": "count=6 names=Gemini 3.6 Flash Lite | Mistral Small 3.2 | Command R | MiniMax M3 | Ling 2.6 Flash | Mistral Nemo",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.wallpaper",
+      "result": "PASS",
+      "evidence": "src=/themes/free/observatory.jpg",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.no-side-rail",
+      "result": "PASS",
+      "evidence": "no visible side rail",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room/Rooms copy",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.prompt-orb-visible",
+      "result": "PASS",
+      "evidence": "op=1 72x72 aria=Open composer",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.prompt-orb-on-phone",
+      "result": "PASS",
+      "evidence": "orb 72x72 at (604,730) glued to phone stage",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.settings-orb-phone-left",
+      "result": "PASS",
+      "evidence": "at (488,734) 44x44",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "home.cards-clear-glass",
+      "result": "PASS",
+      "evidence": "rgba(255, 255, 255, 0.05) | rgba(255, 255, 255, 0.05) | rgba(255, 255, 255, 0.05) | rgba(255, 255, 255, 0.05) | rgba(255, 255, 255, 0.05) | rgba(255, 255, 255, 0.05)",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "font.no-650-home",
+      "result": "PASS",
+      "evidence": "no computed font-weight 650",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "font.manrope-loaded",
+      "result": "PASS",
+      "evidence": "Manrope 400/600/700/800 link present",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "font.manrope-cards",
+      "result": "PASS",
+      "evidence": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "font.weights-allowed",
+      "result": "PASS",
+      "evidence": "600,600,600,600,600,600",
+      "screenshot": "/workspace/screenshots/qa-product/d-01-home.png"
+    },
+    {
+      "id": "prompt.hidden-until-orb",
+      "result": "PASS",
+      "evidence": "{\"op\":\"0\",\"pe\":\"none\",\"tf\":\"matrix(1, 0, 0, 1, -149.688, 28)\",\"open\":false}",
+      "screenshot": "/workspace/screenshots/qa-product/d-02-home-pre-prompt.png"
+    },
+    {
+      "id": "prompt.open-animation",
+      "result": "PASS",
+      "evidence": "animated early dt=53 op=0.000 -> 0.997",
+      "screenshot": "/workspace/screenshots/qa-product/d-03-prompt-mid.png"
+    },
+    {
+      "id": "prompt.orb-summons",
+      "result": "PASS",
+      "evidence": "opened",
+      "screenshot": "/workspace/screenshots/qa-product/d-04-prompt-open.png"
+    },
+    {
+      "id": "prompt.attach-label",
+      "result": "PASS",
+      "evidence": "{\"text\":\"Attach\",\"fs\":\"8px\",\"op\":\"1\",\"w\":26.96875,\"h\":8,\"vis\":\"visible\"}",
+      "screenshot": "/workspace/screenshots/qa-product/d-04-prompt-open.png"
+    },
+    {
+      "id": "prompt.investigate-tray",
+      "result": "PASS",
+      "evidence": "rows=[\"Web search\",\"Research\",\"Deep research\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-05-investigate.png"
+    },
+    {
+      "id": "prompt.investigate-full-phrases",
+      "result": "PASS",
+      "evidence": "Web search / Research / Deep research",
+      "screenshot": "/workspace/screenshots/qa-product/d-05-investigate.png"
+    },
+    {
+      "id": "prompt.investigate-select",
+      "result": "PASS",
+      "evidence": "Web search",
+      "screenshot": "/workspace/screenshots/qa-product/d-05-investigate.png"
+    },
+    {
+      "id": "chrome.no-purple-accent",
+      "result": "FAIL",
+      "evidence": "Deep research probe color=rgb(167, 139, 250) bg=rgba(167, 139, 250, 0.133) — purple chrome accent",
+      "screenshot": "/workspace/screenshots/qa-product/d-05b-deep-probe.png"
+    },
+    {
+      "id": "chrome.no-gold-accent",
+      "result": "PASS",
+      "evidence": "no gold chrome",
+      "screenshot": "/workspace/screenshots/qa-product/d-05b-deep-probe.png"
+    },
+    {
+      "id": "prompt.close-animation",
+      "result": "PASS",
+      "evidence": "fade mid op=0.893999 dt=109",
+      "screenshot": "/workspace/screenshots/qa-product/d-06-prompt-closing.png"
+    },
+    {
+      "id": "prompt.orb-returns",
+      "result": "PASS",
+      "evidence": "{\"away\":false,\"op\":1,\"pe\":\"auto\"}",
+      "screenshot": "/workspace/screenshots/qa-product/d-07-prompt-closed.png"
+    },
+    {
+      "id": "prompt.no-instant-vanish",
+      "result": "PASS",
+      "evidence": "composer tucked with animation; orb restored",
+      "screenshot": "/workspace/screenshots/qa-product/d-07-prompt-closed.png"
+    },
+    {
+      "id": "settings.opens",
+      "result": "PASS",
+      "evidence": "alert-card visible",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.tabs",
+      "result": "PASS",
+      "evidence": "[\"Account\",\"Models\",\"Settings\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.apps",
+      "result": "PASS",
+      "evidence": "[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.no-cancel",
+      "result": "PASS",
+      "evidence": "no Cancel",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.ios-alert-size",
+      "result": "PASS",
+      "evidence": "268x268",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.dim-exists",
+      "result": "PASS",
+      "evidence": "dim present",
+      "screenshot": "/workspace/screenshots/qa-product/d-08-settings-apps.png"
+    },
+    {
+      "id": "settings.account-tab",
+      "result": "PASS",
+      "evidence": "Account Models Settings Pro $19.99/mo Upgrade",
+      "screenshot": "/workspace/screenshots/qa-product/d-09-settings-account.png"
+    },
+    {
+      "id": "models.align",
+      "result": "PASS",
+      "evidence": "Align present",
+      "screenshot": "/workspace/screenshots/qa-product/d-10-settings-models.png"
+    },
+    {
+      "id": "models.category-not-native-select",
+      "result": "PASS",
+      "evidence": "cat='General'",
+      "screenshot": "/workspace/screenshots/qa-product/d-10-settings-models.png"
+    },
+    {
+      "id": "models.ember-chips",
+      "result": "PASS",
+      "evidence": "on=Lite,Small,Command,MiniMax,Ling,Nemo bg=rgba(10, 10, 14, 0.88) bloomOp=0.62",
+      "screenshot": "/workspace/screenshots/qa-product/d-10-settings-models.png"
+    },
+    {
+      "id": "models.category-overlay",
+      "result": "PASS",
+      "evidence": "opts=[\"General\",\"Image\",\"Video\",\"Audio\",\"Coding\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-11-category-overlay.png"
+    },
+    {
+      "id": "models.category-pick",
+      "result": "PASS",
+      "evidence": "Image chips=FLUX,Gemini,Mini,Klein,Banana,Kling,GPT Img,Seedream,Qwen Img,DALL·E,Midjourney,Banana+,Gemini+,FLUX Max,GPT 5.4,Seed 4.5",
+      "screenshot": "/workspace/screenshots/qa-product/d-12-category-image.png"
+    },
+    {
+      "id": "settings.grid-rows",
+      "result": "PASS",
+      "evidence": "[{\"n\":\"1\",\"on\":false},{\"n\":\"2\",\"on\":true},{\"n\":\"3\",\"on\":false}]",
+      "screenshot": "/workspace/screenshots/qa-product/d-14-settings-prefs.png"
+    },
+    {
+      "id": "settings.tuck-toggles-present",
+      "result": "PASS",
+      "evidence": "Account Models Settings Grid rows 1 2 3 Tuck after send On Tuck when idle On",
+      "screenshot": "/workspace/screenshots/qa-product/d-14-settings-prefs.png"
+    },
+    {
+      "id": "font.no-650-settings",
+      "result": "PASS",
+      "evidence": "no 650",
+      "screenshot": "/workspace/screenshots/qa-product/d-14-settings-prefs.png"
+    },
+    {
+      "id": "settings.rows-3-fits-phone",
+      "result": "PASS",
+      "evidence": "6/6 inside stage",
+      "screenshot": "/workspace/screenshots/qa-product/d-18-rows-3-home.png"
+    },
+    {
+      "id": "settings.rows-1-fits-phone",
+      "result": "FAIL",
+      "evidence": "PNG d-19-rows-1-home.png: Grid rows=1. 2/6 cards sit on the phone canvas (stage ~480–799). Spill=[{\"name\":\"Command R\",\"x\":792,\"y\":220},{\"name\":\"MiniMax M3\",\"x\":937,\"y\":220},{\"name\":\"Ling 2.6 Flash\",\"x\":1081,\"y\":220},{\"name\":\"Mistral Nemo\",\"x\":1226,\"y\":220}]",
+      "screenshot": "/workspace/screenshots/qa-product/d-19-rows-1-home.png"
+    },
+    {
+      "id": "card.opens",
+      "result": "PASS",
+      "evidence": "title=Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/qa-product/d-22-card-view.png"
+    },
+    {
+      "id": "card.back-exists",
+      "result": "PASS",
+      "evidence": "back='Back'",
+      "screenshot": "/workspace/screenshots/qa-product/d-22-card-view.png"
+    },
+    {
+      "id": "card.header-back-title-only",
+      "result": "PASS",
+      "evidence": "head='Back Gemini 3.6 Flash Lite'",
+      "screenshot": "/workspace/screenshots/qa-product/d-22-card-view.png"
+    },
+    {
+      "id": "card.title-manrope",
+      "result": "PASS",
+      "evidence": "Manrope, ui-sans-serif, system-ui, sans-serif 17px 600 rgb(127, 216, 196)",
+      "screenshot": "/workspace/screenshots/qa-product/d-22-card-view.png"
+    },
+    {
+      "id": "card.back-returns-home",
+      "result": "PASS",
+      "evidence": "cards=6",
+      "screenshot": "/workspace/screenshots/qa-product/d-25-card-back-home.png"
+    },
+    {
+      "id": "history.overlay",
+      "result": "PASS",
+      "evidence": "title=History cardsUnder=6",
+      "screenshot": "/workspace/screenshots/qa-product/d-26-history.png"
+    },
+    {
+      "id": "history.keeps-home-under",
+      "result": "PASS",
+      "evidence": "cardsUnder=6",
+      "screenshot": "/workspace/screenshots/qa-product/d-26-history.png"
+    },
+    {
+      "id": "history.named-conversations",
+      "result": "PASS",
+      "evidence": "[{\"title\":\"Keep the wallpaper continuous under the cards.\",\"meta\":\"MiniMax2 turns · 12m\",\"tag\":\"MiniMax\"},{\"title\":\"How should consensus sit with the prompt?\",\"meta\":\"Command2 turns · 46m\",\"tag\":\"Command\"},{\"title\":\"What is home, then?\",\"meta\":\"Lite2 turns · 2d\",\"tag\":\"Lite\"}]",
+      "screenshot": "/workspace/screenshots/qa-product/d-26-history.png"
+    },
+    {
+      "id": "history.dates",
+      "result": "PASS",
+      "evidence": "MiniMax2 turns · 12m | Command2 turns · 46m | Lite2 turns · 2d",
+      "screenshot": "/workspace/screenshots/qa-product/d-26-history.png"
+    },
+    {
+      "id": "history.close-control",
+      "result": "PASS",
+      "evidence": "14px red {\"x\":773,\"y\":208.5234375,\"w\":14,\"h\":14,\"bg\":\"rgb(255, 95, 87)\",\"z\":\"3\"}",
+      "screenshot": "/workspace/screenshots/qa-product/d-26-history.png"
+    },
+    {
+      "id": "history.tap-loads",
+      "result": "PASS",
+      "evidence": "opened card='MiniMax M3' from history (seed title may wrap). row='Keep the wallpaper continuous under the cards.'",
+      "screenshot": "/workspace/screenshots/qa-product/d-26b-history-load.png"
+    },
+    {
+      "id": "history.close-returns",
+      "result": "PASS",
+      "evidence": "red close dismissed overlay",
+      "screenshot": "/workspace/screenshots/qa-product/d-27-history-after-red-close.png"
+    },
+    {
+      "id": "history.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room copy",
+      "screenshot": "/workspace/screenshots/qa-product/d-27-history-after-red-close.png"
+    },
+    {
+      "id": "themes.opens",
+      "result": "PASS",
+      "evidence": "Wallpapers Selector Store Interior Observatory Cabin Cabin Space Sanctuary Deck Dune Hall Horizons Ocean Garden Rainfall Twilight Twin Suns Night Star Bridge Neon City Transit Blade Alley Alley Night ",
+      "screenshot": "/workspace/screenshots/qa-product/d-30-themes.png"
+    },
+    {
+      "id": "themes.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room copy",
+      "screenshot": "/workspace/screenshots/qa-product/d-30-themes.png"
+    },
+    {
+      "id": "store.opens",
+      "result": "PASS",
+      "evidence": "Live wallpapers Selector Store FEATURED Aurora Drift Live wallpapers Aurora Drift Nebula Bloom Low Tide Ember Fall Aurora Aurora Drift Nebula Bloom Tide Low Tide Drift Ember Fall",
+      "screenshot": "/workspace/screenshots/qa-product/d-41-store.png"
+    },
+    {
+      "id": "imagine.tabs",
+      "result": "PASS",
+      "evidence": "Discover | Images | Videos | Liked | Library",
+      "screenshot": "/workspace/screenshots/qa-product/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.generate-label",
+      "result": "PASS",
+      "evidence": "{\"aria\":\"Generate\",\"text\":\"Generate\",\"label\":\"Generate\",\"labelFs\":\"10px\",\"labelOp\":1,\"labelW\":54.203125,\"labelH\":10,\"labelVis\":\"visible\"}",
+      "screenshot": "/workspace/screenshots/qa-product/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.tile-overlays-always-visible",
+      "result": "PASS",
+      "evidence": "tiles=19 first={\"title\":\"Night bloom\",\"shade\":true,\"op\":1,\"vis\":\"visible\",\"disp\":\"flex\",\"bg\":\"linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.82))\",\"w\":154,\"h\":64,\"like\":{\"aria\":\"Like\",\"op\":1,\"w\":28},\"remix\":{\"op\":1,\"w\":28}} hoverRules=[]",
+      "screenshot": "/workspace/screenshots/qa-product/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.overlay-black-contrast",
+      "result": "PASS",
+      "evidence": "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.82))",
+      "screenshot": "/workspace/screenshots/qa-product/d-34-imagine.png"
+    },
+    {
+      "id": "imagine.images-tab",
+      "result": "PASS",
+      "evidence": "tiles=15 playMarks=0",
+      "screenshot": "/workspace/screenshots/qa-product/d-34b-imagine-images.png"
+    },
+    {
+      "id": "imagine.videos-tab",
+      "result": "PASS",
+      "evidence": "tiles=4 playMarks=4",
+      "screenshot": "/workspace/screenshots/qa-product/d-34c-imagine-videos.png"
+    },
+    {
+      "id": "imagine.library-empty",
+      "result": "PASS",
+      "evidence": "Nothing made yet.",
+      "screenshot": "/workspace/screenshots/qa-product/d-35-library-empty.png"
+    },
+    {
+      "id": "imagine.liked-empty-first",
+      "result": "PASS",
+      "evidence": "Nothing liked yet.",
+      "screenshot": "/workspace/screenshots/qa-product/d-35b-liked-empty.png"
+    },
+    {
+      "id": "imagine.like-toggle",
+      "result": "PASS",
+      "evidence": "liked buttons=1",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.liked-tab",
+      "result": "PASS",
+      "evidence": "tiles=1",
+      "screenshot": "/workspace/screenshots/qa-product/d-36-liked.png"
+    },
+    {
+      "id": "imagine.remix-chip",
+      "result": "PASS",
+      "evidence": "Remixing Night bloom× draft=Keep the subject of “Night bloom”. New light. above=true",
+      "screenshot": "/workspace/screenshots/qa-product/d-37-remix-chip.png"
+    },
+    {
+      "id": "imagine.remix-cancel",
+      "result": "PASS",
+      "evidence": "cleared",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.preview-actions",
+      "result": "PASS",
+      "evidence": "Remix | Liked | Library | Attach | Use as source",
+      "screenshot": "/workspace/screenshots/qa-product/d-38-preview.png"
+    },
+    {
+      "id": "imagine.preview-delete-only-library",
+      "result": "PASS",
+      "evidence": "Delete absent on catalog tile",
+      "screenshot": "/workspace/screenshots/qa-product/d-38-preview.png"
+    },
+    {
+      "id": "imagine.preview-delete-in-library",
+      "result": "PASS",
+      "evidence": "Remix | Liked | In library | Attach | Use as source | Delete",
+      "screenshot": "/workspace/screenshots/qa-product/d-38b-preview-in-library.png"
+    },
+    {
+      "id": "imagine.library-after-add",
+      "result": "PASS",
+      "evidence": "tiles=1",
+      "screenshot": "/workspace/screenshots/qa-product/d-38c-library-after-add.png"
+    },
+    {
+      "id": "imagine.live-generate",
+      "result": "PASS",
+      "evidence": "preview in 40985ms",
+      "screenshot": "/workspace/screenshots/qa-product/d-39-generate-result.png"
+    },
+    {
+      "id": "imagine.live-generate-kicker",
+      "result": "PASS",
+      "evidence": "IMAGE",
+      "screenshot": "/workspace/screenshots/qa-product/d-39-generate-result.png"
+    },
+    {
+      "id": "imagine.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room copy",
+      "screenshot": null
+    },
+    {
+      "id": "imagine.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-product/d-40-imagine-closed.png"
+    },
+    {
+      "id": "smart.hub",
+      "result": "PASS",
+      "evidence": "[\"Smart Cards\",\"Smart Boards\",\"Smart Canvas\",\"Smart Genie\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-42-smart-hub.png"
+    },
+    {
+      "id": "m.home.six-cards",
+      "result": "PASS",
+      "evidence": "count=6 ratios=1.55,1.55,1.55,1.55,1.55,1.55",
+      "screenshot": "/workspace/screenshots/qa-product/m-01-home.png"
+    },
+    {
+      "id": "m.home.no-room-copy",
+      "result": "PASS",
+      "evidence": "no Room copy",
+      "screenshot": "/workspace/screenshots/qa-product/m-01-home.png"
+    },
+    {
+      "id": "m.home.prompt-orb",
+      "result": "PASS",
+      "evidence": "orb 72x72 y=756",
+      "screenshot": "/workspace/screenshots/qa-product/m-01-home.png"
+    },
+    {
+      "id": "m.home.settings-orb",
+      "result": "PASS",
+      "evidence": "at (20,756)",
+      "screenshot": "/workspace/screenshots/qa-product/m-01-home.png"
+    },
+    {
+      "id": "m.prompt.open-animation",
+      "result": "PASS",
+      "evidence": "op 0.00->0.99",
+      "screenshot": "/workspace/screenshots/qa-product/m-02-prompt.png"
+    },
+    {
+      "id": "m.prompt.attach-label",
+      "result": "PASS",
+      "evidence": "Attach",
+      "screenshot": "/workspace/screenshots/qa-product/m-02-prompt.png"
+    },
+    {
+      "id": "m.prompt.investigate",
+      "result": "PASS",
+      "evidence": "[{\"t\":\"Web search\",\"onScreen\":true},{\"t\":\"Research\",\"onScreen\":true},{\"t\":\"Deep research\",\"onScreen\":true}]",
+      "screenshot": "/workspace/screenshots/qa-product/m-03-investigate.png"
+    },
+    {
+      "id": "m.settings.tabs",
+      "result": "PASS",
+      "evidence": "[\"Account\",\"Models\",\"Settings\"]",
+      "screenshot": "/workspace/screenshots/qa-product/m-04-settings.png"
+    },
+    {
+      "id": "m.settings.apps",
+      "result": "PASS",
+      "evidence": "[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/qa-product/m-04-settings.png"
+    },
+    {
+      "id": "m.models.ember-chips",
+      "result": "PASS",
+      "evidence": "Lite,Small,Command,MiniMax,Ling,Nemo",
+      "screenshot": "/workspace/screenshots/qa-product/m-05-models.png"
+    },
+    {
+      "id": "m.settings.grid-rows",
+      "result": "PASS",
+      "evidence": "[\"1\",\"2\",\"3\"]",
+      "screenshot": "/workspace/screenshots/qa-product/m-07-prefs.png"
+    },
+    {
+      "id": "m.card.header",
+      "result": "PASS",
+      "evidence": "Back Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/qa-product/m-08-card.png"
+    },
+    {
+      "id": "m.card.back-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-product/m-09-card-back.png"
+    },
+    {
+      "id": "m.history.overlay",
+      "result": "PASS",
+      "evidence": "overlay",
+      "screenshot": "/workspace/screenshots/qa-product/m-10-history.png"
+    },
+    {
+      "id": "m.history.close-returns",
+      "result": "PASS",
+      "evidence": "dismissed",
+      "screenshot": "/workspace/screenshots/qa-product/m-10b-history-close.png"
+    },
+    {
+      "id": "m.imagine.tabs",
+      "result": "PASS",
+      "evidence": "Discover | Images | Videos | Liked | Library",
+      "screenshot": "/workspace/screenshots/qa-product/m-11-imagine.png"
+    },
+    {
+      "id": "m.imagine.tile-overlays",
+      "result": "PASS",
+      "evidence": "tiles=19 first={\"title\":\"Night bloom\",\"shade\":true,\"op\":1,\"vis\":\"visible\",\"disp\":\"flex\",\"bg\":\"linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.82))\",\"w\":180,\"h\":64,\"like\":{\"aria\":\"Like\",\"op\":1,\"w\":28},\"remix\":{\"op\":1,\"w\":28}}",
+      "screenshot": "/workspace/screenshots/qa-product/m-11-imagine.png"
+    },
+    {
+      "id": "m.imagine.generate-label",
+      "result": "PASS",
+      "evidence": "GENERATE",
+      "screenshot": "/workspace/screenshots/qa-product/m-11-imagine.png"
+    },
+    {
+      "id": "m.imagine.liked-tab",
+      "result": "PASS",
+      "evidence": "tiles=1",
+      "screenshot": "/workspace/screenshots/qa-product/m-12-liked.png"
+    },
+    {
+      "id": "m.imagine.remix-chip",
+      "result": "PASS",
+      "evidence": "Remixing Night bloom\n×",
+      "screenshot": "/workspace/screenshots/qa-product/m-13-remix.png"
+    },
+    {
+      "id": "m.imagine.preview-actions",
+      "result": "PASS",
+      "evidence": "Remix | Liked | Library | Attach | Use as source",
+      "screenshot": "/workspace/screenshots/qa-product/m-14-preview.png"
+    },
+    {
+      "id": "m.imagine.library-empty",
+      "result": "PASS",
+      "evidence": "Nothing made yet.",
+      "screenshot": "/workspace/screenshots/qa-product/m-15-library.png"
+    },
+    {
+      "id": "m.genie.new",
+      "result": "PASS",
+      "evidence": "New",
+      "screenshot": "/workspace/screenshots/qa-product/m-16-genie.png"
+    },
+    {
+      "id": "m.genie.attach",
+      "result": "PASS",
+      "evidence": "Attach",
+      "screenshot": "/workspace/screenshots/qa-product/m-16-genie.png"
+    },
+    {
+      "id": "m.genie.send-label",
+      "result": "PASS",
+      "evidence": "SEND",
+      "screenshot": "/workspace/screenshots/qa-product/m-16-genie.png"
+    },
+    {
+      "id": "m.genie.reply",
+      "result": "PASS",
+      "evidence": "bubbles=2",
+      "screenshot": "/workspace/screenshots/qa-product/m-17-genie-reply.png"
+    },
+    {
+      "id": "m.genie.new-clears",
+      "result": "PASS",
+      "evidence": "thread empty",
+      "screenshot": null
+    },
+    {
+      "id": "m.tour-complete",
+      "result": "PASS",
+      "evidence": "mobile tour finished",
+      "screenshot": "/workspace/screenshots/qa-product/m-18-final.png"
+    },
+    {
+      "id": "prompt.consensus-above",
+      "result": "PASS",
+      "evidence": "{\"text\":\"Gemini 3.6 Flash LiteHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\",\"cTop\":537.40625,\"cBot\":624,\"bTop\":642,\"above\":true,\"gap\":18}",
+      "screenshot": "/workspace/screenshots/qa-product/d-04b-consensus.png"
+    },
+    {
+      "id": "files.opens",
+      "result": "PASS",
+      "evidence": "Files Imagine Alpine hush Low coast Dusk glass Aurora drift Valley mist Glass still Night bloom Warm still Field light Ember fall",
+      "screenshot": "/workspace/screenshots/qa-product/d-28-files.png"
+    },
+    {
+      "id": "files.no-years-days",
+      "result": "PASS",
+      "evidence": "labels=[\"Imagine\"]",
+      "screenshot": "/workspace/screenshots/qa-product/d-28-files.png"
+    },
+    {
+      "id": "files.close-returns",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-product/d-29-files-closed.png"
+    },
+    {
+      "id": "smart.smart-cards",
+      "result": "PASS",
+      "evidence": "Memory Alpine hush Memory Low coast Memory Valley mist Memory Artifact Dusk glass Artifact Glass still Artifact Task tas",
+      "screenshot": "/workspace/screenshots/qa-product/d-43-smart-cards.png"
+    },
+    {
+      "id": "smart.smart-boards",
+      "result": "PASS",
+      "evidence": "Tray 2 Dusk glass artifact Board the week task Cork 2 Low coast memory Cards vs boards note Notebook 2 Alpine hush memory Valley mist memory Portfolio 1 Glass s",
+      "screenshot": "/workspace/screenshots/qa-product/d-43b-smart-boards.png"
+    },
+    {
+      "id": "smart.smart-canvas",
+      "result": "PASS",
+      "evidence": "objects=7",
+      "screenshot": "/workspace/screenshots/qa-product/d-43c-smart-canvas.png"
+    },
+    {
+      "id": "genie.new",
+      "result": "PASS",
+      "evidence": "New",
+      "screenshot": "/workspace/screenshots/qa-product/d-44-genie.png"
+    },
+    {
+      "id": "genie.attach",
+      "result": "PASS",
+      "evidence": "Attach",
+      "screenshot": "/workspace/screenshots/qa-product/d-44-genie.png"
+    },
+    {
+      "id": "genie.send-label",
+      "result": "PASS",
+      "evidence": "SEND",
+      "screenshot": "/workspace/screenshots/qa-product/d-44-genie.png"
+    },
+    {
+      "id": "genie.reply",
+      "result": "PASS",
+      "evidence": "bubbles=2 reply=I am Smart Genie.",
+      "screenshot": "/workspace/screenshots/qa-product/d-45-genie-reply.png"
+    },
+    {
+      "id": "genie.new-clears",
+      "result": "PASS",
+      "evidence": "thread empty",
+      "screenshot": "/workspace/screenshots/qa-product/d-46-genie-cleared.png"
+    },
+    {
+      "id": "desktop.tour-complete",
+      "result": "PASS",
+      "evidence": "home",
+      "screenshot": "/workspace/screenshots/qa-product/d-47-home-final.png"
+    }
+  ]
+}

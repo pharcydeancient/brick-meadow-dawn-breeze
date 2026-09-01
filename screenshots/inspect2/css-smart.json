@@ -1,0 +1,44 @@
+{
+  "close": [
+    {
+      "text": "Close",
+      "cls": "close-affordance",
+      "w": 14,
+      "h": 14,
+      "x": 498.3125,
+      "y": 0,
+      "font": "16px",
+      "bg": "rgba(255, 255, 255, 0.55)",
+      "radius": "999px",
+      "color": "rgba(0, 0, 0, 0)",
+      "html": ""
+    }
+  ],
+  "btns": [
+    {
+      "t": "Smart Cards",
+      "w": 277.375,
+      "h": 48,
+      "html": "Smart Cards"
+    },
+    {
+      "t": "Smart Boards",
+      "w": 277.375,
+      "h": 48,
+      "html": "Smart Boards"
+    },
+    {
+      "t": "Smart Canvas",
+      "w": 277.375,
+      "h": 48,
+      "html": "Smart Canvas"
+    },
+    {
+      "t": "Smart Genie",
+      "w": 277.375,
+      "h": 48,
+      "html": "Smart Genie"
+    }
+  ],
+  "body": "Smart Cards\nSmart Boards\nSmart Canvas\nSmart Genie"
+}

@@ -82,7 +82,7 @@ export interface Wallpaper {
   tracks: LiveTrack[];
 }
 
-export type DiscoverFilter = "all" | "photo" | "motion" | "edit";
+export type DiscoverFilter = "all" | "photo" | "motion" | "liked" | "edit";
 
 export interface DiscoverItem {
   id: string;
@@ -95,7 +95,7 @@ export interface DiscoverItem {
   ratio?: string;
 }
 
-export type SmartPage = "cards" | "boards" | "canvas" | "genie";
+export type SmartPage = "hub" | "cards" | "boards" | "canvas" | "genie";
 
 export type SmartKind = "memory" | "task" | "artifact" | "note";
 

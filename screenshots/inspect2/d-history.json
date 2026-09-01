@@ -1,0 +1,32 @@
+{
+  "body": "Mistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nHistory\nKeep the wallpaper continuous under the cards.\nMiniMax\n2 turns · 12m\nHow should consensus sit with the prompt?\nCommand\n2 turns · 46m\nWhat is home, then?\nLite\n2 turns · 2d\nAttach\n↑\nSearch",
+  "sheetCss": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "filter": "none",
+    "op": "1",
+    "w": 1280,
+    "h": 800,
+    "cls": "app-root work-tint",
+    "text": "Mistral Small 3.2\n\nTap to start a conversation.\n\nCommand R\n\nHow should consensus sit with the prompt?\n\nTint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus with it.\n\nMiniMax M3\n\nKeep the wallpaper continuous under the cards.\n\nA glass canvas over a live wallpaper. Cards sit in front and never clip the plate they rest on.\n\nLing 2.6 Flash\n\nTap to start a conversation.\n\nMistral Nemo\n\nTap to start a conversation.\n\nHistory\nKeep the wallpaper continuous under the cards.\nMiniMax\n2 turns · 12m\nHow should consensus sit with the prompt?\nCommand\n2 turns · 46m\nWhat is home, then?\nLite\n2 turns · 2d\nAttach\n↑\nSearch"
+  },
+  "scrimCss": {
+    "bg": "rgba(6, 8, 12, 0.72)",
+    "filter": "blur(18px) saturate(1.4)",
+    "cls": "sheet-scrim"
+  },
+  "xs": [],
+  "rows": [
+    "Keep the wallpaper continuous under the cards.\nMiniMax\n2 turns · 12m",
+    "Keep the wallpaper continuous under the cards.",
+    "MiniMax\n2 turns · 12m",
+    "MiniMax",
+    "How should consensus sit with the prompt?\nCommand\n2 turns · 46m",
+    "How should consensus sit with the prompt?",
+    "Command\n2 turns · 46m",
+    "Command",
+    "What is home, then?\nLite\n2 turns · 2d",
+    "What is home, then?",
+    "Lite\n2 turns · 2d",
+    "Lite"
+  ]
+}
