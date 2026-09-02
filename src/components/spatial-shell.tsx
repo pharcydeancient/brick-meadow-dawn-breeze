@@ -30,6 +30,8 @@ export function SpatialShell() {
   const setHistoryOpen = useAether((s) => s.setHistoryOpen);
   const cardModelId = useAether((s) => s.cardModelId);
   const promptOpen = useAether((s) => s.promptOpen);
+  const sending = useAether((s) => s.sending);
+  const blurOnSend = useAether((s) => s.blurOnSend);
   const inCard = Boolean(cardModelId) && surface === "card";
   const working = WORKING.has(surface);
   const swipe = useRef({ x: 0, y: 0, fromTop: false });
@@ -42,7 +44,7 @@ export function SpatialShell() {
   const rootMode = inCard ? " untint" : working || historyOpen ? " work-tint" : " home-tint";
 
   return (
-    <div className={`app-root${promptOpen ? " prompting" : ""}${rootMode}`}>
+    <div className={`app-root${promptOpen ? " prompting" : ""}${rootMode}${sending && blurOnSend ? " send-blur" : ""}`}>
       <Environment />
       <div className="scene">
         <div className="stage">

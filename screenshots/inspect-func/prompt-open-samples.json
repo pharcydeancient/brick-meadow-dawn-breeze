@@ -1,0 +1,194 @@
+[
+  {
+    "dt": 35,
+    "open": true,
+    "op": 0,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 28)",
+    "orbOp": 1,
+    "orbAway": true
+  },
+  {
+    "dt": 76,
+    "open": true,
+    "op": 0,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 28)",
+    "orbOp": 1,
+    "orbAway": true
+  },
+  {
+    "dt": 110,
+    "open": true,
+    "op": 0.290921,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 19.8542)",
+    "orbOp": 0.641897,
+    "orbAway": true
+  },
+  {
+    "dt": 152,
+    "open": true,
+    "op": 0.523177,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 13.351)",
+    "orbOp": 0.38078,
+    "orbAway": true
+  },
+  {
+    "dt": 155,
+    "open": true,
+    "op": 0.614951,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 10.7814)",
+    "orbOp": 0.287436,
+    "orbAway": true
+  },
+  {
+    "dt": 195,
+    "open": true,
+    "op": 0.753568,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 6.90009)",
+    "orbOp": 0.160104,
+    "orbAway": true
+  },
+  {
+    "dt": 235,
+    "open": true,
+    "op": 0.846008,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 4.31177)",
+    "orbOp": 0.0860846,
+    "orbAway": true
+  },
+  {
+    "dt": 273,
+    "open": true,
+    "op": 0.9267,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 2.05241)",
+    "orbOp": 0.0311478,
+    "orbAway": true
+  },
+  {
+    "dt": 313,
+    "open": true,
+    "op": 0.956842,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 1.20843)",
+    "orbOp": 0.0143124,
+    "orbAway": true
+  },
+  {
+    "dt": 350,
+    "open": true,
+    "op": 0.975657,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0.68159)",
+    "orbOp": 0.00569972,
+    "orbAway": true
+  },
+  {
+    "dt": 387,
+    "open": true,
+    "op": 0.990952,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0.253342)",
+    "orbOp": 0.000812461,
+    "orbAway": true
+  },
+  {
+    "dt": 424,
+    "open": true,
+    "op": 0.995922,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0.114181)",
+    "orbOp": 0.0000767707,
+    "orbAway": true
+  },
+  {
+    "dt": 461,
+    "open": true,
+    "op": 0.998489,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0.0423108)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 502,
+    "open": true,
+    "op": 0.999616,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0.0107556)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 540,
+    "open": true,
+    "op": 0.999997,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 8.70057e-05)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 576,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 608,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 644,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 683,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 686,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 703,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 719,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 736,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  },
+  {
+    "dt": 753,
+    "open": true,
+    "op": 1,
+    "tf": "matrix(1, 0, 0, 1, -149.688, 0)",
+    "orbOp": 0,
+    "orbAway": true
+  }
+]

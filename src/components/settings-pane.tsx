@@ -334,6 +334,8 @@ function SettingsTabView() {
   const setHideOnSend = useAether((s) => s.setHidePromptOnSend);
   const hideIdle = useAether((s) => s.hidePromptAfterIdle);
   const setHideIdle = useAether((s) => s.setHidePromptAfterIdle);
+  const blurOnSend = useAether((s) => s.blurOnSend);
+  const setBlurOnSend = useAether((s) => s.setBlurOnSend);
   const rows = useAether((s) => s.cardRows);
   const setRows = useAether((s) => s.setCardRows);
 
@@ -362,6 +364,10 @@ function SettingsTabView() {
       <button type="button" className="alert-row" onClick={() => setHideIdle(!hideIdle)}>
         <span>Tuck when idle</span>
         <span className="alert-val">{hideIdle ? "On" : "Off"}</span>
+      </button>
+      <button type="button" className="alert-row" onClick={() => setBlurOnSend(!blurOnSend)}>
+        <span>Blur on send</span>
+        <span className="alert-val">{blurOnSend ? "On" : "Off"}</span>
       </button>
     </div>
   );

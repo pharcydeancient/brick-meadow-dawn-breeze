@@ -1,0 +1,101 @@
+{
+  "surfaceGuess": "home",
+  "buttons": [
+    {
+      "text": "",
+      "aria": "Open composer",
+      "cls": "prompt-orb",
+      "w": 72,
+      "h": 72,
+      "x": 604,
+      "y": 730,
+      "disabled": false
+    },
+    {
+      "text": "",
+      "aria": "Settings",
+      "cls": "settings-orb glass-ornament gaze-scale",
+      "w": 44,
+      "h": 44,
+      "x": 488,
+      "y": 734,
+      "disabled": false
+    },
+    {
+      "text": "Gemini 3.6 Flash Lite Reply 9. A glass canvas over a live wa",
+      "aria": "",
+      "cls": "consensus-card",
+      "w": 299,
+      "h": 104,
+      "x": 490,
+      "y": 548,
+      "disabled": false
+    },
+    {
+      "text": "Web search",
+      "aria": "",
+      "cls": "investigate-row",
+      "w": 299,
+      "h": 23,
+      "x": 490,
+      "y": 672,
+      "disabled": false
+    },
+    {
+      "text": "Research",
+      "aria": "",
+      "cls": "investigate-row",
+      "w": 299,
+      "h": 23,
+      "x": 490,
+      "y": 701,
+      "disabled": false
+    },
+    {
+      "text": "Deep research ✓",
+      "aria": "",
+      "cls": "investigate-row on",
+      "w": 299,
+      "h": 23,
+      "x": 490,
+      "y": 730,
+      "disabled": false
+    },
+    {
+      "text": "Attach",
+      "aria": "Attach",
+      "cls": "prompt-plus",
+      "w": 39,
+      "h": 34,
+      "x": 499,
+      "y": 682,
+      "disabled": false
+    },
+    {
+      "text": "",
+      "aria": "Send",
+      "cls": "send-btn",
+      "w": 40,
+      "h": 40,
+      "x": 663,
+      "y": 679,
+      "disabled": true
+    },
+    {
+      "text": "Deep research",
+      "aria": "Investigation: Deep research",
+      "cls": "probe on",
+      "w": 72,
+      "h": 32,
+      "x": 711,
+      "y": 683,
+      "disabled": false
+    }
+  ],
+  "cancel": 0,
+  "cardView": false,
+  "cards": 6,
+  "alert": false,
+  "history": false,
+  "composer": false
+}

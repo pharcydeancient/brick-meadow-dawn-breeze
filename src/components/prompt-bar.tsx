@@ -6,10 +6,10 @@ import { uid, useAether } from "@/lib/store";
 import type { Investigation } from "@/lib/types";
 
 /** PromptComposer.tsx — full phrases, never abbreviations. */
-const INVESTIGATION: { id: Investigation; label: string; Icon: typeof Globe; color: string }[] = [
-  { id: "web", label: "Web search", Icon: Globe, color: "#f5e000" },
-  { id: "research", label: "Research", Icon: FileText, color: "#5dbdff" },
-  { id: "deep", label: "Deep research", Icon: Library, color: "#9ad0f5" },
+const INVESTIGATION: { id: Investigation; label: string; Icon: typeof Globe }[] = [
+  { id: "web", label: "Web search", Icon: Globe },
+  { id: "research", label: "Research", Icon: FileText },
+  { id: "deep", label: "Deep research", Icon: Library },
 ];
 
 type PromptAttach = { id: string; name: string; kind: "image"; dataUri: string };
@@ -92,7 +92,6 @@ export function PromptBar() {
               key={opt.id}
               type="button"
               className={`investigate-row${on ? " on" : ""}`}
-              style={on ? { color: opt.color, borderColor: `${opt.color}59`, background: `${opt.color}1f` } : undefined}
               onClick={() => {
                 setInvestigation(opt.id);
                 setTray(false);
@@ -154,7 +153,6 @@ export function PromptBar() {
           className={`probe${active ? " on" : ""}`}
           aria-label={active ? `Investigation: ${active.label}` : "Investigation"}
           aria-expanded={tray}
-          style={active ? { color: active.color, background: `${active.color}22` } : undefined}
           onClick={() => setTray((v) => !v)}
         >
           <Telescope size={16} />

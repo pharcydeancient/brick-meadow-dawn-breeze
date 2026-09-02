@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { MODELS, canUse, DEFAULT_ENABLED } from "./models";
-import { seedSmartCards } from "./smart";
+import { seedCanvases, seedSmartCards } from "./smart";
 import { WALLPAPERS } from "./themes";
 import type {
   CardPos,
@@ -11,8 +11,11 @@ import type {
   GenFile,
   ModelCategory,
   SettingsTab,
+  SmartBoard,
+  SmartCanvas,
   SmartCard,
   SmartLane,
+  SmartObject,
   SmartPage,
   Surface,
   Tier,
@@ -138,8 +141,12 @@ interface AetherState {
   smartPage: SmartPage;
   smartTabsAt: "top" | "bottom";
   smartCards: SmartCard[];
+  smartBoards: SmartBoard[];
+  smartCanvases: SmartCanvas[];
+  activeCanvasId: string;
   smartOpenId: string | null;
   genieMessages: ChatMessage[];
+  genieDocked: boolean;
 
   guideOn: boolean;
   upgradeFromLock: boolean;
@@ -199,7 +206,12 @@ interface AetherState {
   setSmartPage: (p: SmartPage) => void;
   setSmartTabsAt: (v: AetherState["smartTabsAt"]) => void;
   setSmartOpen: (id: string | null) => void;
-  addSmartCard: (card: Omit<SmartCard, "id" | "createdAt" | "x" | "y"> & { id?: string }) => void;
+  addSmartCard: (card: Omit<SmartCard, "id" | "createdAt" | "x" | "y" | "canvasId"> & { id?: string; canvasId?: string }) => void;
+  addSmartBoard: (board: { label: string; object: SmartObject }) => void;
+  removeSmartBoard: (id: string) => void;
+  addSmartCanvas: (name: string) => void;
+  setActiveCanvas: (id: string) => void;
+  setGenieDocked: (v: boolean) => void;
   addGenieMessage: (msg: ChatMessage) => void;
   moveSmartLane: (id: string, lane: SmartLane) => void;
   placeSmartCard: (id: string, x: number, y: number) => void;
@@ -246,7 +258,7 @@ export const useAether = create<AetherState>()(
       sending: false,
       hidePromptOnSend: true,
       hidePromptAfterIdle: true,
-      blurOnSend: false,
+      blurOnSend: true,
       sendFlash: false,
       consensusOpen: false,
       investigation: "off",
@@ -274,8 +286,12 @@ export const useAether = create<AetherState>()(
       smartPage: "hub",
       smartTabsAt: "top",
       smartCards: seedSmartCards(),
+      smartBoards: [],
+      smartCanvases: seedCanvases(),
+      activeCanvasId: "desk",
       smartOpenId: null,
       genieMessages: [],
+      genieDocked: false,
 
       guideOn: false,
       upgradeFromLock: false,
@@ -434,17 +450,42 @@ export const useAether = create<AetherState>()(
             title: card.title,
             body: card.body,
             lane: card.lane,
+            canvasId: card.canvasId ?? s.activeCanvasId,
             preview: card.preview,
             x: 16 + (s.smartCards.length % 3) * 28,
             y: 14 + (s.smartCards.length % 4) * 18,
             createdAt: Date.now(),
           };
+          const stay = s.smartPage === "genie" || s.genieDocked;
           return {
             smartCards: [next, ...s.smartCards],
-            smartOpenId: s.smartPage === "genie" ? s.smartOpenId : id,
-            smartPage: s.smartPage === "genie" ? "genie" : "cards",
+            smartOpenId: stay ? s.smartOpenId : id,
+            smartPage: stay ? s.smartPage : "cards",
           };
         }),
+      addSmartBoard: (board) =>
+        set((s) => {
+          if (s.smartBoards.length + 4 >= 10) return {};
+          const id = uid("bd");
+          return {
+            smartBoards: [...s.smartBoards, { id, label: board.label.slice(0, 14), object: board.object }],
+          };
+        }),
+      removeSmartBoard: (id) =>
+        set((s) => ({
+          smartBoards: s.smartBoards.filter((b) => b.id !== id),
+          smartCards: s.smartCards.map((c) => (c.lane === id ? { ...c, lane: "inbox" } : c)),
+        })),
+      addSmartCanvas: (name) =>
+        set((s) => {
+          if (s.smartCanvases.length >= 10) return {};
+          const id = uid("cv");
+          const paper = WALLPAPERS[s.smartCanvases.length % WALLPAPERS.length];
+          const next = { id, name: name.slice(0, 12) || `Scene ${s.smartCanvases.length + 1}`, wallpaperId: paper.id };
+          return { smartCanvases: [...s.smartCanvases, next], activeCanvasId: id };
+        }),
+      setActiveCanvas: (id) => set({ activeCanvasId: id }),
+      setGenieDocked: (v) => set({ genieDocked: v }),
       addGenieMessage: (msg) =>
         set((s) => ({ genieMessages: [...s.genieMessages, msg] })),
       clearGenie: () => set({ genieMessages: [] }),
@@ -473,6 +514,16 @@ export const useAether = create<AetherState>()(
     }),
     {
       name: "collider-spatial-v12",
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as Partial<AetherState>;
+        return {
+          ...current,
+          ...p,
+          smartCards: p.smartCards?.length ? p.smartCards.map((c) => ({ ...c, canvasId: c.canvasId ?? "desk" })) : current.smartCards,
+          files: p.files?.length ? p.files : current.files,
+          smartCanvases: p.smartCanvases?.length ? p.smartCanvases : current.smartCanvases,
+        };
+      },
       partialize: (s) => ({
         tier: s.tier,
         enabledModelIds: s.enabledModelIds,
@@ -485,10 +536,15 @@ export const useAether = create<AetherState>()(
         purchasedWallpaperIds: s.purchasedWallpaperIds,
         hidePromptOnSend: s.hidePromptOnSend,
         hidePromptAfterIdle: s.hidePromptAfterIdle,
+        blurOnSend: s.blurOnSend,
         promptText: s.promptText,
         smartCards: s.smartCards,
+        smartBoards: s.smartBoards,
+        smartCanvases: s.smartCanvases,
+        activeCanvasId: s.activeCanvasId,
         smartPage: s.smartPage,
         smartTabsAt: s.smartTabsAt,
+        genieDocked: s.genieDocked,
         imagineMade: s.imagineMade,
         imagineLikedIds: s.imagineLikedIds,
         genieMessages: s.genieMessages,

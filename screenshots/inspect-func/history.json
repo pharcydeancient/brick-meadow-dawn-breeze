@@ -1,0 +1,357 @@
+{
+  "sheet": true,
+  "scrim": true,
+  "close": true,
+  "open": true,
+  "blur": "blur(18px) saturate(1.4)",
+  "scrimBg": "rgba(6, 8, 12, 0.72)",
+  "cardsUnder": 6,
+  "canvas": true,
+  "title": "History",
+  "rows": [
+    {
+      "title": "What is home, then?",
+      "meta": "Lite 22 turns · 17m",
+      "tag": "Lite"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Small 20 turns · 17m",
+      "tag": "Small"
+    },
+    {
+      "title": "How should consensus sit with the prompt?",
+      "meta": "Command 22 turns · 17m",
+      "tag": "Command"
+    },
+    {
+      "title": "Keep the wallpaper continuous under the cards.",
+      "meta": "MiniMax 22 turns · 17m",
+      "tag": "MiniMax"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Ling 20 turns · 17m",
+      "tag": "Ling"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Nemo 20 turns · 17m",
+      "tag": "Nemo"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Gemma 20 turns · 17m",
+      "tag": "Gemma"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Qwen 20 turns · 17m",
+      "tag": "Qwen"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Nano 20 turns · 17m",
+      "tag": "Nano"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Laguna 20 turns · 17m",
+      "tag": "Laguna"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Flash 20 turns · 17m",
+      "tag": "Flash"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Mercury 20 turns · 17m",
+      "tag": "Mercury"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "MiMo 20 turns · 17m",
+      "tag": "MiMo"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "GLM 20 turns · 17m",
+      "tag": "GLM"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Luna 20 turns · 17m",
+      "tag": "Luna"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Plus 20 turns · 17m",
+      "tag": "Plus"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Grok 20 turns · 17m",
+      "tag": "Grok"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Grok 4.5 20 turns · 17m",
+      "tag": "Grok 4.5"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Sonar 20 turns · 17m",
+      "tag": "Sonar"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Large 20 turns · 17m",
+      "tag": "Large"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Laguna 20 turns · 17m",
+      "tag": "Laguna"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Air 20 turns · 17m",
+      "tag": "Air"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Codestral 20 turns · 17m",
+      "tag": "Codestral"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Coder 20 turns · 17m",
+      "tag": "Coder"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Codex 20 turns · 17m",
+      "tag": "Codex"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Turbo 20 turns · 17m",
+      "tag": "Turbo"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "KAT 20 turns · 17m",
+      "tag": "KAT"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kimi 20 turns · 17m",
+      "tag": "Kimi"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kimi 3 20 turns · 17m",
+      "tag": "Kimi 3"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Max 20 turns · 17m",
+      "tag": "Max"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "FLUX 20 turns · 17m",
+      "tag": "FLUX"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Gemini 20 turns · 17m",
+      "tag": "Gemini"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Mini 20 turns · 17m",
+      "tag": "Mini"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Klein 20 turns · 17m",
+      "tag": "Klein"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Banana 20 turns · 17m",
+      "tag": "Banana"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kling 20 turns · 17m",
+      "tag": "Kling"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "GPT Img 20 turns · 17m",
+      "tag": "GPT Img"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Seedream 20 turns · 17m",
+      "tag": "Seedream"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Qwen Img 20 turns · 17m",
+      "tag": "Qwen Img"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "DALL·E 20 turns · 17m",
+      "tag": "DALL·E"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Midjourney 20 turns · 17m",
+      "tag": "Midjourney"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Banana+ 20 turns · 17m",
+      "tag": "Banana+"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Gemini+ 20 turns · 17m",
+      "tag": "Gemini+"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "FLUX Max 20 turns · 17m",
+      "tag": "FLUX Max"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "GPT 5.4 20 turns · 17m",
+      "tag": "GPT 5.4"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Seed 4.5 20 turns · 17m",
+      "tag": "Seed 4.5"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Veo Lite 20 turns · 17m",
+      "tag": "Veo Lite"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Wan 20 turns · 17m",
+      "tag": "Wan"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Imagine 20 turns · 17m",
+      "tag": "Imagine"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kling 20 turns · 17m",
+      "tag": "Kling"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Wan Flash 20 turns · 17m",
+      "tag": "Wan Flash"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Wan Plus 20 turns · 17m",
+      "tag": "Wan Plus"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kling 2.5 20 turns · 17m",
+      "tag": "Kling 2.5"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Hailuo 20 turns · 17m",
+      "tag": "Hailuo"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Veo Fast 20 turns · 17m",
+      "tag": "Veo Fast"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Veo 20 turns · 17m",
+      "tag": "Veo"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Sora 20 turns · 17m",
+      "tag": "Sora"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Wan 2.5 20 turns · 17m",
+      "tag": "Wan 2.5"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kling 3 20 turns · 17m",
+      "tag": "Kling 3"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Lyria 20 turns · 17m",
+      "tag": "Lyria"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Kokoro 20 turns · 17m",
+      "tag": "Kokoro"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Audio 20 turns · 17m",
+      "tag": "Audio"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Sesame 20 turns · 17m",
+      "tag": "Sesame"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Lyria+ 20 turns · 17m",
+      "tag": "Lyria+"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Gemini TTS 20 turns · 17m",
+      "tag": "Gemini TTS"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "Voxtral 20 turns · 17m",
+      "tag": "Voxtral"
+    },
+    {
+      "title": "Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.",
+      "meta": "GPT Audio 20 turns · 17m",
+      "tag": "GPT Audio"
+    }
+  ],
+  "named": true,
+  "dates": true,
+  "closeBox": {
+    "x": 773,
+    "y": 95,
+    "w": 14,
+    "h": 14
+  },
+  "closeBg": "rgb(255, 95, 87)"
+}

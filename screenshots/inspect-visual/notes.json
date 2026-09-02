@@ -1,0 +1,903 @@
+{
+  "homeSeed": {
+    "cards": [
+      {
+        "name": "Gemini 3.6 Flash Lite",
+        "accent": "#7fd8c4",
+        "miniCount": 2,
+        "empty": null,
+        "emptyColor": null,
+        "log": {
+          "scrollH": 224,
+          "clientH": 224,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": [
+          {
+            "cls": "card-mini you",
+            "text": "What is home, then?",
+            "color": "rgb(127, 216, 196)",
+            "weight": "600",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(127, 216, 196)",
+            "radius": "0px"
+          },
+          {
+            "cls": "card-mini them",
+            "text": "Home is a card grid. Themes and Imagine are working surfaces with a heavier plate.",
+            "color": "rgb(255, 255, 255)",
+            "weight": "400",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "radius": "0px"
+          }
+        ]
+      },
+      {
+        "name": "Mistral Small 3.2",
+        "accent": "#ffb066",
+        "miniCount": 0,
+        "empty": "Tap to start a conversation.",
+        "emptyColor": "rgba(238, 241, 246, 0.4)",
+        "log": {
+          "scrollH": 242,
+          "clientH": 242,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": []
+      },
+      {
+        "name": "Command R",
+        "accent": "#f2c14e",
+        "miniCount": 2,
+        "empty": null,
+        "emptyColor": null,
+        "log": {
+          "scrollH": 242,
+          "clientH": 242,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": [
+          {
+            "cls": "card-mini you",
+            "text": "How should consensus sit with the prompt?",
+            "color": "rgb(242, 193, 78)",
+            "weight": "600",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(242, 193, 78)",
+            "radius": "0px"
+          },
+          {
+            "cls": "card-mini them",
+            "text": "Tint the wallpaper, not the cards. Names carry the model color. Prompt brings consensus wi",
+            "color": "rgb(255, 255, 255)",
+            "weight": "400",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "radius": "0px"
+          }
+        ]
+      },
+      {
+        "name": "MiniMax M3",
+        "accent": "#ff9e6b",
+        "miniCount": 2,
+        "empty": null,
+        "emptyColor": null,
+        "log": {
+          "scrollH": 242,
+          "clientH": 242,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": [
+          {
+            "cls": "card-mini you",
+            "text": "Keep the wallpaper continuous under the cards.",
+            "color": "rgb(255, 158, 107)",
+            "weight": "600",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(255, 158, 107)",
+            "radius": "0px"
+          },
+          {
+            "cls": "card-mini them",
+            "text": "A glass canvas over a live wallpaper. Cards sit in front and never clip the plate they res",
+            "color": "rgb(255, 255, 255)",
+            "weight": "400",
+            "size": "12.5px",
+            "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+            "bg": "rgba(0, 0, 0, 0)",
+            "pad": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "radius": "0px"
+          }
+        ]
+      },
+      {
+        "name": "Ling 2.6 Flash",
+        "accent": "#9ecbff",
+        "miniCount": 0,
+        "empty": "Tap to start a conversation.",
+        "emptyColor": "rgba(238, 241, 246, 0.4)",
+        "log": {
+          "scrollH": 242,
+          "clientH": 242,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": []
+      },
+      {
+        "name": "Mistral Nemo",
+        "accent": "#67e8f9",
+        "miniCount": 0,
+        "empty": "Tap to start a conversation.",
+        "emptyColor": "rgba(238, 241, 246, 0.4)",
+        "log": {
+          "scrollH": 242,
+          "clientH": 242,
+          "scrollTop": 0,
+          "overflowY": "auto",
+          "canScroll": false
+        },
+        "minis": []
+      }
+    ],
+    "veil": {
+      "class": "env-veil veil-home",
+      "bg": "linear-gradient(rgba(8, 10, 16, 0.34) 0%, rgba(8, 10, 16, 0.26) 48%, rgba(8, 10, 16, 0.48) 100%)",
+      "opacity": "1",
+      "filter": "none",
+      "backdrop": "none"
+    },
+    "canvas": {
+      "class": "main-window glass-window",
+      "bg": "rgba(0, 0, 0, 0)",
+      "backdrop": "none"
+    },
+    "plate": "absent",
+    "photo": {
+      "opacity": "1",
+      "filter": "none"
+    },
+    "leading": false,
+    "cancelLabels": [],
+    "winClose": false,
+    "cardHeads": [
+      "Gemini 3.6 Flash Lite",
+      "Mistral Small 3.2",
+      "Command R",
+      "MiniMax M3",
+      "Ling 2.6 Flash",
+      "Mistral Nemo"
+    ],
+    "bodyOverflow": "hidden",
+    "appRootClass": "app-root home-tint"
+  },
+  "inject": {
+    "ok": true,
+    "key": "collider-spatial-v12",
+    "first": "free/gemini-3-6-flash-lite",
+    "second": "free/mistral-small",
+    "count": 24
+  },
+  "homeLong": [
+    {
+      "i": 0,
+      "count": 24,
+      "scrollH": 2922,
+      "clientH": 224,
+      "scrollTop": 2584,
+      "overflowY": "auto",
+      "canScroll": true,
+      "firstText": "Turn 1 user: keep the wallpaper continuous under the cards a",
+      "lastText": "Turn 12 model: a glass canvas over a live wallpaper. Cards s",
+      "visible": [
+        "Turn 11 model: a glass canvas over a live wallpape",
+        "Turn 12 user: keep the wallpaper continuous under ",
+        "Turn 12 model: a glass canvas over a live wallpape"
+      ]
+    },
+    {
+      "i": 1,
+      "count": 6,
+      "scrollH": 731,
+      "clientH": 242,
+      "scrollTop": 393,
+      "overflowY": "auto",
+      "canScroll": true,
+      "firstText": "Turn 1 user: keep the wallpaper continuous under the cards a",
+      "lastText": "Turn 3 model: a glass canvas over a live wallpaper. Cards si",
+      "visible": [
+        "Turn 2 model: a glass canvas over a live wallpaper",
+        "Turn 3 user: keep the wallpaper continuous under t",
+        "Turn 3 model: a glass canvas over a live wallpaper"
+      ]
+    },
+    {
+      "i": 2,
+      "count": 2,
+      "scrollH": 242,
+      "clientH": 242,
+      "scrollTop": 0,
+      "overflowY": "auto",
+      "canScroll": false,
+      "firstText": "How should consensus sit with the prompt?",
+      "lastText": "Tint the wallpaper, not the cards. Names carry the model col",
+      "visible": [
+        "How should consensus sit with the prompt?",
+        "Tint the wallpaper, not the cards. Names carry the"
+      ]
+    },
+    {
+      "i": 3,
+      "count": 2,
+      "scrollH": 242,
+      "clientH": 242,
+      "scrollTop": 0,
+      "overflowY": "auto",
+      "canScroll": false,
+      "firstText": "Keep the wallpaper continuous under the cards.",
+      "lastText": "A glass canvas over a live wallpaper. Cards sit in front and",
+      "visible": [
+        "Keep the wallpaper continuous under the cards.",
+        "A glass canvas over a live wallpaper. Cards sit in"
+      ]
+    },
+    {
+      "i": 4,
+      "count": 0,
+      "scrollH": 242,
+      "clientH": 242,
+      "scrollTop": 0,
+      "overflowY": "auto",
+      "canScroll": false,
+      "firstText": null,
+      "lastText": null,
+      "visible": []
+    },
+    {
+      "i": 5,
+      "count": 0,
+      "scrollH": 242,
+      "clientH": 242,
+      "scrollTop": 0,
+      "overflowY": "auto",
+      "canScroll": false,
+      "firstText": null,
+      "lastText": null,
+      "visible": []
+    }
+  ],
+  "afterScrollTop": {
+    "scrollTop": 0,
+    "scrollH": 2922,
+    "clientH": 224,
+    "visible": [
+      {
+        "cls": "card-mini you",
+        "text": "Turn 1 user: keep the wallpaper continuous under the cards and never c"
+      },
+      {
+        "cls": "card-mini them",
+        "text": "Turn 1 model: a glass canvas over a live wallpaper. Cards sit in front"
+      }
+    ],
+    "allCount": 24
+  },
+  "wheel": {
+    "beforeLog": 0,
+    "afterLog": 180,
+    "logMoved": true,
+    "beforePage": 0,
+    "afterPage": 0,
+    "pageMoved": false,
+    "canvasMoved": false,
+    "windowBodyMoved": false,
+    "overscroll": "contain"
+  },
+  "realWheel": {
+    "before": {
+      "log": 40,
+      "page": 0,
+      "canvas": 0
+    },
+    "after": {
+      "log": 360,
+      "page": 0,
+      "canvas": 0,
+      "body": 0
+    },
+    "logDelta": 320,
+    "pageDelta": 0
+  },
+  "typeHome": [
+    {
+      "name": {
+        "text": "Gemini 3.6 Flash Lite",
+        "color": "rgb(127, 216, 196)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#7fd8c4",
+      "you": {
+        "text": "Turn 1 user: keep the wallpaper continuous under the cards and never clip the th",
+        "color": "rgb(127, 216, 196)",
+        "weight": "600",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "them": {
+        "text": "Turn 1 model: a glass canvas over a live wallpaper. Cards sit in front. The full",
+        "color": "rgb(255, 255, 255)",
+        "weight": "400",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "empty": null
+    },
+    {
+      "name": {
+        "text": "Mistral Small 3.2",
+        "color": "rgb(255, 176, 102)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#ffb066",
+      "you": {
+        "text": "Turn 1 user: keep the wallpaper continuous under the cards and never clip the th",
+        "color": "rgb(255, 176, 102)",
+        "weight": "600",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "them": {
+        "text": "Turn 1 model: a glass canvas over a live wallpaper. Cards sit in front. The full",
+        "color": "rgb(255, 255, 255)",
+        "weight": "400",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "empty": null
+    },
+    {
+      "name": {
+        "text": "Command R",
+        "color": "rgb(242, 193, 78)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#f2c14e",
+      "you": {
+        "text": "How should consensus sit with the prompt?",
+        "color": "rgb(242, 193, 78)",
+        "weight": "600",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "them": {
+        "text": "Tint the wallpaper, not the cards. Names carry the model color. Prompt brings co",
+        "color": "rgb(255, 255, 255)",
+        "weight": "400",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "empty": null
+    },
+    {
+      "name": {
+        "text": "MiniMax M3",
+        "color": "rgb(255, 158, 107)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#ff9e6b",
+      "you": {
+        "text": "Keep the wallpaper continuous under the cards.",
+        "color": "rgb(255, 158, 107)",
+        "weight": "600",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "them": {
+        "text": "A glass canvas over a live wallpaper. Cards sit in front and never clip the plat",
+        "color": "rgb(255, 255, 255)",
+        "weight": "400",
+        "size": "12.5px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      },
+      "empty": null
+    },
+    {
+      "name": {
+        "text": "Ling 2.6 Flash",
+        "color": "rgb(158, 203, 255)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#9ecbff",
+      "you": null,
+      "them": null,
+      "empty": {
+        "text": "Tap to start a conversation.",
+        "color": "rgba(238, 241, 246, 0.4)",
+        "weight": "400",
+        "size": "12px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      }
+    },
+    {
+      "name": {
+        "text": "Mistral Nemo",
+        "color": "rgb(103, 232, 249)",
+        "weight": "600",
+        "size": "15px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "flow-root"
+      },
+      "accent": "#67e8f9",
+      "you": null,
+      "them": null,
+      "empty": {
+        "text": "Tap to start a conversation.",
+        "color": "rgba(238, 241, 246, 0.4)",
+        "weight": "400",
+        "size": "12px",
+        "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px",
+        "display": "block"
+      }
+    }
+  ],
+  "tint": {
+    "veilClass": "env-veil veil-home",
+    "veilBg": "linear-gradient(rgba(8, 10, 16, 0.34) 0%, rgba(8, 10, 16, 0.26) 48%, rgba(8, 10, 16, 0.48) 100%)",
+    "veilOpacity": "1",
+    "veilBackdrop": "none",
+    "canvasBg": "rgba(0, 0, 0, 0)",
+    "canvasBackdrop": "none",
+    "canvasFilter": "none",
+    "plateDisplay": "absent",
+    "cardBg": "rgba(255, 255, 255, 0.05)",
+    "cardBackdrop": "none",
+    "cardBorder": "1px solid rgba(255, 255, 255, 0.28)",
+    "photoBox": {
+      "x": 0,
+      "y": 0,
+      "w": 1280,
+      "h": 820
+    },
+    "canvasBox": {
+      "x": 475.6875,
+      "y": 18,
+      "w": 328.609375,
+      "h": 712
+    },
+    "rootClass": "app-root home-tint"
+  },
+  "cardView": {
+    "headText": "BackGemini 3.6 Flash Lite",
+    "headHasFiles": false,
+    "headHasHistory": false,
+    "lineCount": 24,
+    "threadScroll": {
+      "scrollH": 2384,
+      "clientH": 612,
+      "scrollTop": 0,
+      "canScroll": true
+    },
+    "you": {
+      "text": "Turn 1 user: keep the wallpaper continuous under the cards and never clip the thread.",
+      "color": "rgb(127, 216, 196)",
+      "weight": "600",
+      "size": "16px",
+      "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pad": "0px",
+      "border": "0px"
+    },
+    "them": {
+      "text": "Turn 1 model: a glass canvas over a live wallpaper. Cards sit in front. The full conversat",
+      "color": "rgb(255, 255, 255)",
+      "weight": "400",
+      "size": "16px",
+      "family": "Manrope, ui-sans-serif, system-ui, sans-serif",
+      "bg": "rgba(0, 0, 0, 0)",
+      "pad": "0px",
+      "border": "0px"
+    },
+    "lineArt": [
+      {
+        "cls": "line you",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px none rgb(243, 244, 247)",
+        "radius": "0px"
+      },
+      {
+        "cls": "line them",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px none rgb(243, 244, 247)",
+        "radius": "0px"
+      },
+      {
+        "cls": "line you",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px none rgb(243, 244, 247)",
+        "radius": "0px"
+      },
+      {
+        "cls": "line them",
+        "bg": "rgba(0, 0, 0, 0)",
+        "pad": "0px",
+        "border": "0px none rgb(243, 244, 247)",
+        "radius": "0px"
+      }
+    ],
+    "veil": "env-veil veil-untint",
+    "root": "app-root untint",
+    "filesBtn": false,
+    "buttonsInHead": [
+      "Back",
+      "Back",
+      ""
+    ]
+  },
+  "negativesHome": {
+    "leading": false,
+    "sidePane": false,
+    "winCloseVisible": false,
+    "cancelButtons": 0,
+    "youLabels": false,
+    "liteLabels": false,
+    "filesOnHomeCards": false
+  },
+  "settings": {
+    "present": true,
+    "paneText": "Account\nModels\nSettings\nFiles\nHistory\nThemes\nImagine\nSmart\nStore",
+    "bg": "rgba(28, 28, 32, 0.97)",
+    "backdrop": "none",
+    "cancel": [],
+    "buttons": [
+      {
+        "text": "Account",
+        "aria": null,
+        "cls": "alert-tab",
+        "w": 80.65625,
+        "h": 28
+      },
+      {
+        "text": "Models",
+        "aria": null,
+        "cls": "alert-tab",
+        "w": 80.671875,
+        "h": 28
+      },
+      {
+        "text": "Settings",
+        "aria": null,
+        "cls": "alert-tab",
+        "w": 80.671875,
+        "h": 28
+      },
+      {
+        "text": "Files",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.328125,
+        "h": 96
+      },
+      {
+        "text": "History",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.328125,
+        "h": 96
+      },
+      {
+        "text": "Themes",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.34375,
+        "h": 96
+      },
+      {
+        "text": "Imagine",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.328125,
+        "h": 96
+      },
+      {
+        "text": "Smart",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.328125,
+        "h": 96
+      },
+      {
+        "text": "Store",
+        "aria": null,
+        "cls": "app-icon",
+        "w": 75.34375,
+        "h": 96
+      }
+    ],
+    "hasCancelText": false
+  },
+  "chips": [
+    {
+      "text": "Lite",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#7fd8c4"
+    },
+    {
+      "text": "Small",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#ffb066"
+    },
+    {
+      "text": "Command",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#f2c14e"
+    },
+    {
+      "text": "MiniMax",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#ff9e6b"
+    },
+    {
+      "text": "Ling",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#9ecbff"
+    },
+    {
+      "text": "Nemo",
+      "bg": "rgba(10, 10, 14, 0.88)",
+      "color": "rgb(255, 255, 255)",
+      "border": "0px none rgb(255, 255, 255)",
+      "cls": "model-chip on",
+      "accent": "#67e8f9"
+    },
+    {
+      "text": "Gemma",
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "cls": "model-chip",
+      "accent": "#7fd8c4"
+    },
+    {
+      "text": "Qwen",
+      "bg": "rgba(8, 8, 12, 0.78)",
+      "color": "rgba(255, 255, 255, 0.55)",
+      "border": "0px none rgba(255, 255, 255, 0.55)",
+      "cls": "model-chip",
+      "accent": "#c9a7ff"
+    }
+  ],
+  "history": {
+    "sheetBg": "rgba(16, 18, 24, 0.98)",
+    "sheetBackdrop": "none",
+    "sheetOpacity": "1",
+    "scrim": "rgba(6, 8, 12, 0.72)",
+    "title": "History",
+    "close": {
+      "cls": "sheet-close",
+      "w": 14,
+      "h": 14,
+      "text": ""
+    },
+    "sampleBehind": [
+      {
+        "text": "Gemini 3.6 Flash Lite",
+        "x": 508.6875,
+        "y": 86.92500305175781,
+        "vis": true
+      },
+      {
+        "text": "Turn 1 user: keep the wallpaper continuo",
+        "x": 508.6875,
+        "y": -2445.074951171875,
+        "vis": true
+      },
+      {
+        "text": "Turn 1 model: a glass canvas over a live",
+        "x": 508.6875,
+        "y": -2332.074951171875,
+        "vis": true
+      },
+      {
+        "text": "Turn 2 user: keep the wallpaper continuo",
+        "x": 508.6875,
+        "y": -2201.574951171875,
+        "vis": true
+      }
+    ]
+  },
+  "placeholder": [
+    {
+      "name": "Gemini 3.6 Flash Lite",
+      "empty": null,
+      "miniColors": [
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)",
+        "rgb(127, 216, 196)",
+        "rgb(255, 255, 255)"
+      ]
+    },
+    {
+      "name": "Mistral Small 3.2",
+      "empty": null,
+      "miniColors": [
+        "rgb(255, 176, 102)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 176, 102)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 176, 102)",
+        "rgb(255, 255, 255)"
+      ]
+    },
+    {
+      "name": "Command R",
+      "empty": null,
+      "miniColors": [
+        "rgb(242, 193, 78)",
+        "rgb(255, 255, 255)"
+      ]
+    },
+    {
+      "name": "MiniMax M3",
+      "empty": null,
+      "miniColors": [
+        "rgb(255, 158, 107)",
+        "rgb(255, 255, 255)"
+      ]
+    },
+    {
+      "name": "Ling 2.6 Flash",
+      "empty": {
+        "text": "Tap to start a conversation.",
+        "color": "rgba(238, 241, 246, 0.4)",
+        "weight": "400"
+      },
+      "miniColors": []
+    },
+    {
+      "name": "Mistral Nemo",
+      "empty": {
+        "text": "Tap to start a conversation.",
+        "color": "rgba(238, 241, 246, 0.4)",
+        "weight": "400"
+      },
+      "miniColors": []
+    }
+  ]
+}

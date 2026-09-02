@@ -1,0 +1,156 @@
+[
+  {
+    "dt": 29,
+    "open": false,
+    "op": 1,
+    "orbOp": 0,
+    "orbAway": false
+  },
+  {
+    "dt": 31,
+    "open": false,
+    "op": 1,
+    "orbOp": 0,
+    "orbAway": false
+  },
+  {
+    "dt": 49,
+    "open": false,
+    "op": 1,
+    "orbOp": 0.0009687,
+    "orbAway": false
+  },
+  {
+    "dt": 92,
+    "open": false,
+    "op": 0.980217,
+    "orbOp": 0.357887,
+    "orbAway": false
+  },
+  {
+    "dt": 135,
+    "open": false,
+    "op": 0.893873,
+    "orbOp": 0.71245,
+    "orbAway": false
+  },
+  {
+    "dt": 207,
+    "open": false,
+    "op": 0.708096,
+    "orbOp": 0.914042,
+    "orbAway": false
+  },
+  {
+    "dt": 253,
+    "open": false,
+    "op": 0.530995,
+    "orbOp": 0.968837,
+    "orbAway": false
+  },
+  {
+    "dt": 291,
+    "open": false,
+    "op": 0.398058,
+    "orbOp": 0.985679,
+    "orbAway": false
+  },
+  {
+    "dt": 332,
+    "open": false,
+    "op": 0.178255,
+    "orbOp": 0.9967,
+    "orbAway": false
+  },
+  {
+    "dt": 372,
+    "open": false,
+    "op": 0.0169792,
+    "orbOp": 0.999187,
+    "orbAway": false
+  },
+  {
+    "dt": 420,
+    "open": false,
+    "op": 0,
+    "orbOp": 0.999994,
+    "orbAway": false
+  },
+  {
+    "dt": 458,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 495,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 528,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 563,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 601,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 636,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 671,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 705,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 739,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 774,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  },
+  {
+    "dt": 810,
+    "open": false,
+    "op": 0,
+    "orbOp": 1,
+    "orbAway": false
+  }
+]

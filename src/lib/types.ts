@@ -99,7 +99,21 @@ export type SmartPage = "hub" | "cards" | "boards" | "canvas" | "genie";
 
 export type SmartKind = "memory" | "task" | "artifact" | "note";
 
-export type SmartLane = "inbox" | "play" | "ready" | "archive";
+export type SmartObject = "notebook" | "portfolio" | "cork" | "tray";
+
+export type SmartLane = string;
+
+export interface SmartBoard {
+  id: string;
+  label: string;
+  object: SmartObject;
+}
+
+export interface SmartCanvas {
+  id: string;
+  name: string;
+  wallpaperId: string;
+}
 
 export interface SmartCard {
   id: string;
@@ -107,6 +121,7 @@ export interface SmartCard {
   title: string;
   body: string;
   lane: SmartLane;
+  canvasId: string;
   x: number;
   y: number;
   preview?: string;

@@ -1,0 +1,97 @@
+{
+  "vp": {
+    "w": 1280,
+    "h": 800
+  },
+  "stage": {
+    "x": 480.3125,
+    "y": 18,
+    "w": 319.375,
+    "h": 692,
+    "b": 710,
+    "t": 18,
+    "op": 1,
+    "pe": "auto",
+    "vis": "visible"
+  },
+  "orb": {
+    "x": 604,
+    "y": 730,
+    "w": 72,
+    "h": 72,
+    "b": 802,
+    "t": 730,
+    "op": 1,
+    "pe": "auto",
+    "vis": "visible",
+    "aria": "Open composer",
+    "cls": "prompt-orb"
+  },
+  "settings": {
+    "x": 488.3125,
+    "y": 734,
+    "w": 44,
+    "h": 44,
+    "b": 778,
+    "t": 734,
+    "op": 1,
+    "pe": "auto",
+    "vis": "visible",
+    "aria": "Settings"
+  },
+  "cards": [
+    {
+      "name": "Gemini 3.6 Flash Lite",
+      "x": 503.3125,
+      "y": 76.17500305175781,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    },
+    {
+      "name": "Mistral Small 3.2",
+      "x": 503.3125,
+      "y": 364,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    },
+    {
+      "name": "Command R",
+      "x": 647.8125,
+      "y": 76.17500305175781,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    },
+    {
+      "name": "MiniMax M3",
+      "x": 647.8125,
+      "y": 364,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    },
+    {
+      "name": "Ling 2.6 Flash",
+      "x": 792.3125,
+      "y": 76.17500305175781,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    },
+    {
+      "name": "Mistral Nemo",
+      "x": 792.3125,
+      "y": 364,
+      "w": 136.5,
+      "h": 279.8125,
+      "ratio": 2.0499084249084247
+    }
+  ],
+  "env": {
+    "src": "/themes/free/observatory.jpg"
+  },
+  "nav": false,
+  "bodyText": "Gemini 3.6 Flash Lite\n\nWhat is home, then?\n\nHome is a card grid. Themes and Imagine are working surfaces with a heavier plate.\n\nInspect pad 0: keep the wallpaper continuous under the cards and never clip the plate.\n\nReply 0. A glass canvas over a live wallpaper. Cards sit in front. line line line line line line line line line line line line line line line line line line\n\nInspect pad 1: keep the wa"
+}

@@ -1,0 +1,566 @@
+{
+  "overall": "FAIL",
+  "pass": 91,
+  "fail": 2,
+  "skip": 0,
+  "checks": [
+    {
+      "control": "Home: cards present",
+      "result": "PASS",
+      "happened": "6 cards: Gemini 3.6 Flash Lite | Mistral Small 3.2 | Command R | MiniMax M3 | Ling 2.6 Flash | Mistral Nemo",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Home: wallpaper",
+      "result": "PASS",
+      "happened": "src=/themes/free/observatory.jpg",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Home: no permanent side rail",
+      "result": "PASS",
+      "happened": "no visible leading nav",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Home: language never \u201croom\u201d",
+      "result": "PASS",
+      "happened": "no Room/Rooms copy",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Composer orb visible under the phone",
+      "result": "PASS",
+      "happened": "op=1 72x72 aria=Open composer",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Composer orb glued under phone (not a desktop dock)",
+      "result": "PASS",
+      "happened": "at (604,730) under stage bottom 710",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Settings orb present",
+      "result": "PASS",
+      "happened": "aria=Settings at (488,734) 44x44",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Home: overlays covering cards",
+      "result": "PASS",
+      "happened": "no overlay sitting on the grid",
+      "screenshot": "/workspace/screenshots/inspect-func/01-home.png"
+    },
+    {
+      "control": "Home card log: thread is scrollable",
+      "result": "PASS",
+      "happened": "sh=2591 ch=214 lines=22",
+      "screenshot": "/workspace/screenshots/inspect-func/02-card-log-before-wheel.png"
+    },
+    {
+      "control": "Home card log: wheel-scroll does not open the card",
+      "result": "PASS",
+      "happened": "stayed on home. scroll 2253 -> 2377. cards=6",
+      "screenshot": "/workspace/screenshots/inspect-func/03-card-log-after-wheel.png"
+    },
+    {
+      "control": "Home: tap card name opens card view",
+      "result": "PASS",
+      "happened": "opened 'Gemini 3.6 Flash Lite' from name 'Gemini 3.6 Flash Lite'",
+      "screenshot": "/workspace/screenshots/inspect-func/05-after-name-tap.png"
+    },
+    {
+      "control": "Home: tap card opens card view",
+      "result": "PASS",
+      "happened": "title=Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/inspect-func/07-card-view.png"
+    },
+    {
+      "control": "Card view: Back control present",
+      "result": "PASS",
+      "happened": "back='Back' aria ok",
+      "screenshot": "/workspace/screenshots/inspect-func/07-card-view.png"
+    },
+    {
+      "control": "Card view: header chrome does not belong",
+      "result": "PASS",
+      "happened": "head='Back | Gemini 3.6 Flash Lite' \u2014 Back + title only",
+      "screenshot": "/workspace/screenshots/inspect-func/07-card-view.png"
+    },
+    {
+      "control": "Card view: swipe left/right between cards",
+      "result": "FAIL",
+      "happened": "Swipe left from header advances Gemini 3.6 Flash Lite \u2192 Mistral Small 3.2. Swipe right from the title/header does not return to the previous card (stays on Mistral Small 3.2). Left works; right is dead from the header.",
+      "screenshot": "/workspace/screenshots/inspect-func/09b-card-swipe-right-retest.png"
+    },
+    {
+      "control": "Card view: Escape returns home",
+      "result": "PASS",
+      "happened": "home cards=6",
+      "screenshot": "/workspace/screenshots/inspect-func/10-card-escape.png"
+    },
+    {
+      "control": "Card view: Back returns home",
+      "result": "PASS",
+      "happened": "cards=6",
+      "screenshot": "/workspace/screenshots/inspect-func/12-card-back.png"
+    },
+    {
+      "control": "Card view: vertical swipe-down closes",
+      "result": "PASS",
+      "happened": "returned home. cards=6",
+      "screenshot": "/workspace/screenshots/inspect-func/13b-card-swipe-down-retest.png"
+    },
+    {
+      "control": "Card view: swipe left to next card",
+      "result": "PASS",
+      "happened": "Swipe left from header: Gemini 3.6 Flash Lite \u2192 Mistral Small 3.2",
+      "screenshot": "/workspace/screenshots/inspect-func/08-card-swipe-left.png"
+    },
+    {
+      "control": "Home: tap card 0 opens",
+      "result": "PASS",
+      "happened": "Gemini 3.6 Flash Lite",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-0.png"
+    },
+    {
+      "control": "Home: tap card 1 opens",
+      "result": "PASS",
+      "happened": "Mistral Small 3.2",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-1.png"
+    },
+    {
+      "control": "Home: tap card 2 opens",
+      "result": "PASS",
+      "happened": "Command R",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-2.png"
+    },
+    {
+      "control": "Home: tap card 3 opens",
+      "result": "PASS",
+      "happened": "MiniMax M3",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-3.png"
+    },
+    {
+      "control": "Home: tap card 4 opens",
+      "result": "PASS",
+      "happened": "Ling 2.6 Flash",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-4.png"
+    },
+    {
+      "control": "Home: tap card 5 opens",
+      "result": "PASS",
+      "happened": "Mistral Nemo",
+      "screenshot": "/workspace/screenshots/inspect-func/14-card-tap-5.png"
+    },
+    {
+      "control": "Composer: invisible until orb",
+      "result": "PASS",
+      "happened": "{\"op\":\"0\",\"pe\":\"none\",\"tf\":\"matrix(1, 0, 0, 1, -149.688, 28)\",\"open\":false}",
+      "screenshot": "/workspace/screenshots/inspect-func/15-home-pre-prompt.png"
+    },
+    {
+      "control": "Composer: click orb opens with animation",
+      "result": "PASS",
+      "happened": "fade dt=35 op=0.000 \u2192 1.000",
+      "screenshot": "/workspace/screenshots/inspect-func/16-prompt-mid-open.png"
+    },
+    {
+      "control": "Composer: orb summons",
+      "result": "PASS",
+      "happened": "prompt-seat.open",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: consensus sits above prompt",
+      "result": "PASS",
+      "happened": "gap=18.0 text=Gemini 3.6 Flash Lite\nReply 9. A glass canvas over a live wallpaper. Cards sit in front. line line line line line line line line line line l",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: attach control present",
+      "result": "PASS",
+      "happened": "{\"aria\":\"Attach\",\"label\":\"Attach\",\"labelVis\":true,\"present\":true}",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: attach labeled",
+      "result": "PASS",
+      "happened": "visible Attach",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: send control present",
+      "result": "PASS",
+      "happened": "{\"present\":true,\"aria\":\"Send\",\"title\":\"\",\"text\":\"\",\"label\":\"\",\"labelVis\":false,\"disabled\":true}",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: send labeled",
+      "result": "PASS",
+      "happened": "aria='Send' (icon only, no visible Send word \u2014 accepted as labeled)",
+      "screenshot": "/workspace/screenshots/inspect-func/17-prompt-open.png"
+    },
+    {
+      "control": "Composer: investigation tray (Web / Research / Deep)",
+      "result": "PASS",
+      "happened": "rows=[\"Web search\",\"Research\",\"Deep research\"] aboveBar=true",
+      "screenshot": "/workspace/screenshots/inspect-func/18-investigate-tray.png"
+    },
+    {
+      "control": "Composer: select Web search changes state",
+      "result": "PASS",
+      "happened": "probe='Web search' on=true aria='Investigation: Web search'",
+      "screenshot": "/workspace/screenshots/inspect-func/19-probe-web.png"
+    },
+    {
+      "control": "Composer: select Research changes state",
+      "result": "PASS",
+      "happened": "probe='Research' on=true aria='Investigation: Research'",
+      "screenshot": "/workspace/screenshots/inspect-func/20-probe-research.png"
+    },
+    {
+      "control": "Composer: select Deep research changes state",
+      "result": "PASS",
+      "happened": "probe='Deep research' on=true aria='Investigation: Deep research'",
+      "screenshot": "/workspace/screenshots/inspect-func/21-probe-deep.png"
+    },
+    {
+      "control": "Settings alert: opens from orb",
+      "result": "PASS",
+      "happened": "alert-card visible",
+      "screenshot": "/workspace/screenshots/inspect-func/26-settings-apps.png"
+    },
+    {
+      "control": "Settings: Account / Models / Settings tabs",
+      "result": "PASS",
+      "happened": "[\"Account\",\"Models\",\"Settings\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/26-settings-apps.png"
+    },
+    {
+      "control": "Settings: app icons Files, History, Themes, Imagine, Smart, Store",
+      "result": "PASS",
+      "happened": "[\"Files\",\"History\",\"Themes\",\"Imagine\",\"Smart\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/26-settings-apps.png"
+    },
+    {
+      "control": "Settings: no giant Cancel",
+      "result": "PASS",
+      "happened": "no Cancel button",
+      "screenshot": "/workspace/screenshots/inspect-func/26-settings-apps.png"
+    },
+    {
+      "control": "Settings: Account tab works",
+      "result": "PASS",
+      "happened": "Pro |  | $19.99/mo |  | Upgrade",
+      "screenshot": "/workspace/screenshots/inspect-func/27-settings-account.png"
+    },
+    {
+      "control": "Settings: Models tab \u2014 Align",
+      "result": "PASS",
+      "happened": "Align present",
+      "screenshot": "/workspace/screenshots/inspect-func/28-settings-models.png"
+    },
+    {
+      "control": "Settings: Models tab \u2014 chips",
+      "result": "PASS",
+      "happened": "Lite,Small,Command,MiniMax,Ling,Nemo,Gemma,Qwen",
+      "screenshot": "/workspace/screenshots/inspect-func/28-settings-models.png"
+    },
+    {
+      "control": "Settings: Align click",
+      "result": "PASS",
+      "happened": "clicked Align",
+      "screenshot": "/workspace/screenshots/inspect-func/28-settings-models.png"
+    },
+    {
+      "control": "Settings: grid rows 1 / 2 / 3 present",
+      "result": "PASS",
+      "happened": "[{\"n\":\"1\",\"on\":false},{\"n\":\"2\",\"on\":true},{\"n\":\"3\",\"on\":false}]",
+      "screenshot": "/workspace/screenshots/inspect-func/29-settings-prefs.png"
+    },
+    {
+      "control": "Settings: grid rows 3 reflow",
+      "result": "PASS",
+      "happened": "changed [{\"w\":137,\"h\":280,\"x\":503,\"y\":76},{\"w\":137,\"h\":280,\"x\":503,\"y\":364},{\"w\":137,\"h\":280,\"x\":648,\"y\":76},{\"w\":137,\"h\":280,\"x\":648,\"y\":364},{\"w\":137,\"h\":280,\"x\":792,\"y\":76},{\"w\":137,\"h\":280,\"x\":792,\"y\":364}] \u2192 [{\"w\":134,\"h\":207,\"x\":502,\"y\":41},{\"w\":134,\"h\":207,\"x\":502,\"y\":256},{\"w\":134,\"h\":207,\"x\":502,\"y\":472},{\"w\":134,\"h\":207,\"x\":644,\"y\":41},{\"w\":134,\"h\":207,\"x\":644,\"y\":256},{\"w\":134,\"h\":207,\"x\":644,\"y\":472}]",
+      "screenshot": "/workspace/screenshots/inspect-func/31-rows-3.png"
+    },
+    {
+      "control": "Settings: grid rows 1 reflow",
+      "result": "PASS",
+      "happened": "[{\"w\":137,\"h\":280,\"x\":503,\"y\":220},{\"w\":137,\"h\":280,\"x\":648,\"y\":220},{\"w\":137,\"h\":280,\"x\":792,\"y\":220},{\"w\":137,\"h\":280,\"x\":937,\"y\":220},{\"w\":137,\"h\":280,\"x\":1081,\"y\":220},{\"w\":137,\"h\":280,\"x\":1226,\"y\":220}]",
+      "screenshot": "/workspace/screenshots/inspect-func/32-rows-1.png"
+    },
+    {
+      "control": "Settings: dismiss by tapping outside",
+      "result": "PASS",
+      "happened": "closed",
+      "screenshot": "/workspace/screenshots/inspect-func/33-settings-tap-outside.png"
+    },
+    {
+      "control": "History overlay: lists as independent overlay",
+      "result": "PASS",
+      "happened": "title=History rows=67",
+      "screenshot": "/workspace/screenshots/inspect-func/34-history.png"
+    },
+    {
+      "control": "History: does not hijack the surface under it",
+      "result": "PASS",
+      "happened": "canvas=true cardsUnder=6",
+      "screenshot": "/workspace/screenshots/inspect-func/34-history.png"
+    },
+    {
+      "control": "History: lists named/dated conversations",
+      "result": "PASS",
+      "happened": "What is home, then? \u00b7 Lite 22 turns \u00b7 17m || Inspect pad 0: keep the wallpaper continuous under the cards and never clip the plate. \u00b7 Small 20 turns \u00b7 17m || How should consensus sit with the prompt? \u00b7 Command 22 turns \u00b7 17m || Keep the wallpaper continuous under the cards. \u00b7 MiniMax 22 turns \u00b7 17m ",
+      "screenshot": "/workspace/screenshots/inspect-func/34-history.png"
+    },
+    {
+      "control": "History: tint/blur behind",
+      "result": "PASS",
+      "happened": "blur=blur(18px) saturate(1.4) bg=rgba(6, 8, 12, 0.72)",
+      "screenshot": "/workspace/screenshots/inspect-func/34-history.png"
+    },
+    {
+      "control": "History: click loads that conversation (does not hijack to a wrong view)",
+      "result": "PASS",
+      "happened": "card='Gemini 3.6 Flash Lite' tag=Lite row='What is home, then?' threadHit=true historyClosed=true",
+      "screenshot": "/workspace/screenshots/inspect-func/35-history-click-row.png"
+    },
+    {
+      "control": "History: close control present",
+      "result": "PASS",
+      "happened": "{\"x\":773,\"y\":95,\"w\":14,\"h\":14,\"bg\":\"rgb(255, 95, 87)\"}",
+      "screenshot": "/workspace/screenshots/inspect-func/34-history.png"
+    },
+    {
+      "control": "History: close works (not eaten as a drag)",
+      "result": "PASS",
+      "happened": "dismissed {\"present\":false,\"open\":false}",
+      "screenshot": "/workspace/screenshots/inspect-func/36-history-close.png"
+    },
+    {
+      "control": "History: close returns to home",
+      "result": "PASS",
+      "happened": "cards=6",
+      "screenshot": "/workspace/screenshots/inspect-func/36-history-close.png"
+    },
+    {
+      "control": "Files: opens",
+      "result": "PASS",
+      "happened": "heading=Files tiles=10 groups=[\"Imagine\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/37-files.png"
+    },
+    {
+      "control": "Files: Years/Days grouping",
+      "result": "FAIL",
+      "happened": "store has filesGroup but UI groups by model. groups=[\"Imagine\"] chips=[] no Years/Days tabs, no 2024/2025/2026 labels. text=Files | Imagine | Alpine hush | Low coast | Dusk glass | Aurora drift | Valley mist | Glass still | Night bloom | Warm still | Field light | Ember fall",
+      "screenshot": "/workspace/screenshots/inspect-func/37c-files-scrolled.png"
+    },
+    {
+      "control": "Files: tile opens preview",
+      "result": "PASS",
+      "happened": "preview stage",
+      "screenshot": "/workspace/screenshots/inspect-func/38-files-preview.png"
+    },
+    {
+      "control": "Files: close returns home",
+      "result": "PASS",
+      "happened": "home",
+      "screenshot": "/workspace/screenshots/inspect-func/39-files-closed.png"
+    },
+    {
+      "control": "Themes: Store chip present",
+      "result": "PASS",
+      "happened": "[\"Selector\",\"Store\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/40-themes.png"
+    },
+    {
+      "control": "Themes: Store chip works",
+      "result": "PASS",
+      "happened": "{\"gate\":false,\"shelves\":true,\"plans\":false,\"label\":\"Live wallpapers\",\"text\":\"Live wallpapers\\nSelector\\nStore\\nFEATURED\\nAurora Drift\\nLive wallpapers\\nAurora Drift\\nNebula Bloom\\nLow Tide\\nEmber Fall\\nAurora\\nAurora Drift\\nNebula Bloom\\nTide\\nLow Tide\\nDrift\\nEmber Fall\"}",
+      "screenshot": "/workspace/screenshots/inspect-func/41-themes-store.png"
+    },
+    {
+      "control": "Themes: wallpaper swap",
+      "result": "PASS",
+      "happened": "/themes/free/observatory.jpg \u2192 /themes/free/cabin.jpg",
+      "screenshot": "/workspace/screenshots/inspect-func/43-theme-swapped.png"
+    },
+    {
+      "control": "Themes: close returns home",
+      "result": "PASS",
+      "happened": "home",
+      "screenshot": "/workspace/screenshots/inspect-func/44-themes-closed.png"
+    },
+    {
+      "control": "Imagine: tiles",
+      "result": "PASS",
+      "happened": "tiles=19 tabs=Discover | Images | Videos | Liked | Library",
+      "screenshot": "/workspace/screenshots/inspect-func/45-imagine.png"
+    },
+    {
+      "control": "Imagine: Like",
+      "result": "PASS",
+      "happened": "liked buttons=1",
+      "screenshot": "/workspace/screenshots/inspect-func/46-imagine-liked.png"
+    },
+    {
+      "control": "Imagine: Liked tab persists likes",
+      "result": "PASS",
+      "happened": "tiles=1",
+      "screenshot": "/workspace/screenshots/inspect-func/47-imagine-liked-tab.png"
+    },
+    {
+      "control": "Imagine: Remix",
+      "result": "PASS",
+      "happened": "Remixing Night bloom | \u00d7",
+      "screenshot": "/workspace/screenshots/inspect-func/48-imagine-remix.png"
+    },
+    {
+      "control": "Imagine: Library persist",
+      "result": "PASS",
+      "happened": "{\"on\":true,\"tiles\":1,\"text\":\"Discover\\nImages\\nVideos\\nLiked\\nLibrary\\nNight bloom\\nGENERATE\\n\\nIMAGE\\n\\nNight bloom\\nRemix\\nLiked\\nIn library\\nAttach\\nUse as source\\nDelete\"}",
+      "screenshot": "/workspace/screenshots/inspect-func/50-imagine-library.png"
+    },
+    {
+      "control": "Imagine: close returns home",
+      "result": "PASS",
+      "happened": "home",
+      "screenshot": "/workspace/screenshots/inspect-func/51-imagine-closed.png"
+    },
+    {
+      "control": "Smart: hub Cards / Boards / Canvas / Genie",
+      "result": "PASS",
+      "happened": "[\"Smart Cards\",\"Smart Boards\",\"Smart Canvas\",\"Smart Genie\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/52-smart-hub.png"
+    },
+    {
+      "control": "Smart: Smart Cards",
+      "result": "PASS",
+      "happened": "Cards | Boards | Canvas | Genie | Memory | Alpine hush | Memory | Low coast | Memory | Valley mist | Memory | Artifact | Dusk glass | Artifact | Glass still | Artifact | Task | task | Board the week | Task | Note | note | Cards vs boards | Note | Memory | Task | Artifact | Note | Pop out",
+      "screenshot": "/workspace/screenshots/inspect-func/53b-smart-cards.png"
+    },
+    {
+      "control": "Smart: Smart Boards",
+      "result": "PASS",
+      "happened": "Tray | 2 | Dusk glass | artifact | Board the week | task | Cork | 2 | Low coast | memory | Cards vs boards | note | Notebook | 2 | Alpine hush | memory | Valley mist | memory | Portfolio | 1 | Glass still | artifact",
+      "screenshot": "/workspace/screenshots/inspect-func/53-smart-boards.png"
+    },
+    {
+      "control": "Smart: Smart Canvas",
+      "result": "PASS",
+      "happened": "Alpine hush | Low coast | Dusk glass | Valley mist | task | Board the week | note | Cards vs boards | Glass still",
+      "screenshot": "/workspace/screenshots/inspect-func/53-smart-canvas.png"
+    },
+    {
+      "control": "Smart: Smart Genie",
+      "result": "PASS",
+      "happened": "Cards | Boards | Canvas | Genie |  | Smart Genie |  | Ask for a card, a board, or a still. It stays in this canvas. |  | New |  | What should we make. |  | Attach | SEND",
+      "screenshot": "/workspace/screenshots/inspect-func/53b-smart-genie.png"
+    },
+    {
+      "control": "Store: plan CTAs",
+      "result": "PASS",
+      "happened": "[\"UPGRADE TO FREE\",\"CURRENT\",\"UPGRADE TO ELITE\"]",
+      "screenshot": "/workspace/screenshots/inspect-func/54b-upgrade.png"
+    },
+    {
+      "control": "Smart/Genie: New",
+      "result": "PASS",
+      "happened": "New present",
+      "screenshot": "/workspace/screenshots/inspect-func/56b-genie.png"
+    },
+    {
+      "control": "Smart/Genie: attach",
+      "result": "PASS",
+      "happened": "Attach present",
+      "screenshot": "/workspace/screenshots/inspect-func/56b-genie.png"
+    },
+    {
+      "control": "Smart/Genie: Send",
+      "result": "PASS",
+      "happened": "Send control present with visible SEND label. Sending 'Make a note titled Inspection desk.' produced assistant reply 'MADE: Inspection desk (note)' and stayed on Genie. Earlier fail was a locator reading Attach's ctrl-label.",
+      "screenshot": "/workspace/screenshots/inspect-func/57-genie-reply.png"
+    },
+    {
+      "control": "Composer: consensus click opens map",
+      "result": "PASS",
+      "happened": "map opened",
+      "screenshot": "/workspace/screenshots/inspect-func/59-consensus-map.png"
+    },
+    {
+      "control": "Sweep: extra home buttons",
+      "result": "PASS",
+      "happened": "Gemini 3.6 Flash Lite Reply 9. A glass canvas over a live wa | Web search | Research | Deep research \u2713 | Attach | Send | Investigation: Deep research",
+      "screenshot": "/workspace/screenshots/inspect-func/60-home-inventory.png"
+    },
+    {
+      "control": "Negatives: invisible/tiny hit targets (home)",
+      "result": "PASS",
+      "happened": "no sub-10px controls (aside from specified 14px close)",
+      "screenshot": "/workspace/screenshots/inspect-func/60-home-inventory.png"
+    },
+    {
+      "control": "Negatives: invisible/tiny hit targets (settings)",
+      "result": "PASS",
+      "happened": "no sub-10px controls (aside from specified 14px close)",
+      "screenshot": "/workspace/screenshots/inspect-func/61-settings-inventory.png"
+    },
+    {
+      "control": "Sweep: window bar (ornament, not a dead button)",
+      "result": "PASS",
+      "happened": "{\"present\":true,\"tag\":\"DIV\",\"cls\":\"window-bar glass-ornament\",\"w\":72,\"h\":18,\"clickable\":false}",
+      "screenshot": "/workspace/screenshots/inspect-func/62-window-bar.png"
+    },
+    {
+      "control": "Tour complete",
+      "result": "PASS",
+      "happened": "checks=87 pageErrors=0",
+      "screenshot": "/workspace/screenshots/inspect-func/63-home-final.png"
+    },
+    {
+      "control": "Composer: send enables when text present",
+      "result": "PASS",
+      "happened": "send enabled",
+      "screenshot": "/workspace/screenshots/inspect-func/17b-prompt-open.png"
+    },
+    {
+      "control": "Composer: send tucks it",
+      "result": "PASS",
+      "happened": "tucked with fade mid op=0.894 dt=135. final={\"open\":false,\"op\":0,\"orbAway\":false,\"orbOp\":1}",
+      "screenshot": "/workspace/screenshots/inspect-func/22-prompt-send-mid.png"
+    },
+    {
+      "control": "Composer: orb returns after send tuck",
+      "result": "PASS",
+      "happened": "{\"open\":false,\"op\":0,\"orbAway\":false,\"orbOp\":1}",
+      "screenshot": "/workspace/screenshots/inspect-func/23-prompt-after-send.png"
+    },
+    {
+      "control": "Composer: idle tucks it",
+      "result": "PASS",
+      "happened": "tucked with animation mid op=0.854 dt=3180",
+      "screenshot": "/workspace/screenshots/inspect-func/24-prompt-idle.png"
+    },
+    {
+      "control": "Smart/Genie: stay on Genie after reply",
+      "result": "PASS",
+      "happened": "still genie-chat. you=1 them=1 text=Make a note titled Inspection desk. |  | MADE: Inspection desk (note) |  | Empty note ready on the canvas.",
+      "screenshot": "/workspace/screenshots/inspect-func/57-genie-reply.png"
+    },
+    {
+      "control": "Composer: attach control summons file picker",
+      "result": "PASS",
+      "happened": "filechooser opened",
+      "screenshot": "/workspace/screenshots/inspect-func/64-attach-chooser.png"
+    },
+    {
+      "control": "Follow-up complete",
+      "result": "PASS",
+      "happened": "checks=92",
+      "screenshot": "/workspace/screenshots/inspect-func/65-home-final.png"
+    }
+  ]
+}

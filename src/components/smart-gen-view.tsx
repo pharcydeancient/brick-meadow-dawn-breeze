@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { Pin, Plus, ArrowUp } from "lucide-react";
-import { SMART_KINDS, SMART_LANES, SMART_PAGES } from "@/lib/smart";
+import { SMART_KINDS, SMART_LANES, SMART_OBJECTS, SMART_PAGES } from "@/lib/smart";
 import { uid, useAether } from "@/lib/store";
-import type { SmartCard, SmartKind, SmartLane } from "@/lib/types";
+import type { SmartBoard, SmartCard, SmartKind, SmartLane, SmartObject } from "@/lib/types";
 import { Draggable } from "./draggable";
 import { PreviewStage } from "./preview-stage";
 import { askModel, imagineEdit, imagineStill } from "@/lib/chat";
@@ -13,11 +13,17 @@ export function SmartGenView() {
   const tabsAt = useAether((s) => s.smartTabsAt);
   const setTabsAt = useAether((s) => s.setSmartTabsAt);
   const cards = useAether((s) => s.smartCards);
+  const extras = useAether((s) => s.smartBoards);
   const openId = useAether((s) => s.smartOpenId);
   const setOpen = useAether((s) => s.setSmartOpen);
   const moveLane = useAether((s) => s.moveSmartLane);
   const remove = useAether((s) => s.removeSmartCard);
+  const genieDocked = useAether((s) => s.genieDocked);
+  const setGenieDocked = useAether((s) => s.setGenieDocked);
+  const tier = useAether((s) => s.tier);
+  const setSurface = useAether((s) => s.setSurface);
   const open = cards.find((c) => c.id === openId) ?? null;
+  const boards: SmartBoard[] = [...SMART_LANES, ...extras];
 
   const nav = (
     <div className="smart-nav">
@@ -25,8 +31,16 @@ export function SmartGenView() {
         <button
           key={p.id}
           type="button"
-          className={page === p.id ? "on" : ""}
-          onClick={() => setPage(p.id)}
+          className={page === p.id || (p.id === "genie" && genieDocked && page !== "genie") ? "on" : ""}
+          onClick={() => {
+            if (p.id === "genie" && page !== "hub" && page !== "genie") {
+              if (tier === "free") setSurface("upgrade");
+              else setGenieDocked(!genieDocked);
+              return;
+            }
+            setGenieDocked(false);
+            setPage(p.id);
+          }}
         >
           {p.label}
         </button>
@@ -48,11 +62,16 @@ export function SmartGenView() {
       <div className="smart-body">
         {page === "hub" ? <HubPage /> : null}
         {page === "cards" ? <CardsPage cards={cards} onOpen={setOpen} /> : null}
-        {page === "boards" ? <BoardsPage cards={cards} onOpen={setOpen} onLane={moveLane} /> : null}
+        {page === "boards" ? <BoardsPage cards={cards} boards={boards} onOpen={setOpen} onLane={moveLane} /> : null}
         {page === "canvas" ? <CanvasPage cards={cards} onOpen={setOpen} /> : null}
         {page === "genie" ? <GeniePage /> : null}
       </div>
       {page !== "hub" && tabsAt === "bottom" ? nav : null}
+      {page !== "hub" && page !== "genie" && genieDocked ? (
+        <div className="genie-dock">
+          <GeniePage docked />
+        </div>
+      ) : null}
       {open ? (
         <PreviewStage
           title={open.title}
@@ -187,60 +206,129 @@ function CardsPage({ cards, onOpen }: { cards: SmartCard[]; onOpen: (id: string)
 
 function BoardsPage({
   cards,
+  boards,
   onOpen,
   onLane,
 }: {
   cards: SmartCard[];
+  boards: SmartBoard[];
   onOpen: (id: string) => void;
   onLane: (id: string, lane: SmartLane) => void;
 }) {
+  const addBoard = useAether((s) => s.addSmartBoard);
+  const removeBoard = useAether((s) => s.removeSmartBoard);
+  const extras = useAether((s) => s.smartBoards);
   const [hold, setHold] = useState<string | null>(null);
+  const [name, setName] = useState("");
+  const [object, setObject] = useState<SmartObject>("notebook");
 
   return (
-    <div className="board-track">
-      {SMART_LANES.map((lane) => {
-        const list = cards.filter((c) => c.lane === lane.id);
-        return (
-          <section
-            key={lane.id}
-            className={`board-lane object-${lane.object}`}
-            onPointerUp={() => {
-              if (hold) onLane(hold, lane.id);
-              setHold(null);
-            }}
-          >
-            <span className={`obj-chrome obj-${lane.object}`} aria-hidden />
-            <header className="board-head">
-              <h3>{lane.label}</h3>
-              <span>{list.length}</span>
-            </header>
-            <div className="board-stack">
-              {list.map((c) => (
-                <button
-                  key={c.id}
-                  type="button"
-                  className={`board-card object-${c.kind}${hold === c.id ? " lifting" : ""}`}
-                  onPointerDown={() => setHold(c.id)}
-                  onClick={() => onOpen(c.id)}
-                >
-                  {c.preview ? <img src={c.preview} alt="" /> : null}
-                  <span className="board-title">{c.title}</span>
-                  <span className="board-kind">{c.kind}</span>
-                </button>
-              ))}
-            </div>
-          </section>
-        );
-      })}
+    <div className="board-page">
+      <div className="board-track">
+        {boards.map((lane) => {
+          const list = cards.filter((c) => c.lane === lane.id);
+          const custom = extras.some((b) => b.id === lane.id);
+          return (
+            <section
+              key={lane.id}
+              className={`board-lane object-${lane.object}`}
+              onPointerUp={() => {
+                if (hold) onLane(hold, lane.id);
+                setHold(null);
+              }}
+            >
+              <span className={`obj-chrome obj-${lane.object}`} aria-hidden />
+              <header className="board-head">
+                <h3>{lane.label}</h3>
+                <span>{list.length}</span>
+                {custom ? (
+                  <button type="button" className="text-btn" aria-label={`Remove ${lane.label}`} onClick={() => removeBoard(lane.id)}>
+                    Remove
+                  </button>
+                ) : null}
+              </header>
+              <div className="board-stack">
+                {list.map((c) => (
+                  <button
+                    key={c.id}
+                    type="button"
+                    className={`board-card object-${c.kind}${hold === c.id ? " lifting" : ""}`}
+                    onPointerDown={() => setHold(c.id)}
+                    onClick={() => onOpen(c.id)}
+                  >
+                    {c.preview ? <img src={c.preview} alt="" /> : null}
+                    <span className="board-title">{c.title}</span>
+                    <span className="board-kind">{c.kind}</span>
+                  </button>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+      <form
+        className="pop-bar"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const label = name.trim();
+          if (!label) return;
+          addBoard({ label, object });
+          setName("");
+        }}
+      >
+        <input
+          className="pop-kind"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="New board name"
+          maxLength={14}
+          aria-label="New board name"
+        />
+        <select className="pop-kind" value={object} onChange={(e) => setObject(e.target.value as SmartObject)} aria-label="Board object">
+          {SMART_OBJECTS.map((o) => (
+            <option key={o.id} value={o.id}>
+              {o.label}
+            </option>
+          ))}
+        </select>
+        <button type="submit" className="genie-pop">
+          <Plus size={14} />
+          Board
+        </button>
+      </form>
     </div>
   );
 }
 
 function CanvasPage({ cards, onOpen }: { cards: SmartCard[]; onOpen: (id: string) => void }) {
   const place = useAether((s) => s.placeSmartCard);
+  const canvases = useAether((s) => s.smartCanvases);
+  const activeId = useAether((s) => s.activeCanvasId);
+  const setActive = useAether((s) => s.setActiveCanvas);
+  const addCanvas = useAether((s) => s.addSmartCanvas);
+  const [draft, setDraft] = useState("");
+  const swipe = useRef({ x: 0 });
+  const scene = canvases.find((c) => c.id === activeId) ?? canvases[0];
+  const placed = cards.filter((c) => !c.canvasId || c.canvasId === scene?.id);
+
+  function step(dir: -1 | 1) {
+    const i = canvases.findIndex((c) => c.id === scene?.id);
+    if (i < 0 || canvases.length < 2) return;
+    setActive(canvases[(i + dir + canvases.length) % canvases.length].id);
+  }
+
   return (
-    <div className="smart-canvas">
-      {cards.map((c) => (
+    <div
+      className="smart-canvas"
+      onPointerDown={(e) => {
+        swipe.current.x = e.clientX;
+      }}
+      onPointerUp={(e) => {
+        const dx = e.clientX - swipe.current.x;
+        if (Math.abs(dx) > 72) step(dx < 0 ? 1 : -1);
+      }}
+    >
+      {placed.map((c) => (
         <Draggable
           key={c.id}
           x={c.x}
@@ -254,11 +342,42 @@ function CanvasPage({ cards, onOpen }: { cards: SmartCard[]; onOpen: (id: string
           <span>{c.title}</span>
         </Draggable>
       ))}
+      <div className="canvas-scenes">
+        {canvases.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            className={c.id === scene?.id ? "on" : ""}
+            onClick={() => setActive(c.id)}
+          >
+            {c.name}
+          </button>
+        ))}
+        {canvases.length < 10 ? (
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const n = draft.trim();
+              if (!n) return;
+              addCanvas(n);
+              setDraft("");
+            }}
+          >
+            <input
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              placeholder="Name"
+              maxLength={12}
+              aria-label="New canvas name"
+            />
+          </form>
+        ) : null}
+      </div>
     </div>
   );
 }
 
-function GeniePage() {
+function GeniePage({ docked = false }: { docked?: boolean }) {
   const tier = useAether((s) => s.tier);
   const setSurface = useAether((s) => s.setSurface);
   const messages = useAether((s) => s.genieMessages);
@@ -362,7 +481,7 @@ function GeniePage() {
   }
 
   return (
-    <div className="genie-chat">
+    <div className={`genie-chat${docked ? " docked" : ""}`}>
       <div className="genie-head">
         <div>
           <p className="genie-kicker">Smart Genie</p>

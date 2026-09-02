@@ -18,6 +18,7 @@ export function CardView() {
   const start = useRef({ x: 0, y: 0, scroll: 0 });
   const scrolled = useRef(false);
   const list = useRef<HTMLDivElement>(null);
+  const tracking = useRef(false);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -65,28 +66,42 @@ export function CardView() {
       className={`card-view${slide ? ` slide-${slide}` : ""}`}
       style={{ ["--card-accent" as string]: model.accent }}
       onPointerDown={(e) => {
+        const t = e.target as HTMLElement;
+        if (t.closest("button")) return;
+        tracking.current = true;
         start.current = { x: e.clientX, y: e.clientY, scroll: list.current?.scrollTop ?? 0 };
         scrolled.current = false;
+        if (!t.closest("[data-scroll]")) {
+          e.currentTarget.setPointerCapture(e.pointerId);
+        }
       }}
-      onPointerMove={() => {
+      onPointerMove={(e) => {
+        if (!tracking.current) return;
         if (list.current && Math.abs(list.current.scrollTop - start.current.scroll) > 8) {
           scrolled.current = true;
         }
+        if (Math.abs(e.clientX - start.current.x) > 12) scrolled.current = true;
       }}
       onPointerUp={(e) => {
+        if (!tracking.current) return;
+        tracking.current = false;
         const dx = e.clientX - start.current.x;
         const dy = e.clientY - start.current.y;
         const absX = Math.abs(dx);
         const absY = Math.abs(dy);
-        if (absX < 56 && absY < 72) return;
-        if (absX > absY * 1.15) {
+        if (absX < 40 && absY < 72) return;
+        if (absX > absY * 1.05 && absX >= 40) {
           step(dx < 0 ? 1 : -1);
           return;
         }
         if (!scrolled.current && absY > 72) close();
       }}
+      onPointerCancel={() => {
+        tracking.current = false;
+      }}
     >
       <header className="card-view-head">
+        <span className="card-bloom" aria-hidden />
         <button type="button" className="card-back" onClick={close} aria-label="Back">
           <ChevronLeft size={18} strokeWidth={2.25} />
           <span>Back</span>
@@ -94,7 +109,7 @@ export function CardView() {
         <h2 className="card-view-title">{model.name}</h2>
         <span className="card-head-spacer" aria-hidden />
       </header>
-      <div ref={list} className="quiet-scroll card-view-thread">
+      <div ref={list} className="quiet-scroll card-view-thread" data-scroll>
         {messages.map((m) => (
           <article
             key={m.id}

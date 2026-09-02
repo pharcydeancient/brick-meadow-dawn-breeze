@@ -33,6 +33,7 @@ Legend: `done` | `partial` | `open`
 |----|-------------|--------|
 | H-grid | Phone cards, drag, Align, tap to card view | done |
 | H-lift | Long-press glows/lifts; no hover-scale | done |
+| H-thread | Full conversation scrollable in the card preview. User type = model color; model type = white | done |
 
 ## Prompt / consensus (zip A-composer.png)
 
@@ -40,9 +41,10 @@ Legend: `done` | `partial` | `open`
 |----|-------------|--------|
 | P1 | Prompt summoned by the bottom orb; invisible until then | done |
 | P2 | Consensus preview sits above the prompt | done |
-| P4 | Attach (+) on the prompt | done — chips in the composer. Not a full file library. |
-| P5 | Web search / Research / Deep research probes | done as labeled tray. Not live backends. |
+| P4 | Attach (+) on the prompt | done — chips in the composer. Not a full file library pick. |
+| P5 | Web search / Research / Deep research probes | done as labeled tray. Live web_search on web/deep. |
 | P6 | Prompt tucks the canvas and returns on send / idle | done |
+| P7 | Blur wallpaper on send | done — default on; Settings toggle |
 
 ## History
 
@@ -56,9 +58,11 @@ Legend: `done` | `partial` | `open`
 
 | id | requirement | status |
 |----|-------------|--------|
+| W-files | Files is a library of generated files. Search, kind chips, open, duplicate, delete, context menu. Not Years/Days | done |
 | W2 | Theme selector + live wallpaper store | partial — labeled shelves exist; purchase is mocked |
-| W-imagine | Grok Imagine-class market (generate, remix, collections, likes, library) | partial — Discover / Library masonry with names. No generate/remix/likes yet |
-| W9 | Smart Gen hub: full-width Cards / Boards / Canvas / Genie. Boards as objects. Genie as agent | partial — hub + objects + in-canvas Genie chat. Not a full agent desk (attachments, thread list, mass edits) |
+| W-imagine | Grok Imagine-class market (generate, remix, likes, library) | done — generate/remix/like/library persist. No live remote market feed |
+| W9 | Smart Gen hub: Cards / Boards / Canvas / Genie | partial — hub, physical boards, custom boards, canvas scenes (up to 10, swipe, named), Genie full page + docked helpdesk on Cards/Boards/Canvas. Not mass field edits / card-type refactor |
+| W-genie | Genie: New, attach, Send, stay, creates cards/stills | done as agent desk. Not elite custom agents |
 
 ## Relocatable ornaments
 

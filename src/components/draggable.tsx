@@ -8,7 +8,8 @@ function isInteractive(t: HTMLElement) {
       t.closest("select") ||
       t.closest("a") ||
       t.closest("label") ||
-      t.closest("[contenteditable='true']"),
+      t.closest("[contenteditable='true']") ||
+      t.closest("[data-scroll]"),
   );
 }
 
