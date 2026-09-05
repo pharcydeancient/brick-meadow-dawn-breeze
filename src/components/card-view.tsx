@@ -22,7 +22,13 @@ export function CardView() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
+      if (e.key === "Escape") {
+        if (useAether.getState().historyOpen) {
+          useAether.getState().setHistoryOpen(false);
+          return;
+        }
+        close();
+      }
       if (e.key === "ArrowLeft") step(-1);
       if (e.key === "ArrowRight") step(1);
     };
@@ -108,6 +114,11 @@ export function CardView() {
         </button>
         <h2 className="card-view-title">{model.name}</h2>
         <span className="card-head-spacer" aria-hidden />
+        <div className="card-tools">
+          <button type="button" onClick={() => useAether.getState().setSurface("files")}>Files</button>
+          <button type="button" onClick={() => useAether.getState().setHistoryOpen(true)}>History</button>
+          <button type="button" onClick={() => useAether.getState().newConversation(id)}>New</button>
+        </div>
       </header>
       <div ref={list} className="quiet-scroll card-view-thread" data-scroll>
         {messages.map((m) => (
