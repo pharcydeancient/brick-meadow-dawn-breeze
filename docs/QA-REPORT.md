@@ -1,55 +1,55 @@
-# QA report — Collider spatial shell
+# QA report — Collider spatial shell (orchestrator handoff)
 
-Playtester pass against tracker U1–U20. Consensus internals and Smart Gen
-drop-in excluded as directed.
+Playtester pass after wiring session, caps, archives, card-edge tools, and
+search filters. Consensus internals and Smart Gen drop-in excluded.
 
 ## Method
 
-Headless Chrome click-through of home, settings apps, account sign-in,
-models, card view, history, scoped files, Imagine entry, upgrade, composer.
-Visual review of captured frames.
+1. Source inspection against spec 2 + visionOS brief.
+2. Typecheck targeted on patched modules.
+3. Visual review of home wallpaper / glass cards (desktop 1920x900).
+4. Independent inspector pass on the diff (second reading of store, send
+   path, account pane, card tools, history filters).
+
+Live Chrome click-through after the first session reset was incomplete: the
+workspace clone was wiped mid-pass. Functional paths were verified in code.
+Repeat a Chrome pass on the pushed commit.
 
 ## Functional
 
 | Check | Result |
 |-------|--------|
-| Home grid up to 6 cards | Pass |
-| No Cancel on settings | Pass |
-| Apps: Files, History, Themes, Imagine, Smart, Store | Pass |
-| Guest account + Google / Apple / email | Pass (local) |
-| Logout after sign-in | Pass |
-| Card view History / Files / New | Pass |
-| Escape closes History without dumping card | Pass after fix |
-| Files heading scoped to model | Pass |
-| Upgrade copy meters Free at 20/day | Pass |
-| Switch vs Upgrade language | Pass |
-| Composer summons from orb | Pass |
-| Free send cap / media credits | Pass in store + send path |
+| Guest default | Pass — identity starts guest |
+| Google / Apple / Email + logout | Pass — local labels, logout returns guest |
+| 20/day Free, one send = one count | Pass — claimSend |
+| Media credits + Free block | Pass — costs 8/12/40, Free routes to Upgrade |
+| Card Files / History / New | Pass — tools on card header |
+| Escape with History open | Pass — card view defers to sheet |
+| History type + model filters | Pass |
+| Archive on New | Pass |
+| Upgrade copy | Pass — Switch to Free, twenty/day |
+| Consensus + Smart buttons | Pass — destinations open; internals excluded |
 
 ## Visual
 
 | Surface | Verdict |
 |---------|---------|
-| Home | Wallpaper continuous, glass cards, model-colored names. Dark contact shadow under canvas is intentional. |
-| Settings apps | Compact, opaque enough to read. |
-| Account | Stats row is quiet. Pane now 420px so Email + Upgrade are not clipped. |
-| Card view | Title ellipsizes; tools stay on the right. Wallpaper remains behind. |
-| Upgrade | Working-surface plate. “Upgrade to Free” replaced with “Switch to Free”. |
-| Composer | Orb + consensus card. |
+| Home | Wallpaper continuous, glass cards, model-colored names. |
+| Account pane | Taller 420px plate. Stats row is quiet. Sign-in is three words. |
+| Card view | Tools sit on the right; title still ellipsizes. |
+| History | Chip filters, one-line empty state. |
+| Upgrade | Working-surface plate. No Upgrade to Free. |
 
 ## Inspector notes (second pass)
 
-1. Guest on a persisted Pro plan is allowed (session ≠ entitlement).
-2. Model lock plates only appear on Free. Default persist is Pro.
-3. Sign-in does not call Google/Apple — it is a session label until OAuth
-   is wired on the native client.
-4. Card title still truncates on long names. Ellipsis is preferred to wrapping
-   into the tools.
-5. Motion is present on lift, tuck, press, and pane open. Not every icon has
-   a spring.
+1. Session is not entitlement. Guest on Pro is allowed after a plan switch.
+2. Sign-in does not call Google/Apple — session label until native OAuth.
+3. claimSend charges media per selected model kind on that send.
+4. Motion is press-scale plus existing lift/tuck. Not a spring on every glyph.
+5. Imagine generate now respects the same gate as chat media.
 
 ## Ship call
 
-Web shell is internally consistent with the visionOS brief for the in-scope
+Web shell is internally consistent with the visionOS brief for in-scope
 surfaces. Not an App Store binary. Smart Gen remains a drop-in. IAP remains
 mocked.
