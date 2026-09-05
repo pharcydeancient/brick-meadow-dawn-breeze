@@ -20,6 +20,8 @@ export type SettingsTab = "account" | "models" | "settings";
 
 export type Identity = "guest" | "google" | "apple" | "email";
 
+export type HistoryKind = "all" | "live" | "archive" | "files";
+
 export interface DailyUse {
   date: string;
   messages: number;
