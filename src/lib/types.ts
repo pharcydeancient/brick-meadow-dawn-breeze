@@ -18,6 +18,24 @@ export type Investigation = "off" | "web" | "research" | "deep";
 
 export type SettingsTab = "account" | "models" | "settings";
 
+export type Identity = "guest" | "google" | "apple" | "email";
+
+export interface DailyUse {
+  date: string;
+  messages: number;
+}
+
+export interface CreditPool {
+  daily: number;
+  weekly: number;
+  monthly: number;
+  usedDaily: number;
+  usedWeekly: number;
+  usedMonthly: number;
+  weekKey: string;
+  monthKey: string;
+}
+
 export type MessageRole = "user" | "assistant";
 
 export interface AiModel {
@@ -43,6 +61,14 @@ export interface ChatMessage {
 export interface Conversation {
   modelId: string;
   messages: ChatMessage[];
+}
+
+export interface ArchivedThread {
+  id: string;
+  modelId: string;
+  title: string;
+  messages: ChatMessage[];
+  closedAt: number;
 }
 
 export interface GenFile {
