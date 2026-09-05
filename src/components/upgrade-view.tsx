@@ -3,7 +3,7 @@ import { useAether } from "@/lib/store";
 import type { Tier } from "@/lib/types";
 
 const FEATURES: Record<Tier, string[]> = {
-  free: ["Six general models", "Unlimited general chat"],
+  free: ["General models", "Twenty messages a day"],
   pro: ["All general models", "Image, audio, video, coding", "3,000 credits / month"],
   elite: ["Flagship models", "Live wallpapers", "7,500 credits / month"],
 };
@@ -41,7 +41,7 @@ export function UpgradeView() {
               disabled={current}
               onClick={() => setTier(id)}
             >
-              {current ? "Current" : `Upgrade to ${info.label}`}
+              {current ? "Current" : id === "free" ? "Switch to Free" : `Move to ${info.label}`}
             </button>
           </article>
         );
