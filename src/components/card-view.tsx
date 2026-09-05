@@ -11,6 +11,8 @@ export function CardView() {
   const openCard = useAether((s) => s.openCard);
   const hideMessage = useAether((s) => s.hideMessage);
   const close = useAether((s) => s.closeToHome);
+  const setSurface = useAether((s) => s.setSurface);
+  const setHistoryOpen = useAether((s) => s.setHistoryOpen);
   const model = MODELS.find((m) => m.id === id);
   const [ctx, setCtx] = useState<{ x: number; y: number; items: CtxItem[] } | null>(null);
   const [slide, setSlide] = useState<"left" | "right" | null>(null);
@@ -115,9 +117,8 @@ export function CardView() {
         <h2 className="card-view-title">{model.name}</h2>
         <span className="card-head-spacer" aria-hidden />
         <div className="card-tools">
-          <button type="button" onClick={() => useAether.getState().setSurface("files")}>Files</button>
-          <button type="button" onClick={() => useAether.getState().setHistoryOpen(true)}>History</button>
-          <button type="button" onClick={() => useAether.getState().newConversation(id)}>New</button>
+          <button type="button" onClick={() => setSurface("files")}>Files</button>
+          <button type="button" onClick={() => setHistoryOpen(true)}>History</button>
         </div>
       </header>
       <div ref={list} className="quiet-scroll card-view-thread" data-scroll>
